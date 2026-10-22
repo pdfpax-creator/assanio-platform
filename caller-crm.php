@@ -69,14 +69,28 @@ foreach ($leads as $l) {
 }
 
 $callerName = $pdo->query("SELECT name FROM users WHERE id = " . (int)$callerId)->fetchColumn();
+$referralCode = $pdo->query("SELECT referral_code FROM users WHERE id = " . (int)$callerId)->fetchColumn();
 
 page_head('Caller CRM');
 rp_app_open($user, 'crm', [
-    'title' => '📞 Caller CRM',
+    'title' => 'Caller CRM',
     'sub' => $isSuper ? "Viewing leads for: <b>" . e($callerName) . "</b>" : 'Your assigned leads. Call them and update status!',
     'crumb' => $isCaller ? 'CRM' : 'Admin',
 ]);
 ?>
+
+<?php if ($referralCode): ?>
+<div class="rp-card" style="background:#f0f7ff;border:1px solid #b3d4fc">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem">
+    <div>
+      <div style="font-size:13px;color:#666;margin-bottom:4px">Your Referral Code</div>
+      <div style="font-size:24px;font-weight:800;letter-spacing:2px;color:#1a56db"><?= e($referralCode) ?></div>
+      <div style="font-size:13px;color:#666;margin-top:4px">Share this code with restaurants when they sign up</div>
+    </div>
+    <button class="rp-btn rp-btn-dark rp-btn-sm" onclick="navigator.clipboard.writeText('<?= e($referralCode) ?>');this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Code',2000)">Copy Code</button>
+  </div>
+</div>
+<?php endif; ?>
 
 <?php if ($isSuper && $callers): ?>
 <div class="rp-card">
