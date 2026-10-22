@@ -13,7 +13,19 @@ if ($user) { header('Location: dashboard.php'); exit; }
 page_head('Home', 'Assanio builds your restaurant a professional website with online ordering. Zero commission, WhatsApp ordering, one flat monthly fee. Live in 48 hours.');
 ?>
 <link rel="stylesheet" href="assets/landing.css?v=20261022">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta property="og:title" content="Assanio — Your restaurant. Your website. Zero commission.">
+<meta property="og:description" content="Pakistan's restaurant growth platform. Professional website + WhatsApp ordering. Keep 100% of every order. Live in 48 hours.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://app.pdfpax.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Assanio — Your restaurant. Your website. Zero commission.">
+<meta name="twitter:description" content="Professional website + WhatsApp ordering for Pakistani restaurants. Zero commission. Live in 48 hours.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Assanio","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"1999","priceCurrency":"PKR"},"description":"Restaurant website builder with WhatsApp ordering for Pakistan. Zero commission."}
+</script>
 <div class="al-grain" aria-hidden="true"></div>
 <noscript><style>.al-rev{opacity:1 !important;transform:none !important}</style></noscript>
 
