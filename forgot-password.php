@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $u->fetch(PDO::FETCH_ASSOC);
 
         // Always show success (don't reveal if email exists)
-        $msg = 'If an account exists with this email, a reset link has been sent.';
+        $msg = 'If an account exists with this email, a reset link has been sent to it. Check your inbox (and spam folder). If you don\'t receive it, contact support on WhatsApp.';
         $msgType = 'ok';
 
         if ($user) {

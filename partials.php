@@ -116,6 +116,7 @@ function rp_sidebar(array $user, string $active): string
         $h .= $item('admin', 'admin.php', rp_icon('shield', 18), 'Super Admin');
         $h .= $item('referrals', 'admin-referrals.php', rp_icon('users', 18), 'Referrals');
         $h .= $item('leads', 'admin-leads.php', rp_icon('phone', 18), 'Leads');
+        $h .= $item('resets', 'admin-resets.php', rp_icon('key', 18), 'Password Resets');
         $h .= $item('crm', 'caller-crm.php', rp_icon('phone', 18), 'Caller CRM');
     }
     $roleLabel = $isSuper ? 'Super Admin' : ($isCaller ? 'Sales Caller' : 'Restaurant Owner');
