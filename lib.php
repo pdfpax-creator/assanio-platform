@@ -84,7 +84,7 @@ function db(): PDO
     )");
     // Default Discover page settings
     $defaults = [
-        'discover_title' => '🍽️ Discover Restaurants',
+        'discover_title' => 'Discover Restaurants',
         'discover_subtitle' => 'Order directly from the restaurant — no middleman, no extra charges.',
     ];
     foreach ($defaults as $k => $v) {

@@ -4,6 +4,13 @@ require_once __DIR__ . '/lib.php';
 
 echo "<h2>✨ Polishing demo stores...</h2><pre>";
 
+// Fix discover title (remove emoji)
+try {
+    $pdo = db();
+    $pdo->prepare("UPDATE settings SET value='Discover Restaurants' WHERE key='discover_title'")->execute();
+    echo "✅ Discover title fixed\n";
+} catch (Exception $e) { echo "Settings: " . $e->getMessage() . "\n"; }
+
 $stores = [
     'tandoor-nights' => [
         'replacements' => [
