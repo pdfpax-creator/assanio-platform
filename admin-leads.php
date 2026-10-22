@@ -6,9 +6,9 @@ $pdo = db();
 
 // Lead statuses
 $statuses = [
-    'new' => '🆕 New',
+    'new' => 'New',
     'no_pick' => '📵 No Pick',
-    'callback' => '🔄 Call Back',
+    'callback' => 'Call Back',
     'not_interested' => '❌ Not Interested',
     'interested' => '👍 Interested',
     'pending' => '⏳ Pending',
@@ -86,7 +86,7 @@ $stats = $pdo->query("SELECT status, COUNT(*) as c FROM leads GROUP BY status")-
 
 page_head('Lead Management');
 rp_app_open($user, 'leads', [
-    'title' => '📞 Lead Management',
+    'title' => 'Lead Management',
     'sub' => 'Assign cold-calling leads to your callers. They\'ll see them in their CRM.',
     'crumb' => 'Admin',
 ]);
@@ -100,7 +100,7 @@ rp_app_open($user, 'leads', [
 </div>
 
 <div class="rp-card">
-  <h2>➕ Add Lead</h2>
+  <h2>Add Lead</h2>
   <form method="post" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem">
     <?= csrf_field() ?>
     <input type="hidden" name="action" value="add-lead">
@@ -119,7 +119,7 @@ rp_app_open($user, 'leads', [
 </div>
 
 <div class="rp-card">
-  <h2>📤 Import CSV</h2>
+  <h2>Import CSV</h2>
   <p class="rp-hint">Format: <code>restaurant_name, contact_name, phone, city</code> (first row = header)</p>
   <form method="post" enctype="multipart/form-data" style="display:flex;gap:.8rem;align-items:center">
     <?= csrf_field() ?>
@@ -130,7 +130,7 @@ rp_app_open($user, 'leads', [
 </div>
 
 <div class="rp-card">
-  <h2>📋 All Leads (<?= count($leads) ?>)</h2>
+  <h2>All Leads (<?= count($leads) ?>)</h2>
   <!-- Bulk assign bar -->
   <form method="post" id="bulkForm" style="display:flex;gap:.6rem;align-items:center;margin-bottom:.8rem;flex-wrap:wrap">
     <?= csrf_field() ?>

@@ -179,11 +179,11 @@ rp_app_open($user, 'admin', [
             <?php if (($s['status'] ?? 'active') === 'suspended'): ?><span class="rp-pill pill-gray">Suspended</span><?php else: ?><span class="rp-pill pill-delivered"><span class="dot"></span>Active</span><?php endif; ?>
           </td>
           <td>
-            <a class="rp-btn rp-btn-red rp-btn-xs" href="edit-website.php?id=<?= (int)$s['id'] ?>" target="_blank">✏️ Edit Website</a>
+            <a class="rp-btn rp-btn-dark rp-btn-xs" href="edit-website.php?id=<?= (int)$s['id'] ?>" target="_blank">Edit Website</a>
             <form method="post" class="rp-inline" title="<?= ($s['show_in_discover'] ?? 1) ? 'Showing in Discover — click to hide' : 'Hidden from Discover — click to show' ?>">
               <?= csrf_field() ?><input type="hidden" name="action" value="toggle-discover"><input type="hidden" name="store_id" value="<?= (int)$s['id'] ?>">
               <input type="hidden" name="show" value="<?= ($s['show_in_discover'] ?? 1) ? '0' : '1' ?>">
-              <button class="rp-btn rp-btn-xs" style="<?= ($s['show_in_discover'] ?? 1) ? 'background:#1a9e4b;color:#fff' : 'background:#ddd;color:#666' ?>" type="submit">🍽️ <?= ($s['show_in_discover'] ?? 1) ? '✓' : '✗' ?></button>
+              <button class="rp-btn rp-btn-xs" style="<?= ($s['show_in_discover'] ?? 1) ? 'background:#1a9e4b;color:#fff' : 'background:#ddd;color:#666' ?>" type="submit"><?= ($s['show_in_discover'] ?? 1) ? 'Visible' : 'Hidden' ?></button>
             </form>
             <?php if (($s['status'] ?? 'active') === 'suspended'): ?>
               <form method="post" class="rp-inline" onsubmit="return confirm('Activate <?= e($s['name']) ?>? Its website goes live again.')">
@@ -193,12 +193,12 @@ rp_app_open($user, 'admin', [
             <?php else: ?>
               <form method="post" class="rp-inline" onsubmit="return confirm('Suspend <?= e($s['name']) ?>? Its website will show an unavailable screen.')">
                 <?= csrf_field() ?><input type="hidden" name="action" value="store-suspend"><input type="hidden" name="store_id" value="<?= (int)$s['id'] ?>">
-                <button class="rp-btn rp-btn-line rp-btn-xs" type="submit">Suspend</button>
+                <button class="rp-btn rp-btn-xs" style="background:#e67e22;color:#fff" type="submit">Suspend</button>
               </form>
             <?php endif; ?>
             <form method="post" class="rp-inline" onsubmit="return confirm('DELETE <?= e($s['name']) ?>? This cannot be undone!')">
               <?= csrf_field() ?><input type="hidden" name="action" value="store-delete"><input type="hidden" name="store_id" value="<?= (int)$s['id'] ?>">
-              <button class="rp-btn rp-btn-xs" style="background:#666;color:#fff" type="submit">🗑️</button>
+              <button class="rp-btn rp-btn-red rp-btn-xs" type="submit" title="Delete store">Delete</button>
             </form>
           </td>
         </tr>
@@ -228,7 +228,7 @@ rp_app_open($user, 'admin', [
   </div>
 
   <div class="rp-card">
-    <h2>🎨 Discover Page Settings</h2>
+    <h2>Discover Page Settings</h2>
     <p class="rp-hint">Edit what customers see on the <a href="discover.php" target="_blank">Discover page</a>.</p>
     <form method="post" style="display:grid;gap:.8rem;max-width:600px">
       <?= csrf_field() ?>
@@ -242,7 +242,7 @@ rp_app_open($user, 'admin', [
         <input class="rp-input" type="text" name="discover_subtitle" value="<?= e(setting_get('discover_subtitle', '')) ?>" style="width:100%">
       </div>
       <div>
-        <button class="rp-btn rp-btn-red" type="submit">💾 Save Discover Page</button>
+        <button class="rp-btn rp-btn-red" type="submit">Save Discover Page</button>
       </div>
     </form>
   </div>
