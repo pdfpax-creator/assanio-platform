@@ -257,8 +257,15 @@ body.cart-open{overflow:hidden}
 /* ---------- premium animations: transform/opacity only (GPU) ---------- */
 @keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
 .hero-bg img{animation:kb 18s ease-in-out infinite alternate;will-change:transform}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out}
-.rv-on{opacity:1;transform:none}
+.rv{opacity:0;transition:opacity .7s ease-out,transform .7s ease-out;will-change:opacity,transform}
+.rv-up{transform:translateY(32px)}
+.rv-left{transform:translateX(-40px)}
+.rv-right{transform:translateX(40px)}
+.rv-zoom{transform:scale(.92)}
+.rv-fade{transform:none}
+.rv-on{opacity:1!important;transform:none!important}
+/* No-flicker: only hide when JS confirms */
+.no-js .rv{opacity:1!important;transform:none!important}
 section.block{content-visibility:auto;contain-intrinsic-size:800px}
 header.site.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.45)}
 @media(hover:hover){
@@ -381,7 +388,7 @@ html.no-anim *,html.no-anim *::before,html.no-anim *::after{animation:none!impor
 @media(prefers-reduced-motion:reduce){.os-dot.on{animation:none}}
 </style>
 </head>
-<body>
+<body class="no-js">
 
 <div class="annbar" id="annBar" hidden><span id="annText"></span><button class="ann-x" id="annX" aria-label="Dismiss announcement">&times;</button></div>
 
@@ -895,12 +902,26 @@ x:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.3
 
 /* ---------- premium animations: scroll reveal, stat count-up, header shadow ---------- */
 function initAnims(c){
-  if(c.theme&&c.theme.animations===false)return; /* admin toggle off: no-anim class kills all CSS motion */
-  if(!("IntersectionObserver" in window))return; /* ancient browser: leave content static & visible */
-  var groups=[".sec-head",".deal-card",".gcard",".stat",".step",".chip","#faqAcc .acc","#location .loc-card","#qrBox","#reservation"],targets=[];
-  groups.forEach(function(sel){
-    Array.prototype.forEach.call(document.querySelectorAll(sel),function(el,i){
-      el.classList.add("rv");el.style.transitionDelay=((i%4)*80)+"ms";targets.push(el);
+  document.body.classList.remove('no-js');
+  if(c.theme&&c.theme.animations===false)return;
+  if(!("IntersectionObserver" in window))return;
+  var animMap=[
+    [".sec-head","rv-up"],
+    [".deal-card","rv-zoom"],
+    [".gcard","rv-up"],
+    [".stat","rv-zoom"],
+    [".step","rv-left"],
+    [".chip","rv-fade"],
+    ["#faqAcc .acc","rv-up"],
+    ["#location .loc-card","rv-right"],
+    ["#qrBox","rv-zoom"],
+    ["#reservation","rv-up"],
+    [".menu-cat","rv-left"],
+    [".rev","rv-right"]
+  ],targets=[];
+  animMap.forEach(function(pair){
+    Array.prototype.forEach.call(document.querySelectorAll(pair[0]),function(el,i){
+      el.classList.add("rv",pair[1]);el.style.transitionDelay=((i%4)*90)+"ms";targets.push(el);
     });
   });
   var io=new IntersectionObserver(function(es){
@@ -909,7 +930,7 @@ function initAnims(c){
       var el=e.target;io.unobserve(el);el.classList.add("rv-on");
       var b=el.querySelector("[data-count]");if(b)countUp(b);
     });
-  },{threshold:.12,rootMargin:"0px 0px -30px 0px"});
+  },{threshold:.1,rootMargin:"0px 0px -40px 0px"});
   targets.forEach(function(el){io.observe(el)});
   var hd=document.querySelector("header.site"),tick=false;
   function sh(){if(hd)hd.classList.toggle("scrolled",window.scrollY>10);tick=false}
