@@ -769,7 +769,7 @@ function initCart(c){
     var q=e.target.closest("[data-q]");
     if(q){changeQty(q.getAttribute("data-id"),parseInt(q.getAttribute("data-q"),10));return}
     var x=e.target.closest("[data-x]");
-    if(x){removeItem(x.getAttribute("data-id"));return}
+    if(x){removeItem(x.getAttribute("data-x"));return}
     if(e.target.closest("#cartBtn,#hdOrder,#barWa")){e.preventDefault();openDrawer();return}
     if(e.target.closest("#drClose")||e.target.id==="drawerOv"){closeDrawer();return}
     if(e.target.closest("#browseBtn")){closeDrawer();document.getElementById("menu").scrollIntoView({behavior:"smooth"});return}
