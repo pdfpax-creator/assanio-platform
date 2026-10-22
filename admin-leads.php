@@ -149,11 +149,33 @@ rp_app_open($user, 'leads', [
       document.querySelectorAll('.lead-check').forEach(cb => cb.checked = this.checked);
     });
   </script>
-  <div class="rp-tablewrap"><table class="rp-table">
+  <div class="rp-tablewrap">
+  <div style="display:flex;gap:.6rem;margin-bottom:.8rem;flex-wrap:wrap">
+    <input class="rp-input" id="leadSearch" placeholder="Search restaurant, contact, phone..." style="max-width:280px" onkeyup="filterLeads()">
+    <select class="rp-input" id="statusFilter" onchange="filterLeads()" style="max-width:180px">
+      <option value="">All statuses</option>
+      <?php foreach ($statuses as $k => $v): ?>
+        <option value="<?= e($k) ?>"><?= e($v) ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <script>
+  function filterLeads() {
+    var q = document.getElementById('leadSearch').value.toLowerCase();
+    var st = document.getElementById('statusFilter').value;
+    document.querySelectorAll('#leadsTable tbody tr').forEach(function(tr) {
+      var txt = tr.textContent.toLowerCase();
+      var rowStatus = tr.getAttribute('data-status') || '';
+      var ok = (!q || txt.indexOf(q) !== -1) && (!st || rowStatus === st);
+      tr.style.display = ok ? '' : 'none';
+    });
+  }
+  </script>
+  <table class="rp-table" id="leadsTable">
     <thead><tr><th></th><th>Restaurant</th><th>Contact</th><th>Phone</th><th>City</th><th>Status</th><th>Assigned To</th><th>Actions</th></tr></thead>
     <tbody>
     <?php foreach ($leads as $l): ?>
-      <tr>
+      <tr data-status="<?= e($l['status']) ?>">
         <td><input type="checkbox" class="lead-check" name="lead_ids[]" value="<?= (int)$l['id'] ?>" form="bulkForm"></td>
         <td><b><?= e($l['restaurant_name']) ?></b></td>
         <td><?= e($l['contact_name']) ?></td>
