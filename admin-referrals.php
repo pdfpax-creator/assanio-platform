@@ -184,24 +184,22 @@ rp_app_open($user, 'referrals', [
   <?php endif; ?>
 </div>
 
-<!-- STEP 3 & 4 DISABLED: Owner handles commissions manually on WhatsApp.
-     No auto-commission creation. Kept commented for future use.
+<!-- STEP 3: Monthly commissions -->
 <div class="rp-card">
-  <h2>Step 3: Monthly Commission</h2>
-  <p class="rp-hint">Har mahine ki <b>1 tareekh</b> ko ye button dabao. Sab active clients ka monthly commission ban jayega.</p>
+  <h2>Monthly Commissions</h2>
+  <p class="rp-hint">Generate recurring commissions for all active referrals. Run on the 1st of each month (or auto via cron).</p>
   <form method="post" class="rp-form-inline">
     <?= csrf_field() ?>
     <input type="hidden" name="action" value="calculate">
     <input type="month" name="month" value="<?= e(date('Y-m')) ?>" required class="rp-input">
-    <button class="rp-btn rp-btn-red" type="submit">Monthly Commission Banao</button>
+    <button class="rp-btn rp-btn-dark" type="submit">Generate Monthly Commissions</button>
   </form>
 </div>
 
+<!-- STEP 4: Mark as paid -->
 <div class="rp-card">
-  <h2>Step 4: Paise Do</h2>
-  <p class="rp-hint">Manual WhatsApp verification ke baad yahan mark karo.</p>
-</div>
--->
+  <h2>Commission Payments</h2>
+  <p class="rp-hint">After paying via bank transfer / Easypaisa, mark commissions as paid here.</p>
 
 <!-- ALL REFERRALS -->
 <?php if ($referrals): ?>
