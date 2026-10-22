@@ -21,33 +21,52 @@ $tplInfo = [
 
 page_head('Discover Restaurants — Assanio');
 
-$discTitle = setting_get('discover_title', '🍽️ Discover Restaurants');
+$discTitle = setting_get('discover_title', 'Discover Restaurants');
 $discSubtitle = setting_get('discover_subtitle', 'Order directly from the restaurant — no middleman, no extra charges.');
 ?>
 <style>
 .disc-wrap { max-width:1200px; margin:0 auto; padding:0 16px; }
-.disc-hero { background:linear-gradient(135deg,#C8102E,#8B0A1F); color:#fff; text-align:center; padding:3rem 1rem 2.5rem; margin:0 -16px 2rem; border-radius:0 0 24px 24px; }
-.disc-hero h1 { font-size:2.4rem; margin:0 0 .5rem; }
-.disc-hero p { opacity:.9; font-size:1.1rem; margin:0 0 1.5rem; }
-.disc-search { max-width:500px; margin:0 auto; position:relative; }
-.disc-search input { width:100%; padding:.9rem 1.2rem .9rem 3rem; border:none; border-radius:50px; font-size:1rem; box-shadow:0 4px 15px rgba(0,0,0,.15); }
-.disc-search .s-icon { position:absolute; left:1.1rem; top:50%; transform:translateY(-50%); font-size:1.2rem; }
-.disc-filters { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin:1.5rem 0; }
-.disc-filter { padding:.5rem 1.1rem; border:1px solid #ddd; border-radius:50px; background:#fff; cursor:pointer; font-size:.9rem; transition:all .15s; }
-.disc-filter:hover, .disc-filter.active { background:#C8102E; color:#fff; border-color:#C8102E; }
-.disc-section { margin:2rem 0; }
-.disc-section h2 { font-size:1.3rem; margin-bottom:1rem; display:flex; align-items:center; gap:.5rem; }
-.disc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1.2rem; }
-.dcard { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.08); text-decoration:none; color:#222; display:block; }
-.dcard:hover { box-shadow:0 6px 20px rgba(0,0,0,.13); }
-.dcard-img { width:100%; height:160px; background-size:cover; background-position:center; position:relative; display:block; }
-.dcard-badge { position:absolute; top:8px; left:8px; background:#1a9e4b; color:#fff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:20px; }
-.dcard-body { padding:12px 14px 14px; display:block; }
-.dcard-body h3 { margin:0 0 4px; font-size:17px; font-weight:700; color:#222; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.dcard-meta { font-size:13px; color:#777; margin-bottom:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.dcard-tags { display:flex; gap:12px; font-size:12px; color:#666; margin-bottom:10px; }
-.dcard-btn { display:block; width:100%; background:#C8102E; color:#fff; text-align:center; padding:9px; border-radius:8px; font-weight:700; font-size:14px; text-decoration:none; border:none; }
+.disc-hero { background:linear-gradient(135deg,#C8102E,#8B0A1F); color:#fff; text-align:center; padding:3.5rem 1rem 3rem; margin:0 -16px 2rem; border-radius:0 0 24px 24px; }
+.disc-hero h1 { font-size:2.6rem; margin:0 0 .6rem; font-weight:800; letter-spacing:-.5px; }
+.disc-hero p { opacity:.92; font-size:1.15rem; margin:0 0 1.8rem; max-width:600px; margin-left:auto; margin-right:auto; }
+.disc-search { max-width:520px; margin:0 auto; position:relative; }
+.disc-search input { width:100%; padding:1rem 1.2rem 1rem 3.2rem; border:none; border-radius:50px; font-size:1rem; box-shadow:0 4px 20px rgba(0,0,0,.2); }
+.disc-search input:focus { outline:2px solid #fff; outline-offset:2px; }
+.disc-search .s-icon { position:absolute; left:1.2rem; top:50%; transform:translateY(-50%); font-size:1.2rem; opacity:.6; }
+.disc-filters { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin:1.8rem 0; }
+.disc-filter { padding:.55rem 1.2rem; border:1.5px solid #e0e0e0; border-radius:50px; background:#fff; cursor:pointer; font-size:.92rem; font-weight:600; transition:all .2s; color:#555; }
+.disc-filter:hover { border-color:#C8102E; color:#C8102E; transform:translateY(-1px); }
+.disc-filter.active { background:#C8102E; color:#fff; border-color:#C8102E; box-shadow:0 3px 12px rgba(200,16,46,.3); }
+.disc-section { margin:2.2rem 0; }
+.disc-section h2 { font-size:1.4rem; margin-bottom:1.2rem; font-weight:700; color:#222; }
+.disc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.4rem; }
+.dcard { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.08); text-decoration:none; color:#222; display:block; transition:all .25s ease; border:1px solid #f0f0f0; }
+.dcard:hover { box-shadow:0 8px 28px rgba(0,0,0,.15); transform:translateY(-4px); border-color:#e0e0e0; }
+.dcard-img { width:100%; height:180px; background-size:cover; background-position:center; position:relative; display:block; }
+.dcard-img::after { content:''; position:absolute; bottom:0; left:0; right:0; height:60px; background:linear-gradient(transparent, rgba(0,0,0,.4)); }
+.dcard-badge { position:absolute; top:10px; left:10px; background:#1a9e4b; color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:20px; z-index:2; box-shadow:0 2px 8px rgba(0,0,0,.2); }
+.dcard-status { position:absolute; top:10px; right:10px; font-size:11px; font-weight:700; padding:5px 12px; border-radius:20px; z-index:2; }
+.dcard-status.open { background:#fff; color:#1a9e4b; }
+.dcard-status.closed { background:rgba(0,0,0,.7); color:#fff; }
+.dcard-body { padding:14px 16px 16px; display:block; }
+.dcard-body h3 { margin:0 0 5px; font-size:18px; font-weight:700; color:#1a1a1a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; letter-spacing:-.3px; }
+.dcard-meta { font-size:13.5px; color:#777; margin-bottom:10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.dcard-tags { display:flex; gap:12px; font-size:12.5px; color:#666; margin-bottom:12px; align-items:center; }
+.dcard-tags .rating { color:#e6a817; font-weight:700; }
+.dcard-btn { display:block; width:100%; background:#C8102E; color:#fff; text-align:center; padding:10px; border-radius:10px; font-weight:700; font-size:14.5px; text-decoration:none; border:none; transition:background .2s; }
 .dcard-btn:hover { background:#a00d26; color:#fff; }
+.disc-empty { text-align:center; padding:4rem 1rem; }
+.disc-empty .big { font-size:4rem; margin-bottom:1rem; }
+.disc-empty h3 { font-size:1.5rem; margin-bottom:.5rem; color:#333; }
+.disc-empty p { color:#777; font-size:1.05rem; }
+.disc-cta { text-align:center; padding:3rem 1rem 3.5rem; background:#fafafa; border-radius:20px; margin:2rem 0; }
+.disc-cta h3 { font-size:1.6rem; margin-bottom:.5rem; color:#222; }
+.disc-cta p { color:#777; margin-bottom:1.5rem; font-size:1.05rem; }
+@media (max-width:600px) {
+  .disc-hero h1 { font-size:2rem; }
+  .disc-hero { padding:2.5rem 1rem 2rem; }
+  .disc-grid { grid-template-columns:1fr; }
+}
 </style>
 
 <div class="disc-hero">
@@ -77,7 +96,7 @@ $discSubtitle = setting_get('discover_subtitle', 'Order directly from the restau
     </div>
   <?php else: ?>
     <div class="disc-section">
-      <h2>🔥 All Restaurants (<?= count($stores) ?>)</h2>
+      <h2>All Restaurants <span style="color:#999;font-weight:400;font-size:1rem">(<?= count($stores) ?>)</span></h2>
       <div class="disc-grid" id="discGrid">
         <?php foreach ($stores as $s):
           $tpl = $tplInfo[$s['template']] ?? ['name' => $s['template'], 'img' => 'assets/landing/t1-pizza.jpg', 'emoji' => '🍴'];
@@ -86,17 +105,18 @@ $discSubtitle = setting_get('discover_subtitle', 'Order directly from the restau
         ?>
         <a class="dcard" href="/<?= e($s['slug']) ?>/" data-tpl="<?= e($s['template']) ?>" data-name="<?= e(strtolower($s['name'] . ' ' . $tpl['name'] . ' ' . ($s['city'] ?? ''))) ?>">
           <span class="dcard-img" style="background-image:url('<?= e($tpl['img']) ?>')">
-            <span class="dcard-badge">🛵 Order Direct</span>
+            <span class="dcard-badge">Order Direct</span>
           </span>
           <span class="dcard-body">
             <h3><?= e($s['name']) ?></h3>
-            <div class="dcard-meta"><?= e($tpl['emoji']) ?> <?= e($tpl['name']) ?> · 📍 <?= e($s['city'] ?: 'Pakistan') ?></div>
+            <div class="dcard-meta"><?= e($tpl['name']) ?> · <?= e($s['city'] ?: 'Pakistan') ?></div>
             <div class="dcard-tags">
               <?php if ((int)$s['order_count'] > 0): ?>
                 <span>📦 <?= (int)$s['order_count'] ?> orders</span>
               <?php else: ?>
-                <span>✨ New</span>
+                <span style="color:#1a9e4b;font-weight:600">✨ New on Assanio</span>
               <?php endif; ?>
+              <span style="margin-left:auto;color:#999">No commission</span>
             </div>
             <span class="dcard-btn">View Menu →</span>
           </span>
@@ -106,10 +126,10 @@ $discSubtitle = setting_get('discover_subtitle', 'Order directly from the restau
     </div>
   <?php endif; ?>
 
-  <div style="text-align:center; padding:2.5rem 1rem 3rem;">
+  <div class="disc-cta">
     <h3>Own a restaurant?</h3>
-    <p style="color:#777">Get your own website + WhatsApp ordering. Setup FREE with yearly billing.</p>
-    <a class="rp-btn rp-btn-red" href="register.php" style="font-size:1.05rem;padding:.8rem 2rem">Claim My Free Setup →</a>
+    <p>Get your own website + WhatsApp ordering. Setup FREE with yearly billing.</p>
+    <a class="rp-btn rp-btn-red" href="register.php" style="font-size:1.05rem;padding:.85rem 2.2rem;border-radius:50px">Claim My Free Setup →</a>
   </div>
 </div>
 
