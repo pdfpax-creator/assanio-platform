@@ -1,0 +1,632 @@
+{
+  "about": {
+    "heading": "An Evening Worth Taking Your Time For",
+    "image": "images/interior.jpg",
+    "imageAlt": "Candlelit dining salon at NOORÉ, Islamabad",
+    "kicker": "Our Philosophy",
+    "para1": "NOORÉ began with a simple conviction: Pakistani cuisine deserves the same reverence the world gives to French or Japanese fine dining. Our kitchen works with seasonal ingredients, heritage recipes, and a tandoor that has not gone cold since our first night.",
+    "para2": "Every course is composed, not cooked — charcoal-smoked starters, slow-braised mains, and desserts finished with edible gold. Dine in our candlelit salon in Kohsar Market, where the pace is deliberate and the evening is the point.",
+    "stats": [
+      {
+        "label": "Course Tasting Menu",
+        "value": "7"
+      },
+      {
+        "label": "Guest Rating",
+        "value": "4.9"
+      },
+      {
+        "label": "Seats Per Evening",
+        "value": "120"
+      }
+    ]
+  },
+  "announcement": {
+    "enabled": true,
+    "link": "#reservation",
+    "linkText": "Reserve",
+    "text": "Now accepting private event bookings for December"
+  },
+  "cart": {
+    "addButton": "ADD +",
+    "addressPh": "House, street, area",
+    "browseMenu": "Browse Menu",
+    "couponApply": "Apply",
+    "couponInvalid": "That code doesn't look right. Try again.",
+    "couponPh": "Promo code",
+    "discountLabel": "Discount",
+    "drawerTitle": "Your Order",
+    "emptyText": "Your order is empty",
+    "formError": "Please fill name, phone and address.",
+    "namePh": "Your name",
+    "notesPh": "Occasion, allergies, seating preferences? (optional)",
+    "orderButton": "Order via WhatsApp",
+    "payNote": "Pay at the restaurant or via WhatsApp",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "phonePh": "03xx xxxxxxx",
+    "subtotal": "Subtotal",
+    "successText": "Our team will confirm on WhatsApp shortly.",
+    "successTitle": "Order sent!",
+    "toastAdded": "Added to your order",
+    "totalLabel": "Total",
+    "webOrderButton": "Place Order — Cash on Delivery",
+    "webSuccessTitle": "Order placed!",
+    "webSuccessText": "Thank you! Your order {orderId} has been received. The restaurant will call to confirm shortly.",
+    "webCodNote": "Please keep cash ready — pay on delivery.",
+    "webErrorText": "Sorry, your order could not be placed. Please check your connection and try again.",
+    "minOrderError": "Minimum order is Rs {min}"
+  },
+  "coupons": [
+    {
+      "code": "NOORE15",
+      "label": "15% off with code NOORE15",
+      "type": "percent",
+      "value": 15
+    }
+  ],
+  "dealOfDay": {
+    "ctaText": "Reserve This Experience",
+    "endedText": "Tonight's seating is closed — reserve for tomorrow.",
+    "endsAt": "23:30",
+    "endsLabel": "Tonight's seating ends in",
+    "label": "Chef's Special — Tonight",
+    "offer": "7-Course Tasting Menu",
+    "oldPrice": "Rs 7,999",
+    "price": "Rs 6,500",
+    "tag": "Tonight Only",
+    "text": "A guided journey through the season's finest courses — from smoked starters to gold-leaf dessert — composed by our executive chef."
+  },
+  "deals": {
+    "heading": "Tasting & Private Dining",
+    "items": [
+      {
+        "desc": "Seven guided courses from our executive chef — smoked starters, tandoor specialties, mains, and a gold-leaf finale. Pairings available on request.",
+        "img": "images/hero-dish.jpg",
+        "name": "Chef's Tasting",
+        "offer": "7 Courses · Per Guest",
+        "price": "Rs 6,500",
+        "tag": "Signature"
+      },
+      {
+        "desc": "A complete evening for two — tasting menu, candlelit corner table, and a shared gold-leaf kulfi to finish.",
+        "img": "images/table.jpg",
+        "name": "Dinner for Two",
+        "offer": "Tasting for 2 + Corner Table",
+        "price": "Rs 7,999",
+        "tag": "Most Loved"
+      },
+      {
+        "desc": "Our private salon for up to 12 guests — dedicated service, customized menu, and complete privacy for celebrations and corporate evenings.",
+        "img": "images/interior.jpg",
+        "name": "Private Dining",
+        "offer": "Salon for 12 · Custom Menu",
+        "price": "Rs 12,000",
+        "tag": ""
+      }
+    ],
+    "kicker": "Curated Experiences",
+    "note": "Tasting menus require a reservation. Please book at least 4 hours ahead.",
+    "subtitle": "Compose your evening — guided tastings and private salons."
+  },
+  "delivery": {
+    "areas": [
+      "F-6",
+      "F-7",
+      "E-7",
+      "F-8",
+      "DHA Phase 2",
+      "Blue Area"
+    ],
+    "heading": "Fine Dining, Delivered",
+    "kicker": "Delivery Areas",
+    "note": "Delivered in insulated luxury packaging. Outside these areas? Call us — we'll try our best."
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "a": "Smart elegant. Jackets are not required, but we appreciate guests dressing for the occasion — no shorts or flip-flops in the evening.",
+        "q": "Is there a dress code?"
+      },
+      {
+        "a": "Yes — our private salon seats up to 12 guests with a customized menu and dedicated service. Book via the reservation form or WhatsApp at least 48 hours ahead.",
+        "q": "Do you offer private dining?"
+      },
+      {
+        "a": "Complimentary valet parking every evening from 6:00 PM at our Kohsar Market entrance.",
+        "q": "Is valet parking available?"
+      },
+      {
+        "a": "Absolutely. Tell us in the order notes or when reserving — our kitchen accommodates vegetarian, halal-conscious, and allergy-aware requests.",
+        "q": "Can you handle dietary restrictions?"
+      },
+      {
+        "a": "For weekends, we recommend 2–3 days ahead. Tasting menus need at least 4 hours' notice; private dining needs 48 hours.",
+        "q": "How far ahead should I reserve?"
+      },
+      {
+        "a": "Yes, within F-6, F-7, E-7, F-8, DHA Phase 2 and Blue Area — in insulated packaging that keeps everything at the right temperature.",
+        "q": "Do you deliver?"
+      }
+    ],
+    "kicker": "Good to Know"
+  },
+  "footer": {
+    "about": "Contemporary Pakistani fine dining in Kohsar Market, Islamabad — heritage recipes, cinematic plating, and evenings worth taking your time for.",
+    "copyright": "© 2026 NOORÉ Islamabad. All rights reserved.",
+    "credit": "Demo Experience for Islamabad",
+    "hoursText": "Tuesday – Sunday, 12:00 PM – 11:30 PM. Complimentary valet parking evenings.",
+    "quickLinks": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Tasting Menus"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Contact"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "The NOORÉ Collection",
+    "items": [
+      {
+        "img": "images/hero-dish.jpg",
+        "text": "Smoked, gold-finished, unforgettable",
+        "title": "Signature Lamb Chops"
+      },
+      {
+        "img": "images/interior.jpg",
+        "text": "Candlelit warmth, architectural calm",
+        "title": "The Salon"
+      },
+      {
+        "img": "images/dessert.jpg",
+        "text": "Edible gold over slow-churned kulfi",
+        "title": "Gold-Leaf Kulfi"
+      },
+      {
+        "img": "images/table.jpg",
+        "text": "Set for an unhurried evening",
+        "title": "Table for Two"
+      }
+    ],
+    "kicker": "Visual Journal",
+    "subtitle": "A glimpse of the salon, the courses, and the candlelight."
+  },
+  "header": {
+    "logoText": "NOORÉ",
+    "nav": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Tasting Menus"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Location"
+      }
+    ],
+    "orderText": "Reserve a Table"
+  },
+  "hero": {
+    "badge": "Kohsar Market, Islamabad",
+    "ctaHref": "#menu",
+    "ctaText": "Explore Menu",
+    "headline": "A Different Kind of Dining.",
+    "image": "images/hero-dish.jpg",
+    "imageAlt": "Smoked lamb chops plated at NOORÉ",
+    "subtext": "Contemporary Pakistani flavours, thoughtfully prepared in the diplomatic heart of Islamabad."
+  },
+  "hours": {
+    "close": "23:30",
+    "note": "Tue–Sun",
+    "open": "12:00"
+  },
+  "howOrder": {
+    "heading": "How Your Evening Works",
+    "kicker": "Effortless",
+    "steps": [
+      {
+        "n": "1",
+        "text": "Explore the tasting menus and à la carte — every dish with honest PKR pricing.",
+        "title": "Browse the courses"
+      },
+      {
+        "n": "2",
+        "text": "Book your table in seconds, or order dinner delivered to your doorstep.",
+        "title": "Reserve or order"
+      },
+      {
+        "n": "3",
+        "text": "Valet, courses, candlelight — all confirmed personally on WhatsApp.",
+        "title": "We take it from here"
+      }
+    ]
+  },
+  "location": {
+    "heading": "Visit NOORÉ",
+    "kicker": "Find Us",
+    "mapQuery": "Kohsar Market F-6 Islamabad",
+    "text": "Step into our candlelit salon in Kohsar Market — heritage recipes, cinematic plating, and an evening composed around you."
+  },
+  "menu": {
+    "categories": [
+      {
+        "desc": "Composed Beginnings",
+        "icon": "restaurant",
+        "id": "starters",
+        "items": [
+          {
+            "desc": "Charcoal-smoked hummus, saffron oil, warm naan crisps.",
+            "img": "images/hero-dish.jpg",
+            "name": "Smoked Hummus",
+            "price": "Rs 1,200",
+            "tag": "Chef's Pick"
+          },
+          {
+            "desc": "Velvet saffron broth, cream swirl, toasted almonds.",
+            "img": "",
+            "name": "Saffron Soup",
+            "price": "Rs 950",
+            "tag": ""
+          },
+          {
+            "desc": "Seared halloumi, honey-chili glaze, micro herbs.",
+            "img": "",
+            "name": "Crispy Halloumi",
+            "price": "Rs 1,350",
+            "tag": ""
+          },
+          {
+            "desc": "Creamy burrata, charred figs, balsamic pearls, rocket.",
+            "img": "",
+            "name": "Burrata & Charred Fig",
+            "price": "Rs 1,650",
+            "tag": ""
+          }
+        ],
+        "name": "Starters"
+      },
+      {
+        "desc": "From the Clay Oven",
+        "icon": "outdoor_grill",
+        "id": "tandoor",
+        "items": [
+          {
+            "desc": "Charred lamb chops, smoked garlic butter, gold dust, micro herbs.",
+            "img": "images/hero-dish.jpg",
+            "name": "Tandoori Lamb Chops",
+            "price": "Rs 2,800",
+            "tag": "Signature"
+          },
+          {
+            "desc": "Saffron-marinated chicken tikka, mint emulsion.",
+            "img": "",
+            "name": "Saffron Chicken Tikka",
+            "price": "Rs 1,450",
+            "tag": ""
+          },
+          {
+            "desc": "Tandoor-fired sea bass, turmeric beurre blanc, charred lemon.",
+            "img": "",
+            "name": "Tandoori Sea Bass",
+            "price": "Rs 2,400",
+            "tag": ""
+          },
+          {
+            "desc": "Creamy malai boti skewers, smoked onion jam.",
+            "img": "",
+            "name": "Malai Boti Skewers",
+            "price": "Rs 1,650",
+            "tag": ""
+          }
+        ],
+        "name": "From the Tandoor"
+      },
+      {
+        "desc": "Heirloom Recipes, Reimagined",
+        "icon": "lunch_dining",
+        "id": "mains",
+        "items": [
+          {
+            "desc": "Deconstructed chapli kebab, spiced jus, saffron aioli.",
+            "img": "images/hero-dish.jpg",
+            "name": "Chapli Royale",
+            "price": "Rs 1,850",
+            "tag": "Signature"
+          },
+          {
+            "desc": "Twelve-hour braised lamb shank, smoked aubergine, jus.",
+            "img": "",
+            "name": "Slow-Braised Lamb Shank",
+            "price": "Rs 2,950",
+            "tag": ""
+          },
+          {
+            "desc": "Free-range chicken karahi, tomato confit, ginger pearls.",
+            "img": "",
+            "name": "Saffron Chicken Karahi",
+            "price": "Rs 1,950",
+            "tag": ""
+          },
+          {
+            "desc": "Wild mushroom risotto, truffle oil, aged parmesan.",
+            "img": "",
+            "name": "Wild Mushroom Risotto",
+            "price": "Rs 1,750",
+            "tag": ""
+          }
+        ],
+        "name": "Main Courses"
+      },
+      {
+        "desc": "Saffron, Steam & Patience",
+        "icon": "rice_bowl",
+        "id": "rice",
+        "items": [
+          {
+            "desc": "Aged basmati, saffron threads, caramelized onions, tender chicken.",
+            "img": "",
+            "name": "Saffron Biryani",
+            "price": "Rs 1,450",
+            "tag": ""
+          },
+          {
+            "desc": "Slow-cooked khichdi, truffle oil, crispy shallots.",
+            "img": "",
+            "name": "Truffle Khichdi",
+            "price": "Rs 1,250",
+            "tag": ""
+          },
+          {
+            "desc": "Chef's signature pulao, dried fruits, brown butter.",
+            "img": "",
+            "name": "NOORÉ Special Pulao",
+            "price": "Rs 1,650",
+            "tag": ""
+          }
+        ],
+        "name": "Rice & Biryani"
+      },
+      {
+        "desc": "A Golden Finale",
+        "icon": "cake",
+        "id": "desserts",
+        "items": [
+          {
+            "desc": "Slow-churned kulfi, edible gold leaf, pistachio dust.",
+            "img": "images/dessert.jpg",
+            "name": "Gold-Leaf Kulfi",
+            "price": "Rs 850",
+            "tag": "Signature"
+          },
+          {
+            "desc": "Silky saffron panna cotta, rose syrup, almond tuile.",
+            "img": "",
+            "name": "Saffron Panna Cotta",
+            "price": "Rs 950",
+            "tag": ""
+          },
+          {
+            "desc": "Crisp chocolate samosa, cardamom cream, gold cocoa.",
+            "img": "",
+            "name": "Chocolate Samosa",
+            "price": "Rs 750",
+            "tag": ""
+          }
+        ],
+        "name": "Desserts"
+      },
+      {
+        "desc": "Infusions & Coolers",
+        "icon": "local_bar",
+        "id": "beverages",
+        "items": [
+          {
+            "desc": "Traditional green tea, served in brass — the NOORÉ way to end an evening.",
+            "img": "",
+            "name": "Kehwa",
+            "price": "Rs 450",
+            "tag": ""
+          },
+          {
+            "desc": "Fresh mint, lime, sparkling water, crushed ice.",
+            "img": "",
+            "name": "Mint Cooler",
+            "price": "Rs 550",
+            "tag": ""
+          },
+          {
+            "desc": "House lemonade brightened with saffron and rose.",
+            "img": "",
+            "name": "Saffron Lemonade",
+            "price": "Rs 650",
+            "tag": ""
+          },
+          {
+            "desc": "Slow-brewed chai over ice, cinnamon smoke.",
+            "img": "",
+            "name": "NOORÉ Iced Chai",
+            "price": "Rs 600",
+            "tag": ""
+          }
+        ],
+        "name": "Beverages & Infusions"
+      }
+    ],
+    "heading": "The Menu",
+    "kicker": "Course by Course",
+    "printText": "Print Menu",
+    "subtitle": "Tasting journeys and à la carte offerings from heritage recipes and seasonal finesse."
+  },
+  "qr": {
+    "downloadText": "Download QR Menu",
+    "heading": "The Menu at Your Table",
+    "kicker": "Contactless Dining",
+    "note": "Demo QR — replace with restaurant URL",
+    "text": "Scan to open the full menu on your phone — browse courses, tasting menus, and send your order straight to our kitchen."
+  },
+  "reservation": {
+    "button": "Reserve via WhatsApp",
+    "dateLabel": "Date",
+    "formError": "Please fill all fields correctly.",
+    "guestsLabel": "Guests",
+    "heading": "Book a Table",
+    "kicker": "Reservations",
+    "message": "*Table Reservation — {site}*\nName: {name}\nPhone: {phone}\nDate: {date}\nTime: {time}\nGuests: {guests}",
+    "nameLabel": "Your name",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "phoneLabel": "Phone number",
+    "text": "An evening at NOORÉ begins with a reservation. Tell us when, and our team will confirm personally on WhatsApp — with your table waiting.",
+    "timeLabel": "Time"
+  },
+  "reviews": {
+    "heading": "Guest Impressions",
+    "items": [
+      {
+        "meta": "Islamabad",
+        "name": "Ayesha K.",
+        "text": "An evening worth taking your time for. The tasting menu flows like a story, and the gold-leaf kulfi is pure theatre."
+      },
+      {
+        "meta": "F-7, Islamabad",
+        "name": "Daniyal R.",
+        "text": "The lamb chops are the best I have had outside of fine-dining abroad. Candlelight, calm service, flawless pacing."
+      },
+      {
+        "meta": "DHA, Islamabad",
+        "name": "Mahnoor S.",
+        "text": "Booked the private salon for my father's 60th. The team customized the menu and treated us like royalty."
+      },
+      {
+        "meta": "E-7, Islamabad",
+        "name": "Fahad M.",
+        "text": "Chapli Royale is genius — a street classic elevated without losing its soul. This place understands Pakistani food."
+      },
+      {
+        "meta": "Blue Area, Islamabad",
+        "name": "Sana T.",
+        "text": "Quiet, cinematic, and the saffron panna cotta might be the best dessert in the city right now."
+      },
+      {
+        "meta": "F-6, Islamabad",
+        "name": "Omar J.",
+        "text": "Seven courses, not one misstep. NOORÉ has quietly become Islamabad's finest table."
+      }
+    ],
+    "kicker": "Guest Book",
+    "note": "Sample reviews for template demonstration — replace with real guest feedback."
+  },
+  "site": {
+    "_demoNote": "DEMO: whatsappDigits/phoneDigits = owner's test number 03193722519. Replace with the customer's real numbers at customer setup.",
+    "address": "Shop 4, Kohsar Market, F-6/3, Islamabad",
+    "coverage": "F-6, F-7, E-7, F-8, DHA Phase 2 & surroundings",
+    "hours": "Tue – Sun, 12:00 PM – 11:30 PM",
+    "mapQuery": "Kohsar Market F-6 Islamabad",
+    "name": "NOORÉ",
+    "checkoutMode": "whatsapp",
+    "phone": "0319 3722519",
+    "phoneDigits": "923193722519",
+    "whatsappDigits": "923193722519",
+    "deliveryFee": 0,
+    "minOrderValue": 0,
+    "payments": {
+      "cod": true,
+      "easypaisa": false,
+      "bank": false
+    }
+  },
+  "socials": [
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/nooreislamabad"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/noore.islamabad"
+    },
+    {
+      "platform": "youtube",
+      "url": "https://youtube.com/@nooreislamabad"
+    }
+  ],
+  "theme": {
+    "accent": "#c9a227",
+    "animations": true,
+    "bodyFont": "Inter",
+    "headingFont": "Playfair Display",
+    "palette": "gold",
+    "primary": "#ecc246"
+  },
+  "trustRow": [
+    {
+      "icon": "candle",
+      "text": "Candlelit salon, unhurried pacing",
+      "title": "Fine-Dining Ambience"
+    },
+    {
+      "icon": "restaurant_menu",
+      "text": "Seasonal 7-course chef's menu",
+      "title": "Curated Tasting"
+    },
+    {
+      "icon": "local_parking",
+      "text": "Complimentary every evening",
+      "title": "Valet Parking"
+    }
+  ],
+  "visibility": {
+    "about": true,
+    "announcement": true,
+    "deals": true,
+    "delivery": true,
+    "dotd": true,
+    "faq": true,
+    "footer": true,
+    "gallery": true,
+    "hero": true,
+    "howOrder": true,
+    "location": true,
+    "menu": true,
+    "qr": true,
+    "reservation": true,
+    "reviews": true,
+    "trust": true,
+    "waSignup": true
+  },
+  "waSignup": {
+    "button": "Join the Private List",
+    "heading": "First to Know",
+    "message": "Assalam-o-Alaikum! Please add me to NOORÉ's private guest list.",
+    "text": "Join our private list for seasonal tasting menus, chef's-table evenings and December event bookings. No noise — only the evenings worth knowing about."
+  },
+  "whatsapp": {
+    "dealMessage": "Assalam-o-Alaikum! I would like to reserve the {deal} for {price}",
+    "dotdMessage": "Assalam-o-Alaikum! I would like to reserve tonight's Chef's Special ({offer} for {price})",
+    "orderMessage": "Assalam-o-Alaikum! I would like to order from {name}"
+  }
+}

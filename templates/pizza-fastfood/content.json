@@ -1,0 +1,535 @@
+{
+  "about": {
+    "kicker": "Our Story",
+    "heading": "Fired Up in Bahria Town",
+    "para1": "Crust House started with one roaring wood-fired oven and a family recipe for dough proofed fresh every morning. No shortcuts, no frozen bases — just flour, fire and patience.",
+    "para2": "Today our Bahria Town Phase 4 kitchen serves thousands of happy customers, but every pizza still gets the same treatment: hand-stretched, stone-baked at 900°C, and rushed to your door while the cheese is still pulling.",
+    "image": "images/chef-oven.jpg",
+    "imageAlt": "Chef baking a pizza in the wood-fired oven",
+    "stats": [
+      {
+        "value": "15k+",
+        "label": "Orders Delivered"
+      },
+      {
+        "value": "4.9",
+        "label": "Average Rating"
+      },
+      {
+        "value": "30 min",
+        "label": "Avg. Delivery Time"
+      }
+    ]
+  },
+  "cart": {
+    "drawerTitle": "Your Cart",
+    "emptyText": "Your cart is empty",
+    "browseMenu": "Browse Menu",
+    "subtotal": "Subtotal",
+    "payNote": "Pay on delivery / via WhatsApp",
+    "namePh": "Your name",
+    "phonePh": "03xx xxxxxxx",
+    "addressPh": "House, street, area",
+    "notesPh": "Anything we should know? (optional)",
+    "orderButton": "Order via WhatsApp",
+    "toastAdded": "Added to cart",
+    "formError": "Please fill name, phone and address.",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "successTitle": "Order sent!",
+    "successText": "The restaurant will confirm on WhatsApp.",
+    "addButton": "ADD +",
+    "webOrderButton": "Place Order — Cash on Delivery",
+    "webSuccessTitle": "Order placed!",
+    "webSuccessText": "Thank you! Your order {orderId} has been received. The restaurant will call to confirm shortly.",
+    "webCodNote": "Please keep cash ready — pay on delivery.",
+    "webErrorText": "Sorry, your order could not be placed. Please check your connection and try again.",
+    "minOrderError": "Minimum order is Rs {min}"
+  },
+  "dealOfDay": {
+    "ctaText": "Order This Deal",
+    "label": "Deal of the Day",
+    "offer": "2 Large Pizzas + 1.5L Drink",
+    "oldPrice": "Rs 3,600",
+    "price": "Rs 2,999",
+    "tag": "Today Only",
+    "text": "Perfect for sharing. Freshly baked to order with premium melted mozzarella.",
+    "endsAt": "23:59",
+    "endsLabel": "Ends in",
+    "endedText": "Deal ended — new deal tomorrow!"
+  },
+  "deals": {
+    "heading": "Combo Deals",
+    "items": [
+      {
+        "desc": "Choose any two gourmet pizzas from our oven lineup, accompanied with an ice-cold 1.5L bottle.",
+        "img": "images/chef-oven.jpg",
+        "name": "Family Deal",
+        "offer": "2 Large Pizzas + 1.5L Drink",
+        "price": "Rs 2,999",
+        "tag": "Most Popular"
+      },
+      {
+        "desc": "The ultimate squad feast combining crispy fried zingers, a sizzling hot large pizza, and two chilled sodas.",
+        "img": "images/burger.jpg",
+        "name": "Friends Deal",
+        "offer": "1 Large Pizza + 2 Zinger Burgers + 2 Drinks",
+        "price": "Rs 2,499",
+        "tag": ""
+      },
+      {
+        "desc": "Quick solo treat — a hot personal pizza with loaded fries and a chilled drink.",
+        "img": "images/fries.jpg",
+        "name": "Snack Deal",
+        "offer": "1 Personal Pizza + Fries + Drink",
+        "price": "Rs 899",
+        "tag": ""
+      }
+    ],
+    "kicker": "Value Packs",
+    "note": "Valid for Dine-in, Takeaway & Delivery",
+    "subtitle": "Carefully bundled combos designed for value and taste."
+  },
+  "delivery": {
+    "kicker": "Delivery Areas",
+    "heading": "We Deliver to Your Doorstep",
+    "areas": [
+      "Bahria Town Phase 1–6",
+      "DHA Phase 1",
+      "Rawat",
+      "Islamabad Expressway",
+      "PWD",
+      "Sawan Garden"
+    ],
+    "note": "Outside these areas? Call us — we’ll try our best."
+  },
+  "faq": {
+    "kicker": "Good to Know",
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Is there a minimum order for delivery?",
+        "a": "Yes — Rs 500 for delivery orders. There’s no minimum for dine-in or takeaway."
+      },
+      {
+        "q": "How long does delivery take?",
+        "a": "Usually 30–45 minutes inside Bahria Town, depending on rush hours. We’ll always confirm your time on WhatsApp."
+      },
+      {
+        "q": "Which payment methods do you accept?",
+        "a": "Cash on delivery, JazzCash and Easypaisa. Online card payments are coming soon."
+      },
+      {
+        "q": "Do you deliver late at night?",
+        "a": "Yes! We’re open daily till 1:00 AM, and late-night delivery is active across our delivery areas."
+      },
+      {
+        "q": "Can I customize my pizza?",
+        "a": "Absolutely — extra cheese, extra toppings or no onions, just write it in the order notes and we’ll make it happen."
+      }
+    ]
+  },
+  "footer": {
+    "about": "Rawalpindi's favourite fiery stone-baked pizzas, loaded fries and family deals — served hot from Bahria Town Phase 4.",
+    "copyright": "© 2025 Crust House. All rights reserved.",
+    "credit": "Demo Experience for Bahria Town Phase 4",
+    "hoursText": "Monday – Sunday, 12:00 PM – 1:00 AM. Late Night Delivery Active.",
+    "quickLinks": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Deals"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Contact"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "Straight From Our Kitchen",
+    "items": [
+      {
+        "img": "images/chef-oven.jpg",
+        "text": "900°C wood-fired baking",
+        "title": "Stone Oven Fire"
+      },
+      {
+        "img": "images/hero-pizza.jpg",
+        "text": "Double mozzarella edges",
+        "title": "Cheese Pull"
+      },
+      {
+        "img": "images/burger.jpg",
+        "text": "Golden fried crunch",
+        "title": "Crisp Zinger"
+      },
+      {
+        "img": "images/fries.jpg",
+        "text": "Cheddar, chicken & jalapeños",
+        "title": "Loaded Fries"
+      }
+    ],
+    "kicker": "Visual Showcase",
+    "subtitle": "Wood-fired ovens, molten cheese pulls and honest fast-casual craft."
+  },
+  "header": {
+    "logoText": "CRUST HOUSE",
+    "nav": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Deals"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Location"
+      }
+    ],
+    "orderText": "Order Now"
+  },
+  "hero": {
+    "badge": "Bahria Town Phase 4, Rawalpindi",
+    "ctaHref": "#menu",
+    "ctaText": "Explore Menu",
+    "headline": "Big Flavour. Fresh From The Oven.",
+    "image": "images/hero-pizza.jpg",
+    "imageAlt": "Freshly baked chicken tikka pizza close-up",
+    "subtext": "Hand-stretched pizzas, loaded burgers and family deals in Bahria Town. Crafted with fiery stone-baked heat and authentic local spices."
+  },
+  "howOrder": {
+    "kicker": "Easy as 1-2-3",
+    "heading": "How Ordering Works",
+    "steps": [
+      {
+        "n": "1",
+        "title": "Browse the menu",
+        "text": "Explore pizzas, burgers, sides and deals — everything with honest PKR prices."
+      },
+      {
+        "n": "2",
+        "title": "Add to cart",
+        "text": "Tap ADD on anything you like. Change quantities anytime before checkout."
+      },
+      {
+        "n": "3",
+        "title": "Order on WhatsApp",
+        "text": "One tap sends your full order to our WhatsApp. We confirm instantly."
+      }
+    ]
+  },
+  "location": {
+    "heading": "Visit Crust House",
+    "kicker": "Outlet Details",
+    "mapQuery": "Bahria Town Phase 4 Rawalpindi",
+    "text": "Experience the aroma of authentic wood-fired crusts fresh out of the deck oven. Dine-in seats and express drive-up takeaway available."
+  },
+  "menu": {
+    "categories": [
+      {
+        "desc": "5 Handcrafted Stone-Baked Varieties",
+        "icon": "local_pizza",
+        "id": "pizzas",
+        "items": [
+          {
+            "desc": "Charred tikka chunks, spiced marinara, mozzarella, fresh onions and cilantro sprigs.",
+            "img": "images/hero-pizza.jpg",
+            "name": "Chicken Tikka Pizza",
+            "price": "Rs 1,499",
+            "tag": "Bestseller"
+          },
+          {
+            "desc": "Grilled fajita chicken, crisp bell capsicum, black olives, sweetcorn and aromatic herbs.",
+            "img": "images/hero-pizza.jpg",
+            "name": "Fajita Supreme Pizza",
+            "price": "Rs 1,599",
+            "tag": ""
+          },
+          {
+            "desc": "Creamy malai boti chicken, melted mozzarella, roasted garlic drizzle and mild green chilies.",
+            "img": "images/hero-pizza.jpg",
+            "name": "Malai Boti Pizza",
+            "price": "Rs 1,699",
+            "tag": ""
+          },
+          {
+            "desc": "Double beef pepperoni slices, slow-simmered marinara, Italian herbs and rich mozzarella.",
+            "img": "images/hero-pizza.jpg",
+            "name": "Pepperoni Pizza",
+            "price": "Rs 1,799",
+            "tag": ""
+          },
+          {
+            "desc": "Rich slow-simmered tomato sauce, fragrant fresh basil leaves and premium double mozzarella.",
+            "img": "images/hero-pizza.jpg",
+            "name": "Margherita Pizza",
+            "price": "Rs 1,099",
+            "tag": ""
+          }
+        ],
+        "name": "Pizzas"
+      },
+      {
+        "desc": "3 Crispy & Smashed Specialties",
+        "icon": "lunch_dining",
+        "id": "burgers",
+        "items": [
+          {
+            "desc": "Crispy spiced fried chicken breast, chipotle mayo, crunchy iceberg lettuce in a toasted brioche bun.",
+            "img": "images/burger.jpg",
+            "name": "Zinger Burger",
+            "price": "Rs 599",
+            "tag": "Favorite"
+          },
+          {
+            "desc": "Double smashed beef patties, melted sharp cheddar, caramelized brown onions and signature house relish.",
+            "img": "images/burger.jpg",
+            "name": "Beef Smash Burger",
+            "price": "Rs 899",
+            "tag": ""
+          },
+          {
+            "desc": "Grilled shredded chicken, creamy garlic mayo, crisp garden lettuce wrapped tightly in a soft tortilla.",
+            "img": "images/burger.jpg",
+            "name": "Chicken Cheese Wrap",
+            "price": "Rs 499",
+            "tag": ""
+          }
+        ],
+        "name": "Burgers & Wraps"
+      },
+      {
+        "desc": "3 Crispy & Cheesy Extras",
+        "icon": "tapas",
+        "id": "sides",
+        "items": [
+          {
+            "desc": "Golden fries smothered in melted cheddar sauce, spicy grilled chicken bites, jalapeños & house sauce.",
+            "img": "images/fries.jpg",
+            "name": "Loaded Fries",
+            "price": "Rs 499",
+            "tag": ""
+          },
+          {
+            "desc": "Warm toasted baguette slices loaded with herb-infused garlic butter and golden melted cheese.",
+            "img": "images/fries.jpg",
+            "name": "Garlic Bread",
+            "price": "Rs 349",
+            "tag": ""
+          },
+          {
+            "desc": "Crispy chicken wings tossed generously in smokey spicy peri-peri glaze.",
+            "img": "images/fries.jpg",
+            "name": "Chicken Wings, 6 Pieces",
+            "price": "Rs 699",
+            "tag": ""
+          }
+        ],
+        "name": "Sides"
+      },
+      {
+        "desc": "3 Cold Refreshments",
+        "icon": "local_bar",
+        "id": "drinks",
+        "items": [
+          {
+            "desc": "Chilled 345ml can — Coca-Cola, Sprite, or Fanta.",
+            "img": "",
+            "name": "Regular Soft Drink",
+            "price": "Rs 120",
+            "tag": ""
+          },
+          {
+            "desc": "Family sharing chilled bottle for squad celebrations.",
+            "img": "",
+            "name": "1.5L Soft Drink",
+            "price": "Rs 250",
+            "tag": ""
+          },
+          {
+            "desc": "500ml purified cold mineral water.",
+            "img": "",
+            "name": "Mineral Water",
+            "price": "Rs 100",
+            "tag": ""
+          }
+        ],
+        "name": "Drinks"
+      }
+    ],
+    "heading": "Our Menu",
+    "kicker": "Artisanal Stone Bake",
+    "subtitle": "Made fresh. Served hot. Click any category below to reveal items."
+  },
+  "qr": {
+    "downloadText": "Download QR Menu",
+    "heading": "Your Menu, One Scan Away",
+    "kicker": "Contactless Dining",
+    "note": "Demo QR — replace with restaurant URL",
+    "text": "Scan the QR code to open our digital menu on your smartphone. Browse full menu, see live toppings, and place fast takeaway requests."
+  },
+  "reviews": {
+    "heading": "What Bahria Town Is Saying",
+    "items": [
+      {
+        "meta": "Phase 4, Rawalpindi",
+        "name": "Ahmed R.",
+        "text": "The crust was fresh and the family deal was worth it."
+      },
+      {
+        "meta": "Bahria Town, Rawalpindi",
+        "name": "Sana K.",
+        "text": "Good portion sizes and quick service."
+      },
+      {
+        "meta": "Phase 4, Rawalpindi",
+        "name": "Bilal M.",
+        "text": "Loved the chicken tikka pizza. Will order again."
+      }
+    ],
+    "kicker": "Customer Feedback",
+    "note": "Sample reviews for template demonstration — replace with real customer feedback."
+  },
+  "site": {
+    "address": "Shop 12, Commercial Market, Bahria Town Phase 4, Rawalpindi",
+    "coverage": "Bahria Town, DHA 1 & surroundings",
+    "hours": "Daily, 12:00 PM – 1:00 AM",
+    "mapQuery": "Bahria Town Phase 4 Rawalpindi",
+    "name": "Crust House",
+    "checkoutMode": "whatsapp",
+    "phone": "0319 3722519",
+    "phoneDigits": "923193722519",
+    "whatsappDigits": "923193722519",
+    "_demoNote": "DEMO: whatsappDigits/phoneDigits = owner's test number 03193722519. Replace with the customer's real numbers at customer setup.",
+    "deliveryFee": 0,
+    "minOrderValue": 0,
+    "payments": {
+      "cod": true,
+      "easypaisa": false,
+      "bank": false
+    }
+  },
+  "trustRow": [
+    {
+      "icon": "timer",
+      "text": "Hot & sealed packaging",
+      "title": "30 Mins Delivery"
+    },
+    {
+      "icon": "local_pizza",
+      "text": "Proofed daily on-site",
+      "title": "100% Fresh Dough"
+    },
+    {
+      "icon": "verified",
+      "text": "Commercial hub outlet",
+      "title": "Bahria Phase 4"
+    }
+  ],
+  "waSignup": {
+    "heading": "Hungry for deals?",
+    "text": "Join our WhatsApp deals list and be the first to hear about secret discounts, family-deal drops and late-night specials. No spam — only the good stuff.",
+    "button": "Join WhatsApp List",
+    "message": "Assalam-o-Alaikum! Please add me to the deals list."
+  },
+  "whatsapp": {
+    "dealMessage": "Assalam-o-Alaikum! I want to order the {deal} for {price}",
+    "dotdMessage": "Assalam-o-Alaikum! I want to order the Deal of the Day ({offer} for {price})",
+    "orderMessage": "Assalam-o-Alaikum! I want to order from {name}"
+  },
+  "socials": [
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/crusthouse"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/crusthouse"
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@crusthouse"
+    }
+  ],
+  "announcement": {
+    "enabled": true,
+    "text": "Free delivery on orders above Rs 2,000!",
+    "link": "",
+    "linkText": ""
+  },
+  "theme": {
+    "headingFont": "Poppins",
+    "bodyFont": "Inter",
+    "palette": "classic",
+    "primary": "#d62839",
+    "accent": "#f4a261",
+    "animations": true
+  },
+  "visibility": {
+    "announcement": true,
+    "hero": true,
+    "trust": true,
+    "about": true,
+    "dotd": true,
+    "menu": true,
+    "deals": true,
+    "howOrder": true,
+    "gallery": true,
+    "reviews": true,
+    "delivery": true,
+    "faq": true,
+    "location": true,
+    "qr": true,
+    "waSignup": true,
+    "footer": true,
+    "reservation": true
+  },
+  "hours": {
+    "open": "12:00",
+    "close": "01:00",
+    "note": "Daily"
+  },
+  "coupons": [
+    {
+      "code": "CRUST10",
+      "type": "percent",
+      "value": 10,
+      "label": "10% off — applied at checkout"
+    }
+  ],
+  "reservation": {
+    "kicker": "Dine With Us",
+    "heading": "Book a Table",
+    "text": "Planning dinner with family or friends? Reserve your table in seconds — we confirm on WhatsApp.",
+    "nameLabel": "Your name",
+    "phoneLabel": "Phone number",
+    "dateLabel": "Date",
+    "timeLabel": "Time",
+    "guestsLabel": "Guests",
+    "button": "Reserve via WhatsApp",
+    "formError": "Please fill all fields correctly.",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "message": "*Table Reservation — {site}*\nName: {name}\nPhone: {phone}\nDate: {date}\nTime: {time}\nGuests: {guests}"
+  }
+}

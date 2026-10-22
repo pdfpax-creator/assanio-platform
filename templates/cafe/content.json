@@ -1,0 +1,629 @@
+{
+  "about": {
+    "heading": "Made With a Little More Care",
+    "image": "images/pour-over.jpg",
+    "imageAlt": "Barista brewing a slow pour-over coffee",
+    "kicker": "Our Story",
+    "para1": "The Quiet Cup began with a simple idea: good coffee, fresh ingredients and a space that lets you slow down. From your first coffee of the day to a quiet afternoon break, there is always a seat for you.",
+    "para2": "We roast small batches of single-origin beans every morning, bake our croissants at dawn, and keep the room calm enough to read in. No rushing, no noise — just thoughtful coffee and warm things, made slowly.",
+    "stats": [
+      {
+        "label": "Cups Poured",
+        "value": "12k+"
+      },
+      {
+        "label": "Average Rating",
+        "value": "4.9"
+      },
+      {
+        "label": "Perfect Extraction",
+        "value": "92°C"
+      }
+    ]
+  },
+  "announcement": {
+    "enabled": true,
+    "link": "",
+    "linkText": "",
+    "text": "Fresh croissants baked at dawn — order before 10 AM!"
+  },
+  "cart": {
+    "addButton": "ADD +",
+    "addressPh": "House, street, area",
+    "browseMenu": "Browse Menu",
+    "drawerTitle": "Your Order",
+    "emptyText": "Your order tray is empty",
+    "formError": "Please fill name, phone and address.",
+    "namePh": "Your name",
+    "notesPh": "Anything we should know? (optional)",
+    "orderButton": "Order via WhatsApp",
+    "payNote": "Pay on delivery / via WhatsApp",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "phonePh": "03xx xxxxxxx",
+    "subtotal": "Subtotal",
+    "successText": "The cafe will confirm on WhatsApp.",
+    "successTitle": "Order sent!",
+    "toastAdded": "Added to your tray",
+    "couponPh": "Promo code",
+    "couponApply": "Apply",
+    "discountLabel": "Discount",
+    "totalLabel": "Total",
+    "couponInvalid": "That code doesn't look right. Try again.",
+    "webOrderButton": "Place Order — Cash on Delivery",
+    "webSuccessTitle": "Order placed!",
+    "webSuccessText": "Thank you! Your order {orderId} has been received. The restaurant will call to confirm shortly.",
+    "webCodNote": "Please keep cash ready — pay on delivery.",
+    "webErrorText": "Sorry, your order could not be placed. Please check your connection and try again.",
+    "minOrderError": "Minimum order is Rs {min}"
+  },
+  "coupons": [
+    {
+      "code": "QUIET10",
+      "label": "10% off with code QUIET10",
+      "type": "percent",
+      "value": 10
+    }
+  ],
+  "dealOfDay": {
+    "ctaText": "Order This Deal",
+    "endedText": "Deal ended — new deal tomorrow!",
+    "endsAt": "10:00",
+    "endsLabel": "Ends in",
+    "label": "Deal of the Day",
+    "offer": "Coffee & Croissant — Rs 799",
+    "oldPrice": "Rs 950",
+    "price": "Rs 799",
+    "tag": "Today Only",
+    "text": "Your favourite single-origin coffee with a warm, layered French butter croissant — baked at dawn, gone by noon."
+  },
+  "deals": {
+    "heading": "Curated Pairings",
+    "items": [
+      {
+        "desc": "Your favourite single-origin coffee with a warm, layered French butter croissant baked at dawn.",
+        "img": "images/croissant.jpg",
+        "name": "Coffee & Croissant",
+        "offer": "Any Specialty Coffee + Butter Croissant",
+        "price": "Rs 799",
+        "tag": "Morning Pick"
+      },
+      {
+        "desc": "Slow mornings are better shared. Two specialty coffees, two warm croissants and a fresh fruit bowl.",
+        "img": "images/latte-art.jpg",
+        "name": "Morning Ritual for Two",
+        "offer": "2 Specialty Coffees + 2 Croissants + Fruit Bowl",
+        "price": "Rs 1,499",
+        "tag": "Most Loved"
+      },
+      {
+        "desc": "A guided tasting flight of three single-origin pour-overs, a warm pastry and tasting notes to keep.",
+        "img": "images/pour-over.jpg",
+        "name": "Brew Bar Experience",
+        "offer": "Pour-Over Flight + Pastry + Tasting Notes",
+        "price": "Rs 999",
+        "tag": ""
+      }
+    ],
+    "kicker": "Quiet Value",
+    "note": "Valid for Dine-in, Takeaway & Delivery",
+    "subtitle": "Small pairings, thoughtfully priced."
+  },
+  "delivery": {
+    "areas": [
+      "F-7 Markaz",
+      "F-6",
+      "F-8",
+      "E-7",
+      "Margalla Town",
+      "F-10 Markaz"
+    ],
+    "heading": "We Deliver to Your Doorstep",
+    "kicker": "Delivery Areas",
+    "note": "Outside these areas? Call us — we’ll try our best."
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "a": "Yes — fast, free Wi-Fi for all guests. Writers and remote workers are welcome; we just ask you keep calls quiet.",
+        "q": "Do you have free Wi-Fi?"
+      },
+      {
+        "a": "Friendly pets are welcome on our outdoor terrace. Inside seating is reserved for a calm, quiet space.",
+        "q": "Are pets allowed?"
+      },
+      {
+        "a": "Single-origin lots from Ethiopia, Kenya and Brazil, roasted in small batches every morning between 9 and 11.",
+        "q": "Where do your beans come from?"
+      },
+      {
+        "a": "Yes — use the reservation form below and we’ll confirm your table on WhatsApp within minutes.",
+        "q": "Can I reserve a table?"
+      },
+      {
+        "a": "Always. Croissants and pastries are baked at dawn each morning and usually sell out by noon.",
+        "q": "Are the bakes fresh daily?"
+      }
+    ],
+    "kicker": "Good to Know"
+  },
+  "footer": {
+    "about": "A sanctuary for slow mornings, thoughtful conversation, and single-origin craft nestled among the leafy avenues of F-7 Markaz, Islamabad.",
+    "copyright": "© 2026 The Quiet Cup, F-7 Markaz, Islamabad. All rights reserved.",
+    "credit": "Demo Experience for F-7 Markaz, Islamabad",
+    "quickLinks": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Deals"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Contact"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "Glimpses of the Sanctuary",
+    "items": [
+      {
+        "img": "images/latte-art.jpg",
+        "text": "Double-shot flat white, poured slow",
+        "title": "Morning Rituals"
+      },
+      {
+        "img": "images/croissant.jpg",
+        "text": "Layered French butter croissant",
+        "title": "Baked at Dawn"
+      },
+      {
+        "img": "images/pour-over.jpg",
+        "text": "Single-origin Ethiopian pour-over",
+        "title": "Craft & Colour"
+      },
+      {
+        "img": "images/cheesecake.jpg",
+        "text": "Berry cheesecake, minimal styling",
+        "title": "Afternoon Sweetness"
+      }
+    ],
+    "kicker": "Visual Journal",
+    "subtitle": "Soft light, slow pours and honest cafe craft."
+  },
+  "header": {
+    "nav": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Deals"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Location"
+      }
+    ],
+    "orderText": "Order Now"
+  },
+  "hero": {
+    "badge": "Specialty Coffee & Bakery — F-7 Markaz, Islamabad",
+    "ctaHref": "#menu",
+    "ctaText": "Explore Menu",
+    "headline": "A Little Pause in Your Day.",
+    "image": "images/latte-art.jpg",
+    "imageAlt": "Latte art cup on a wooden cafe table in morning light",
+    "subtext": "Thoughtful coffee, fresh bakes and good things made slowly. Take a seat by the window, breathe in the roast, and let the city wait outside."
+  },
+  "hours": {
+    "close": "23:00",
+    "note": "Daily",
+    "open": "08:00"
+  },
+  "howOrder": {
+    "heading": "How Ordering Works",
+    "kicker": "Easy as 1-2-3",
+    "steps": [
+      {
+        "n": "1",
+        "text": "Explore specialty coffees, bakes and pairings — everything with honest PKR prices.",
+        "title": "Browse the menu"
+      },
+      {
+        "n": "2",
+        "text": "Tap ADD on anything you like. Change quantities anytime before checkout.",
+        "title": "Add to your tray"
+      },
+      {
+        "n": "3",
+        "text": "One tap sends your full order to our WhatsApp. We confirm instantly.",
+        "title": "Order on WhatsApp"
+      }
+    ]
+  },
+  "location": {
+    "heading": "Visit The Quiet Cup",
+    "kicker": "Find Us",
+    "text": "Conveniently situated in the green heart of F-7 Markaz, Islamabad. Street parking and outdoor terrace seating available."
+  },
+  "menu": {
+    "categories": [
+      {
+        "desc": "8 Single-Origin & House Blends",
+        "icon": "local_cafe",
+        "id": "coffee",
+        "items": [
+          {
+            "desc": "Double shot of our house espresso with velvety condensed-milk sweetness, served iced or hot.",
+            "img": "images/latte-art.jpg",
+            "name": "Spanish Latte",
+            "price": "Rs 550",
+            "tag": "Bestseller"
+          },
+          {
+            "desc": "Classic Italian balance — rich espresso, steamed milk and a cloud of foam, dusted with cocoa.",
+            "img": "images/latte-art.jpg",
+            "name": "Cappuccino",
+            "price": "Rs 450",
+            "tag": ""
+          },
+          {
+            "desc": "Single-origin Ethiopian beans brewed slow through a V60 at exactly 92°C. Floral, bright, clean.",
+            "img": "images/pour-over.jpg",
+            "name": "Pour Over",
+            "price": "Rs 650",
+            "tag": ""
+          },
+          {
+            "desc": "Steeped 18 hours for a smooth, chocolatey concentrate. Served over ice, black or with milk.",
+            "img": "images/pour-over.jpg",
+            "name": "Cold Brew",
+            "price": "Rs 600",
+            "tag": ""
+          },
+          {
+            "desc": "Double ristretto with silky microfoam. Small, strong and honest.",
+            "img": "images/latte-art.jpg",
+            "name": "Flat White",
+            "price": "Rs 520",
+            "tag": ""
+          },
+          {
+            "desc": "Our house espresso folded into Belgian cocoa, topped with a whisper of cream.",
+            "img": "images/latte-art.jpg",
+            "name": "Belgian Mocha",
+            "price": "Rs 580",
+            "tag": ""
+          },
+          {
+            "desc": "A proper double shot — syrupy, intense, the base of everything we pour.",
+            "img": "images/latte-art.jpg",
+            "name": "Espresso",
+            "price": "Rs 350",
+            "tag": ""
+          },
+          {
+            "desc": "Vanilla bean gelato drowned in a fresh double espresso. Simple and perfect.",
+            "img": "images/cheesecake.jpg",
+            "name": "Affogato",
+            "price": "Rs 650",
+            "tag": "Favorite"
+          }
+        ],
+        "name": "Specialty Coffee"
+      },
+      {
+        "desc": "6 Brews & Chillers",
+        "icon": "local_drink",
+        "id": "tea",
+        "items": [
+          {
+            "desc": "Our signature — salted pink tea with crushed pistachios and almonds, served piping hot.",
+            "img": "images/latte-art.jpg",
+            "name": "Kashmiri Chai",
+            "price": "Rs 400",
+            "tag": "Signature"
+          },
+          {
+            "desc": "Ceremonial-grade matcha whisked to order, poured over cold milk and ice.",
+            "img": "images/latte-art.jpg",
+            "name": "Iced Matcha",
+            "price": "Rs 700",
+            "tag": ""
+          },
+          {
+            "desc": "Slow-simmered with cardamom, ginger and whole spices. Tastes like home.",
+            "img": "images/latte-art.jpg",
+            "name": "Masala Chai",
+            "price": "Rs 350",
+            "tag": ""
+          },
+          {
+            "desc": "Double espresso shaken with cold milk over ice. Clean, cold, strong.",
+            "img": "images/latte-art.jpg",
+            "name": "Iced Latte",
+            "price": "Rs 550",
+            "tag": ""
+          },
+          {
+            "desc": "Fresh mint, lemon and a hint of honey over crushed ice. The afternoon reset.",
+            "img": "images/latte-art.jpg",
+            "name": "Mint Lemonade",
+            "price": "Rs 400",
+            "tag": ""
+          },
+          {
+            "desc": "Belgian hot chocolate, thick and dark, with a torched marshmallow on top.",
+            "img": "images/latte-art.jpg",
+            "name": "Hot Chocolate",
+            "price": "Rs 500",
+            "tag": ""
+          }
+        ],
+        "name": "Tea & Cold Drinks"
+      },
+      {
+        "desc": "6 Morning Plates",
+        "icon": "breakfast_dining",
+        "id": "bites",
+        "items": [
+          {
+            "desc": "Flaky, buttery, baked at dawn. Pairs with everything — especially our Spanish latte.",
+            "img": "images/croissant.jpg",
+            "name": "Butter Croissant",
+            "price": "Rs 350",
+            "tag": "Bestseller"
+          },
+          {
+            "desc": "Smashed avocado, poached egg, chili flakes and sourdough toasted in olive oil.",
+            "img": "images/croissant.jpg",
+            "name": "Avocado Toast",
+            "price": "Rs 850",
+            "tag": ""
+          },
+          {
+            "desc": "Flaky paratha wrapped around spiced chicken, mint chutney and pickled onions.",
+            "img": "images/croissant.jpg",
+            "name": "Chicken Paratha Roll",
+            "price": "Rs 400",
+            "tag": ""
+          },
+          {
+            "desc": "Three-egg omelette with cheddar and herbs, served with toasted sourdough.",
+            "img": "images/croissant.jpg",
+            "name": "Cheese Omelette",
+            "price": "Rs 450",
+            "tag": ""
+          },
+          {
+            "desc": "House granola, Greek yogurt, honey and seasonal fruit. Light and lovely.",
+            "img": "images/cheesecake.jpg",
+            "name": "Granola Bowl",
+            "price": "Rs 650",
+            "tag": ""
+          },
+          {
+            "desc": "Grilled chicken, pesto and mozzarella pressed in ciabatta until golden.",
+            "img": "images/croissant.jpg",
+            "name": "Chicken Panini",
+            "price": "Rs 700",
+            "tag": ""
+          }
+        ],
+        "name": "Breakfast & Light Bites"
+      },
+      {
+        "desc": "5 From Our Bakery",
+        "icon": "cake",
+        "id": "desserts",
+        "items": [
+          {
+            "desc": "Creamy baked cheesecake with a Lotus Biscoff base and caramelized biscuit crumble.",
+            "img": "images/cheesecake.jpg",
+            "name": "Lotus Cheesecake Slice",
+            "price": "Rs 650",
+            "tag": "Favorite"
+          },
+          {
+            "desc": "Dense, dark and unapologetic. Served slightly warm with a dusting of cocoa.",
+            "img": "images/cheesecake.jpg",
+            "name": "Chocolate Fudge Cake",
+            "price": "Rs 550",
+            "tag": ""
+          },
+          {
+            "desc": "Milk-soaked sponge, light as a cloud, topped with cinnamon cream.",
+            "img": "images/cheesecake.jpg",
+            "name": "Tres Leches",
+            "price": "Rs 600",
+            "tag": ""
+          },
+          {
+            "desc": "Toasted walnut banana bread, served warm with salted butter.",
+            "img": "images/cheesecake.jpg",
+            "name": "Banana Bread",
+            "price": "Rs 400",
+            "tag": ""
+          },
+          {
+            "desc": "Delicate saffron-infused milk cake — our nod to classic Pakistani mithaas.",
+            "img": "images/cheesecake.jpg",
+            "name": "Saffron Milk Cake",
+            "price": "Rs 600",
+            "tag": ""
+          }
+        ],
+        "name": "Cakes & Desserts"
+      }
+    ],
+    "heading": "Our Short Menu",
+    "kicker": "Handcrafted Everyday",
+    "subtitle": "Prepared intentionally with calibrated water, fresh dairy, and micro-lot single-origin estates. Select an item to add it to your order tray.",
+    "printText": "Print Menu"
+  },
+  "qr": {
+    "downloadText": "Download Digital Menu (PDF)",
+    "heading": "The Menu, Whenever You Need It",
+    "kicker": "Tabletop Digital Menu",
+    "note": "Demo QR — replace with restaurant URL",
+    "text": "Scan the QR code to explore our origin cards, freshly rolled bakes, and daily seasonal specials directly on your mobile device."
+  },
+  "reservation": {
+    "button": "Reserve via WhatsApp",
+    "dateLabel": "Date",
+    "formError": "Please fill all fields correctly.",
+    "guestsLabel": "Guests",
+    "heading": "Book a Table",
+    "kicker": "Dine With Us",
+    "message": "*Table Reservation — {site}*\nName: {name}\nPhone: {phone}\nDate: {date}\nTime: {time}\nGuests: {guests}",
+    "nameLabel": "Your name",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "phoneLabel": "Phone number",
+    "text": "Planning a slow morning or a quiet evening? Reserve your window seat in seconds — we confirm on WhatsApp.",
+    "timeLabel": "Time"
+  },
+  "reviews": {
+    "heading": "Reflections From the Room",
+    "items": [
+      {
+        "meta": "F-7 Resident · Regular Visitor",
+        "name": "Mahnoor D.",
+        "text": "A peaceful haven away from Islamabad's rush. The Spanish latte and their butter croissants are my Saturday morning staple."
+      },
+      {
+        "meta": "Architect · Design Patron",
+        "name": "Daniyal K.",
+        "text": "The pour-over coffee is roasted to perfection, and their butter croissants are dangerously good. Easily the finest cafe in town."
+      },
+      {
+        "meta": "Writer · Morning Guest",
+        "name": "Sarah T.",
+        "text": "You can actually read a book in silence without loud music. Impeccable coffee craft and lovely warm beans."
+      },
+      {
+        "meta": "F-7 Markaz · Weekend Regular",
+        "name": "Ahmed R.",
+        "text": "Kashmiri chai here tastes like my grandmother's recipe. Quiet corners, honest prices, and staff who remember your order."
+      },
+      {
+        "meta": "Photographer · Creative Soul",
+        "name": "Fatima S.",
+        "text": "The light through those windows is magic. I come for the matcha, stay for the calm, and leave with full memory cards."
+      },
+      {
+        "meta": "Student · Evening Drifter",
+        "name": "Zain A.",
+        "text": "Best study spot in Islamabad. Free Wi-Fi, gentle playlist, and a cold brew that keeps me going till closing."
+      }
+    ],
+    "kicker": "Customer Notes",
+    "note": "Sample reviews for template demonstration — replace with real customer feedback."
+  },
+  "site": {
+    "_demoNote": "DEMO: whatsappDigits/phoneDigits = owner's test number 03193722519. Replace with the customer's real numbers at customer setup.",
+    "address": "Plot 14-B, School Road, F-7 Markaz, Islamabad",
+    "coverage": "F-7, F-6, F-8, E-7 & surroundings",
+    "hours": "Daily, 8:00 AM – 11:00 PM",
+    "mapQuery": "F-7 Markaz Islamabad",
+    "name": "The Quiet Cup",
+    "checkoutMode": "whatsapp",
+    "phone": "0319 3722519",
+    "phoneDigits": "923193722519",
+    "whatsappDigits": "923193722519",
+    "deliveryFee": 0,
+    "minOrderValue": 0,
+    "payments": {
+      "cod": true,
+      "easypaisa": false,
+      "bank": false
+    }
+  },
+  "socials": [
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/thequietcup"
+    },
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/thequietcup"
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@thequietcup"
+    }
+  ],
+  "theme": {
+    "accent": "#8d4d35",
+    "animations": true,
+    "bodyFont": "Inter",
+    "headingFont": "Playfair Display",
+    "palette": "ink",
+    "primary": "#181612"
+  },
+  "trustRow": [
+    {
+      "icon": "thermostat",
+      "text": "Calibrated precision brewing",
+      "title": "92°C Extraction"
+    },
+    {
+      "icon": "local_cafe",
+      "text": "Single-origin, small batches",
+      "title": "Daily 9–11 Roast"
+    },
+    {
+      "icon": "location_on",
+      "text": "Green heart of Islamabad",
+      "title": "F-7 Markaz"
+    }
+  ],
+  "visibility": {
+    "about": true,
+    "announcement": true,
+    "deals": true,
+    "delivery": true,
+    "dotd": true,
+    "faq": true,
+    "footer": true,
+    "gallery": true,
+    "hero": true,
+    "howOrder": true,
+    "location": true,
+    "menu": true,
+    "qr": true,
+    "reservation": true,
+    "reviews": true,
+    "trust": true,
+    "waSignup": true
+  },
+  "waSignup": {
+    "button": "Join WhatsApp Circle",
+    "heading": "Craving something quiet?",
+    "message": "Assalam-o-Alaikum! Please add me to The Quiet Cup WhatsApp circle.",
+    "text": "Join our WhatsApp circle for new single-origin drops, fresh-bake announcements and slow Sunday specials. No noise — only the good stuff."
+  },
+  "whatsapp": {
+    "dotdMessage": "Assalam-o-Alaikum! I want to order the Deal of the Day ({offer} for {price})",
+    "orderMessage": "Assalam-o-Alaikum! I want to order from {name}"
+  }
+}

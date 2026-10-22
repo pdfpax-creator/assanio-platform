@@ -1,0 +1,710 @@
+{
+  "about": {
+    "heading": "Real Fire. Real Dera Flavour.",
+    "image": "images/chicken-karahi.jpg",
+    "imageAlt": "Steaming chicken karahi in an iron wok",
+    "kicker": "Our Story",
+    "para1": "Dera BBQ House began with a single clay tandoor and a charcoal pit in Bahria Town Phase 7. Our kababs are hand-rolled every morning, marinated in family spice blends, and grilled over real charcoal — never gas, never shortcuts.",
+    "para2": "Today our kitchen serves hundreds of families a day, but every order still gets the dera treatment: slow-cooked karahis, smoky seekh kababs and piping-hot naans slapped fresh onto the tandoor wall.",
+    "stats": [
+      {
+        "label": "Orders Delivered",
+        "value": "20k+"
+      },
+      {
+        "label": "Average Rating",
+        "value": "4.8"
+      },
+      {
+        "label": "Avg. Delivery Time",
+        "value": "40 min"
+      }
+    ]
+  },
+  "announcement": {
+    "enabled": true,
+    "link": "",
+    "linkText": "",
+    "text": "Free delivery on orders above Rs 2,000!"
+  },
+  "cart": {
+    "addButton": "ADD +",
+    "addressPh": "House, street, area",
+    "browseMenu": "Browse Menu",
+    "drawerTitle": "Your Cart",
+    "emptyText": "Your cart is empty",
+    "formError": "Please fill name, phone and address.",
+    "namePh": "Your name",
+    "notesPh": "Anything we should know? (optional)",
+    "orderButton": "Order via WhatsApp",
+    "payNote": "Pay on delivery / via WhatsApp",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "phonePh": "03xx xxxxxxx",
+    "subtotal": "Subtotal",
+    "successText": "The restaurant will confirm on WhatsApp.",
+    "successTitle": "Order sent!",
+    "toastAdded": "Added to cart",
+    "couponPh": "Promo code",
+    "couponApply": "Apply",
+    "discountLabel": "Discount",
+    "totalLabel": "Total",
+    "couponInvalid": "That code doesn't look right. Try again.",
+    "webOrderButton": "Place Order — Cash on Delivery",
+    "webSuccessTitle": "Order placed!",
+    "webSuccessText": "Thank you! Your order {orderId} has been received. The restaurant will call to confirm shortly.",
+    "webCodNote": "Please keep cash ready — pay on delivery.",
+    "webErrorText": "Sorry, your order could not be placed. Please check your connection and try again.",
+    "minOrderError": "Minimum order is Rs {min}"
+  },
+  "coupons": [
+    {
+      "code": "DERA10",
+      "label": "10% off with code DERA10",
+      "type": "percent",
+      "value": 10
+    }
+  ],
+  "dealOfDay": {
+    "ctaText": "Order This Deal",
+    "endedText": "Deal ended — new deal tomorrow!",
+    "endsAt": "23:59",
+    "endsLabel": "Ends in",
+    "label": "Deal of the Day",
+    "offer": "Dera Signature Platter — 4 Seekh Kababs, Chicken Tikka, 4 Naans",
+    "oldPrice": "Rs 2,400",
+    "price": "Rs 1,899",
+    "tag": "Today Only",
+    "text": "Our most-loved charcoal spread, grilled fresh to order and served with mint raita and salad."
+  },
+  "deals": {
+    "heading": "Dera Signature Deals",
+    "items": [
+      {
+        "desc": "Chicken Karahi (Half), 4 Seekh Kababs, 4 piping-hot naans, fresh mint raita and kachumber salad.",
+        "img": "images/bbq-platter.jpg",
+        "name": "Family Feast",
+        "offer": "Karahi + Kababs + 4 Naans",
+        "price": "Rs 2,999",
+        "tag": "Most Popular"
+      },
+      {
+        "desc": "Seekh kababs, chicken tikka, malai boti and behari boti on one sizzling platter with naans and raita.",
+        "img": "images/seekh-kabab.jpg",
+        "name": "BBQ Platter Deal",
+        "offer": "4 BBQ Varieties + Naans",
+        "price": "Rs 1,899",
+        "tag": ""
+      },
+      {
+        "desc": "Chicken karahi, seekh kababs, 6 naans, fresh salad and drinks — a complete dera dinner for the family.",
+        "img": "images/chicken-karahi.jpg",
+        "name": "Dera Dinner",
+        "offer": "Karahi + Kababs + Drinks",
+        "price": "Rs 2,199",
+        "tag": ""
+      }
+    ],
+    "kicker": "Hearty Gatherings",
+    "note": "Valid for Dine-in, Takeaway & Delivery",
+    "subtitle": "Curated feasts designed for generous family dining and celebrations."
+  },
+  "delivery": {
+    "areas": [
+      "Bahria Town Phase 1",
+      "Bahria Town Phase 2",
+      "Bahria Town Phase 3",
+      "Bahria Town Phase 4",
+      "Bahria Town Phase 5",
+      "Bahria Town Phase 6",
+      "Bahria Town Phase 7",
+      "Bahria Town Phase 8",
+      "DHA Phase 1",
+      "PWD",
+      "Sawan Garden"
+    ],
+    "heading": "We Deliver to Your Doorstep",
+    "kicker": "Delivery Areas",
+    "note": "Outside these areas? Call us — we’ll try our best."
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "a": "Yes — all our chicken, beef and mutton is sourced fresh daily from certified halal suppliers.",
+        "q": "Is your meat 100% halal?"
+      },
+      {
+        "a": "Yes — Rs 500 for delivery orders. There’s no minimum for dine-in or takeaway.",
+        "q": "Is there a minimum order for delivery?"
+      },
+      {
+        "a": "Usually 35–50 minutes inside Bahria Town, depending on rush hours. We’ll always confirm your time on WhatsApp.",
+        "q": "How long does delivery take?"
+      },
+      {
+        "a": "Yes! We cater dawats, weddings and office events across Rawalpindi/Islamabad. Call us at 0319 3722519 for a custom quote.",
+        "q": "Do you take catering orders for events?"
+      },
+      {
+        "a": "Absolutely — use the Book a Table section below or message us on WhatsApp and we’ll arrange seating for your group.",
+        "q": "Can I reserve the family hall for a gathering?"
+      }
+    ],
+    "kicker": "Good to Know"
+  },
+  "footer": {
+    "about": "Bahria Town’s favourite charcoal-grilled BBQ, sizzling karahis and family feasts — served hot from Phase 7.",
+    "copyright": "© 2025 Dera BBQ House. All rights reserved.",
+    "credit": "Demo Experience for Bahria Town Phase 7",
+    "hoursText": "Monday – Sunday, 12:00 PM – 1:00 AM. Late Night Delivery Active.",
+    "quickLinks": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Deals"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Contact"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "Straight From Our Tandoor & Grill",
+    "items": [
+      {
+        "img": "images/seekh-kabab.jpg",
+        "text": "Hand-rolled over live charcoal",
+        "title": "Ember-Grilled Seekh"
+      },
+      {
+        "img": "images/chicken-karahi.jpg",
+        "text": "Slow-simmered in the iron wok",
+        "title": "Sizzling Karahi"
+      },
+      {
+        "img": "images/naan-tandoor.jpg",
+        "text": "Slapped fresh on the clay wall",
+        "title": "Tandoor Naans"
+      },
+      {
+        "img": "images/bbq-platter.jpg",
+        "text": "The full dera spread",
+        "title": "Dera BBQ Platter"
+      }
+    ],
+    "kicker": "Live Hearth Craft",
+    "subtitle": "Charcoal smoke, sizzling woks and honest desi craft."
+  },
+  "header": {
+    "logoText": "DERA BBQ HOUSE",
+    "nav": [
+      {
+        "href": "#menu",
+        "label": "Menu"
+      },
+      {
+        "href": "#deals",
+        "label": "Deals"
+      },
+      {
+        "href": "#gallery",
+        "label": "Gallery"
+      },
+      {
+        "href": "#reviews",
+        "label": "Reviews"
+      },
+      {
+        "href": "#location",
+        "label": "Location"
+      }
+    ],
+    "orderText": "Order Now"
+  },
+  "hero": {
+    "badge": "Bahria Town Phase 7, Rawalpindi",
+    "ctaHref": "#menu",
+    "ctaText": "Explore Menu",
+    "headline": "The Taste of a True Dera.",
+    "image": "images/seekh-kabab.jpg",
+    "imageAlt": "Seekh kababs grilling over charcoal fire",
+    "subtext": "Charcoal-grilled BBQ, authentic karahi and hearty family feasts — crafted over real fire in the heart of Bahria Town."
+  },
+  "hours": {
+    "close": "01:00",
+    "note": "Daily",
+    "open": "12:00"
+  },
+  "howOrder": {
+    "heading": "How Ordering Works",
+    "kicker": "Easy as 1-2-3",
+    "steps": [
+      {
+        "n": "1",
+        "text": "Explore BBQ, karahi, handi, biryani and deals — everything with honest PKR prices.",
+        "title": "Browse the menu"
+      },
+      {
+        "n": "2",
+        "text": "Tap ADD on anything you like. Change quantities anytime before checkout.",
+        "title": "Add to cart"
+      },
+      {
+        "n": "3",
+        "text": "One tap sends your full order to our WhatsApp. We confirm instantly.",
+        "title": "Order on WhatsApp"
+      }
+    ]
+  },
+  "location": {
+    "heading": "Visit Dera BBQ House",
+    "kicker": "Outlet Details",
+    "mapQuery": "Bahria Town Phase 7 Rawalpindi",
+    "text": "Come feel the warmth of the charcoal pit and the aroma of fresh tandoori naans. Family hall seating and express takeaway available."
+  },
+  "menu": {
+    "categories": [
+      {
+        "desc": "6 Charcoal-Grilled Specialties",
+        "icon": "kebab_dining",
+        "id": "bbq",
+        "items": [
+          {
+            "desc": "Juicy chicken leg quarter marinated overnight in desi spices, grilled over charcoal.",
+            "img": "images/seekh-kabab.jpg",
+            "name": "Chicken Tikka",
+            "price": "Rs 380",
+            "tag": "Bestseller"
+          },
+          {
+            "desc": "Hand-rolled minced beef skewers with green chilies and fresh coriander, smoked over embers.",
+            "img": "images/seekh-kabab.jpg",
+            "name": "Seekh Kabab Beef",
+            "price": "Rs 450",
+            "tag": ""
+          },
+          {
+            "desc": "Creamy, melt-in-mouth chicken cubes marinated in yogurt, cream and mild spices.",
+            "img": "images/seekh-kabab.jpg",
+            "name": "Malai Boti",
+            "price": "Rs 520",
+            "tag": ""
+          },
+          {
+            "desc": "Tender chicken strips in a smoky behari masala, charred to perfection on the grill.",
+            "img": "images/seekh-kabab.jpg",
+            "name": "Chicken Behari Boti",
+            "price": "Rs 480",
+            "tag": ""
+          },
+          {
+            "desc": "Premium minced mutton skewers with roasted spices — the dera classic, extra juicy.",
+            "img": "images/seekh-kabab.jpg",
+            "name": "Mutton Seekh Kabab",
+            "price": "Rs 620",
+            "tag": "Chef’s Pick"
+          },
+          {
+            "desc": "Smoky grilled wings tossed in our signature spicy masala glaze.",
+            "img": "",
+            "name": "Tandoori Wings (6 pc)",
+            "price": "Rs 420",
+            "tag": ""
+          }
+        ],
+        "name": "BBQ & Tikka"
+      },
+      {
+        "desc": "5 Traditional Iron-Wok Karahis",
+        "icon": "soup_kitchen",
+        "id": "karahi",
+        "items": [
+          {
+            "desc": "Desi ghee, fresh tomatoes, ginger and green chilies — the classic Lahori style.",
+            "img": "images/chicken-karahi.jpg",
+            "name": "Chicken Karahi (Half)",
+            "price": "Rs 950",
+            "tag": ""
+          },
+          {
+            "desc": "Full wok of our signature chicken karahi — perfect for 3–4 people.",
+            "img": "images/chicken-karahi.jpg",
+            "name": "Chicken Karahi (Full)",
+            "price": "Rs 1,800",
+            "tag": "Bestseller"
+          },
+          {
+            "desc": "Tender mutton slow-cooked in the wok with black pepper and fresh coriander.",
+            "img": "images/chicken-karahi.jpg",
+            "name": "Mutton Karahi (Half)",
+            "price": "Rs 1,650",
+            "tag": ""
+          },
+          {
+            "desc": "Full wok of mutton karahi for the whole family — rich, peppery and aromatic.",
+            "img": "",
+            "name": "Mutton Karahi (Full)",
+            "price": "Rs 2,900",
+            "tag": ""
+          },
+          {
+            "desc": "Creamy white karahi with yogurt, green chilies and a buttery finish.",
+            "img": "",
+            "name": "Chicken White Karahi (Half)",
+            "price": "Rs 1,050",
+            "tag": ""
+          }
+        ],
+        "name": "Karahi"
+      },
+      {
+        "desc": "5 Slow-Simmered Handi Curries",
+        "icon": "cooking",
+        "id": "handi",
+        "items": [
+          {
+            "desc": "Silky tomato-butter gravy with charred chicken tikka pieces folded in.",
+            "img": "images/chicken-karahi.jpg",
+            "name": "Chicken Makhni Handi",
+            "price": "Rs 1,100",
+            "tag": "Favorite"
+          },
+          {
+            "desc": "Rich, creamy butter chicken — mild, comforting and deeply satisfying.",
+            "img": "",
+            "name": "Butter Chicken",
+            "price": "Rs 1,150",
+            "tag": ""
+          },
+          {
+            "desc": "White gravy of cashew and cream with tender chicken and green chili heat.",
+            "img": "",
+            "name": "Chicken White Handi",
+            "price": "Rs 1,050",
+            "tag": ""
+          },
+          {
+            "desc": "Black lentils simmered overnight with butter and cream — pure comfort.",
+            "img": "",
+            "name": "Daal Makhni",
+            "price": "Rs 550",
+            "tag": ""
+          },
+          {
+            "desc": "Fresh spinach and soft paneer in a homestyle desi-ghee tadka.",
+            "img": "",
+            "name": "Palak Paneer",
+            "price": "Rs 650",
+            "tag": ""
+          }
+        ],
+        "name": "Handi"
+      },
+      {
+        "desc": "5 Fragrant Rice Specialties",
+        "icon": "rice_bowl",
+        "id": "rice",
+        "items": [
+          {
+            "desc": "Layered basmati with spiced chicken, aloo and crispy onions — served with raita.",
+            "img": "",
+            "name": "Chicken Biryani",
+            "price": "Rs 320",
+            "tag": "Bestseller"
+          },
+          {
+            "desc": "Hearty beef biryani with bold masala and a squeeze of lemon.",
+            "img": "",
+            "name": "Beef Biryani",
+            "price": "Rs 380",
+            "tag": ""
+          },
+          {
+            "desc": "Yakhni-style chicken pulao — subtle, aromatic and deeply savoury.",
+            "img": "",
+            "name": "Chicken Pulao",
+            "price": "Rs 350",
+            "tag": ""
+          },
+          {
+            "desc": "Family-size biryani tray with extra masala, raita and salad — feeds 4–5.",
+            "img": "",
+            "name": "Sindhi Biryani Family Pack",
+            "price": "Rs 1,200",
+            "tag": ""
+          },
+          {
+            "desc": "Simple steamed basmati tossed with roasted cumin — the perfect karahi partner.",
+            "img": "",
+            "name": "Zeera Rice",
+            "price": "Rs 280",
+            "tag": ""
+          }
+        ],
+        "name": "Rice & Biryani"
+      },
+      {
+        "desc": "6 Fresh Tandoor Breads & Sides",
+        "icon": "bakery_dining",
+        "id": "breads",
+        "items": [
+          {
+            "desc": "Soft, sesame-topped naan baked fresh on the tandoor wall.",
+            "img": "images/naan-tandoor.jpg",
+            "name": "Roghni Naan",
+            "price": "Rs 60",
+            "tag": ""
+          },
+          {
+            "desc": "Naan brushed with roasted garlic butter — made for karahi.",
+            "img": "images/naan-tandoor.jpg",
+            "name": "Garlic Naan",
+            "price": "Rs 80",
+            "tag": "Favorite"
+          },
+          {
+            "desc": "Whole-wheat tandoori roti, blistered and smoky straight from the clay oven.",
+            "img": "",
+            "name": "Tandoori Roti",
+            "price": "Rs 30",
+            "tag": ""
+          },
+          {
+            "desc": "Naan stuffed with molten cheese — a crowd-pleaser for kids and adults.",
+            "img": "",
+            "name": "Cheese Naan",
+            "price": "Rs 150",
+            "tag": ""
+          },
+          {
+            "desc": "Cooling yogurt with mint and roasted cumin — the BBQ essential.",
+            "img": "",
+            "name": "Mint Raita",
+            "price": "Rs 120",
+            "tag": ""
+          },
+          {
+            "desc": "Crisp onions, tomatoes, cucumber and lemon with a chaat-masala sprinkle.",
+            "img": "",
+            "name": "Green Salad",
+            "price": "Rs 150",
+            "tag": ""
+          }
+        ],
+        "name": "Breads & Sides"
+      },
+      {
+        "desc": "6 Chilled Drinks & Desi Desserts",
+        "icon": "icecream",
+        "id": "desserts",
+        "items": [
+          {
+            "desc": "Hand-shaken fresh lime with soda and a mint sprig — ice cold.",
+            "img": "",
+            "name": "Fresh Lime Soda",
+            "price": "Rs 180",
+            "tag": ""
+          },
+          {
+            "desc": "Thick, creamy Punjabi lassi — choose sweet or salted, topped with malai.",
+            "img": "",
+            "name": "Desi Lassi",
+            "price": "Rs 200",
+            "tag": ""
+          },
+          {
+            "desc": "Dense, slow-frozen traditional kulfi with crushed pistachios.",
+            "img": "",
+            "name": "Kulfi",
+            "price": "Rs 150",
+            "tag": "Bestseller"
+          },
+          {
+            "desc": "Royal rice pudding with cardamom, saffron and silver leaf.",
+            "img": "",
+            "name": "Shahi Kheer",
+            "price": "Rs 180",
+            "tag": ""
+          },
+          {
+            "desc": "Chilled 345ml can — Coca-Cola, Sprite, or Fanta.",
+            "img": "",
+            "name": "Regular Soft Drink",
+            "price": "Rs 120",
+            "tag": ""
+          },
+          {
+            "desc": "500ml purified cold mineral water.",
+            "img": "",
+            "name": "Mineral Water",
+            "price": "Rs 100",
+            "tag": ""
+          }
+        ],
+        "name": "Drinks & Desserts"
+      }
+    ],
+    "heading": "Our Menu",
+    "kicker": "Authentic Charcoal Flavours",
+    "subtitle": "Handcrafted over live charcoal & traditional karahi fires. Tap any category to explore.",
+    "printText": "Print Menu"
+  },
+  "qr": {
+    "downloadText": "Download QR Menu",
+    "heading": "The Dera Menu, Digitally",
+    "kicker": "Contactless Dine-In",
+    "note": "Demo QR — replace with restaurant URL",
+    "text": "Scan with your phone camera for contactless dine-in viewing, instant parcel ordering, or download a printable edition."
+  },
+  "reservation": {
+    "button": "Reserve via WhatsApp",
+    "dateLabel": "Date",
+    "formError": "Please fill all fields correctly.",
+    "guestsLabel": "Guests",
+    "heading": "Book a Table",
+    "kicker": "Dine With Us",
+    "message": "*Table Reservation — {site}*\nName: {name}\nPhone: {phone}\nDate: {date}\nTime: {time}\nGuests: {guests}",
+    "nameLabel": "Your name",
+    "phoneError": "Please enter a valid Pakistani mobile number.",
+    "phoneLabel": "Phone number",
+    "text": "Planning dinner with family or friends? Reserve your table in seconds — we confirm on WhatsApp.",
+    "timeLabel": "Time"
+  },
+  "reviews": {
+    "heading": "What Our Guests Say",
+    "items": [
+      {
+        "meta": "Bahria Phase 7",
+        "name": "Tariq Mehmood",
+        "text": "Seekh kabab was so juicy, bilkul authentic taste. Best BBQ in Bahria, no doubt."
+      },
+      {
+        "meta": "Bahria Phase 4",
+        "name": "Ayesha Siddiqui",
+        "text": "Ordered the family feast for a dawat — everyone loved it. Karahi was fresh and masaledaar."
+      },
+      {
+        "meta": "DHA Phase 1",
+        "name": "Hamza Farooq",
+        "text": "Malai boti melts in the mouth. Delivery bhi quick thi, garam khana aya."
+      },
+      {
+        "meta": "Bahria Phase 8",
+        "name": "Fatima Khan",
+        "text": "Tandoori naan with chicken karahi = perfect combo. Highly recommended for desi food lovers."
+      },
+      {
+        "meta": "PWD, Islamabad",
+        "name": "Usman Tariq",
+        "text": "Dera dinner deal is full value for money. Quantity aur taste dono zabardast."
+      },
+      {
+        "meta": "Bahria Phase 2",
+        "name": "Mahnoor Sheikh",
+        "text": "Best kulfi in town! The BBQ platter is a must-try for family gatherings."
+      }
+    ],
+    "kicker": "Real Guests",
+    "note": "Sample reviews for template demonstration — replace with real customer feedback."
+  },
+  "site": {
+    "_demoNote": "DEMO: whatsappDigits/phoneDigits = owner's test number 03193722519. Replace with the customer's real numbers at customer setup.",
+    "address": "Shop 5, Commercial Market, Bahria Town Phase 7, Rawalpindi",
+    "coverage": "Bahria Town, DHA 1 & surroundings",
+    "hours": "Daily, 12:00 PM – 1:00 AM",
+    "mapQuery": "Bahria Town Phase 7 Rawalpindi",
+    "name": "Dera BBQ House",
+    "checkoutMode": "whatsapp",
+    "phone": "0319 3722519",
+    "phoneDigits": "923193722519",
+    "whatsappDigits": "923193722519",
+    "deliveryFee": 0,
+    "minOrderValue": 0,
+    "payments": {
+      "cod": true,
+      "easypaisa": false,
+      "bank": false
+    }
+  },
+  "socials": [
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/derabbqhouse"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/derabbqhouse"
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@derabbqhouse"
+    }
+  ],
+  "theme": {
+    "accent": "#bb581e",
+    "animations": true,
+    "bodyFont": "Inter",
+    "headingFont": "Playfair Display",
+    "palette": "classic",
+    "primary": "#9b4003"
+  },
+  "trustRow": [
+    {
+      "icon": "outdoor_grill",
+      "text": "Never gas, always embers",
+      "title": "Real Charcoal Grill"
+    },
+    {
+      "icon": "soup_kitchen",
+      "text": "Cooked fresh per order",
+      "title": "Live Karahi Wok"
+    },
+    {
+      "icon": "verified",
+      "text": "Phase 7 commercial hub",
+      "title": "Bahria Town"
+    }
+  ],
+  "visibility": {
+    "about": true,
+    "announcement": true,
+    "deals": true,
+    "delivery": true,
+    "dotd": true,
+    "faq": true,
+    "footer": true,
+    "gallery": true,
+    "hero": true,
+    "howOrder": true,
+    "location": true,
+    "menu": true,
+    "qr": true,
+    "reservation": true,
+    "reviews": true,
+    "trust": true,
+    "waSignup": true
+  },
+  "waSignup": {
+    "button": "Join WhatsApp List",
+    "heading": "Craving secret deals?",
+    "message": "Assalam-o-Alaikum! Please add me to the deals list.",
+    "text": "Join our WhatsApp deals list and be the first to hear about BBQ-night specials, family-deal drops and late-night offers. No spam — only the good stuff."
+  },
+  "whatsapp": {
+    "dealMessage": "Assalam-o-Alaikum! I want to order the {deal} for {price}",
+    "dotdMessage": "Assalam-o-Alaikum! I want to order the Deal of the Day ({offer} for {price})",
+    "orderMessage": "Assalam-o-Alaikum! I want to order from {name}"
+  }
+}
