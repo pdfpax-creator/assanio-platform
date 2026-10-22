@@ -157,7 +157,7 @@ rp_app_open($user, 'leads', [
         <td><input type="checkbox" class="lead-check" name="lead_ids[]" value="<?= (int)$l['id'] ?>" form="bulkForm"></td>
         <td><b><?= e($l['restaurant_name']) ?></b></td>
         <td><?= e($l['contact_name']) ?></td>
-        <td><a href="tel:<?= e($l['phone']) ?>"><?= e($l['phone']) ?></a></td>
+        <td><a href="tel:<?= e($l['phone']) ?>" style="color:#1a73e8;text-decoration:none"><?= e($l['phone']) ?></a></td>
         <td><?= e($l['city']) ?></td>
         <td><?= e($statuses[$l['status']] ?? $l['status']) ?></td>
         <td><?= e($l['caller_name'] ?? '—') ?></td>

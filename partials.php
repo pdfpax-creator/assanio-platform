@@ -114,10 +114,10 @@ function rp_sidebar(array $user, string $active): string
     if ($isSuper) {
         $h .= '<div class="sec">Admin</div>';
         $h .= $item('admin', 'admin.php', rp_icon('shield', 18), 'Super Admin');
-        $h .= $item('referrals', 'admin-referrals.php', rp_icon('users', 18), 'Referrals');
+        $h .= $item('referrals', 'admin-referrals.php', rp_icon('chart', 18), 'Referrals');
         $h .= $item('leads', 'admin-leads.php', rp_icon('phone', 18), 'Leads');
-        $h .= $item('resets', 'admin-resets.php', rp_icon('key', 18), 'Password Resets');
-        $h .= $item('crm', 'caller-crm.php', rp_icon('phone', 18), 'Caller CRM');
+        $h .= $item('resets', 'admin-resets.php', rp_icon('lock', 18), 'Password Resets');
+        $h .= $item('crm', 'caller-crm.php', rp_icon('chat', 18), 'Caller CRM');
     }
     $roleLabel = $isSuper ? 'Super Admin' : ($isCaller ? 'Sales Caller' : 'Restaurant Owner');
     $h .= '</nav><div class="rp-side-foot"><div class="rp-avatar">' . e(rp_initials($user['name'] ?? '?')) . '</div>'
