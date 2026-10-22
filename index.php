@@ -276,7 +276,7 @@ page_head('Home', 'Assanio builds your restaurant a professional website with on
       <div>
         <p class="al-secnum">07 &mdash; White-glove setup</p>
         <h2>We set up everything for you — personally.</h2>
-        <p>No fake reviews, no rented testimonials. We earn trust the old way: we set up your menu, your deals and your WhatsApp ordering ourselves &mdash; and waive the setup fee entirely with yearly billing.</p>
+        <p>Our team configures your menu, deals and WhatsApp ordering for you — and the setup fee is waived entirely with yearly billing. You focus on the food, we handle the tech.</p>
         <a class="al-btn" href="register.php">Get started &rarr;</a>
       </div>
       <div class="al-pilot-list">

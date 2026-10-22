@@ -57,11 +57,11 @@ function rp_icon(string $name, int $size = 18): string
     return '<svg width="' . $s . '" height="' . $s . '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' . $body . '</svg>';
 }
 
-/** Honest pilot panel (replaces invented testimonials everywhere). */
+/** White-glove setup panel. */
 function rp_pilot_panel(): string
 {
     return '<div class="rp-quote rp-pilotp"><div class="qlbl">White-glove setup</div>'
-        . '<p><b>We set up everything for you.</b> No fake reviews &mdash; we set up your menu, deals and WhatsApp ordering ourselves, and waive the Rs 9,999 setup fee with yearly billing.</p></div>';
+        . '<p><b>We set up everything for you.</b> Our team configures your menu, deals and WhatsApp ordering — and the Rs 9,999 setup fee is waived with yearly billing.</p></div>';
 }
 
 /** Dynamic date chip, e.g. "Today, 20 Oct 2026". */
