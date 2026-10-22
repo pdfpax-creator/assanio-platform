@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <title>Admin — Dera BBQ House</title>
 <style>
-/* ---------- RestoPlatform store admin — Stitch editor skin ---------- */
+/* ---------- Assanio store admin — Stitch editor skin ---------- */
 :root{--rp-red:#C8102E;--rp-red-dark:#A90D26;--rp-ink:#141414;--rp-mut:#686868;--rp-bg:#F7F7F5;--rp-card:#ffffff;--rp-line:#E7E5E1;--rp-line2:#D9D6D1;--rp-track:#ECEAE7}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--rp-bg);color:var(--rp-ink);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -137,7 +137,7 @@ textarea{min-height:76px;resize:vertical}
 </div>
 
 <div id="app" class="hidden">
-  <div class="topbar"><span class="tb-brand"><span class="rp-logo">R</span><span class="rp-word">RestoPlatform</span><span class="tb-store">Dera BBQ House</span></span><span class="tb-right"><a href="../" target="_blank" class="tb-view">View site &#8599;</a><button class="btn btn-sm btn-line tb-logout" id="logoutBtn">Log out</button></span></div>
+  <div class="topbar"><span class="tb-brand"><span class="rp-logo">A</span><span class="rp-word">Assanio</span><span class="tb-store">Dera BBQ House</span></span><span class="tb-right"><a href="../" target="_blank" class="tb-view">View site &#8599;</a><button class="btn btn-sm btn-line tb-logout" id="logoutBtn">Log out</button></span></div>
   <div class="sec-nav wrap" id="secNav"></div>
   <div class="admin-split">
     <div class="pv-pane">
@@ -805,7 +805,14 @@ document.addEventListener("click",function(e){
 });
 
 function load(){
-  fetch("../content.json").then(function(r){return r.json()}).then(function(j){data=j;render();}).catch(function(){msg("Could not load content.json",false)});
+  fetch("../content.json").then(function(r){return r.json()}).then(function(j){data=j;
+    // Update header with actual store name
+    var sn = (j.site && j.site.name) || (j.name) || '';
+    if(sn){
+      document.querySelectorAll('.tb-store').forEach(function(el){el.textContent=sn});
+      document.title = 'Admin — ' + sn;
+    }
+    render();}).catch(function(){msg("Could not load content.json",false)});
 }
 </script>
 <script>
