@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $st->execute(array_merge([$callerId], $ids));
             flash(count($ids) . ' leads assigned!');
         } else {
-            flash('Leads select karo aur caller chuno!', false);
+            flash('Please select leads and choose a caller!', false);
         }
     } elseif ($action === 'delete-lead') {
         $pdo->prepare("DELETE FROM leads WHERE id = ?")->execute([(int)($_POST['lead_id'] ?? 0)]);
@@ -137,12 +137,12 @@ rp_app_open($user, 'leads', [
     <input type="hidden" name="action" value="bulk-assign">
     <label style="display:flex;align-items:center;gap:.4rem"><input type="checkbox" id="checkAll"> <b>Select All</b></label>
     <select name="caller_id" required class="rp-select">
-      <option value="">— Caller chuno —</option>
+      <option value="">— Choose caller —</option>
       <?php foreach ($callers as $c): ?>
         <option value="<?= (int)$c['id'] ?>"><?= e($c['name']) ?></option>
       <?php endforeach; ?>
     </select>
-    <button class="rp-btn rp-btn-red" type="submit">Sab Assign Karo</button>
+    <button class="rp-btn rp-btn-dark" type="submit">Assign Selected</button>
   </form>
   <script>
     document.getElementById('checkAll').addEventListener('change', function() {

@@ -27,7 +27,8 @@ $recentOrders = $rec->fetchAll();
 $firstName = trim((string)strtok((string)($user['name'] ?? ''), ' '));
 page_head('Dashboard');
 rp_app_open($user, 'dashboard', [
-    'title_html' => e(rp_greet() . ', ' . ($firstName !== '' ? $firstName : 'there')) . ' <span class="rp-pill pill-live" style="vertical-align:middle"><span class="dot"></span>Live</span>',
+    'title' => rp_greet() . ', ' . ($firstName !== '' ? $firstName : 'there'),
+    'title_badge' => '<span class="rp-pill pill-live"><span class="dot"></span>Live</span>',
     'sub'   => 'Here\'s what\'s happening with your restaurants today.',
     'actions' => '<a class="rp-btn rp-btn-red" href="create-store.php">+ New Restaurant</a>',
 ]);
@@ -47,7 +48,6 @@ rp_app_open($user, 'dashboard', [
     <div style="display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:1.4rem 0 .8rem;flex-wrap:wrap">
       <div><h2 style="font-size:19px">My Restaurants</h2>
       <p class="rp-hint">Manage your websites, menus, and incoming customer orders.</p></div>
-      <a class="rp-btn rp-btn-line rp-btn-sm" href="create-store.php">+ Add Restaurant</a>
     </div>
     <div class="rp-stores">
       <?php foreach ($stores as $s):

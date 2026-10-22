@@ -3,12 +3,12 @@
 // Binding: red rounded-square white "R" + "Assanio" Inter 800 logo, one mark everywhere.
 require_once __DIR__ . '/config.php';
 
-/** Logo: red rounded square, white "R", Inter 800 wordmark. $pk adds the "Pakistan" pill (public/auth pages). */
+/** Logo: red rounded square, white "A", Inter 800 wordmark. $pk adds the "Pakistan" pill (public/auth pages). */
 function rp_logo(bool $pk = false, bool $small = false): string
 {
     $cls = $small ? 'rp-mark sm' : 'rp-mark';
     $h = '<a class="rp-logo" href="' . 'index.php' . '" aria-label="' . e(PLATFORM_NAME) . ' home">'
-        . '<span class="' . $cls . '">R</span>'
+        . '<span class="' . $cls . '">A</span>'
         . '<span class="rp-word">' . e(PLATFORM_NAME) . '</span>';
     if ($pk) $h .= '<span class="rp-pk">Pakistan</span>';
     return $h . '</a>';
@@ -25,7 +25,7 @@ function rp_initials(string $name): string
 /** Time-of-day greeting for the dashboard. */
 function rp_greet(): string
 {
-    $h = (int)date('G');
+    $h = (int)date('G', time() + 5*3600); // Asia/Karachi (UTC+5)
     if ($h < 12) return 'Good morning';
     if ($h < 17) return 'Good afternoon';
     return 'Good evening';
@@ -146,7 +146,7 @@ function rp_app_open(array $user, string $active, array $opts = []): void
     }
     echo '<div class="rp-top-row"><div style="display:flex;gap:.6rem;align-items:center">'
         . '<button class="rp-burger" onclick="document.body.classList.toggle(\'nav-open\')" aria-label="Menu">☰</button>'
-        . '<div><h1>' . ($opts['title_html'] ?? e($title)) . '</h1>' . ($sub !== '' ? '<p class="sub">' . $sub . '</p>' : '') . '</div></div>'
+        . '<div><h1>' . ($opts['title_html'] ?? e($title)) . (isset($opts['title_badge']) ? ' ' . $opts['title_badge'] : '') . '</h1>' . ($sub !== '' ? '<p class="sub">' . $sub . '</p>' : '') . '</div></div>'
         . '<div class="rp-top-actions">' . (empty($opts['hideDate']) ? rp_date_chip() : '') . $actions . '</div></div>';
     echo '</div><div class="rp-content">';
     flash_html();
@@ -246,7 +246,7 @@ function rp_error_page(int $code, string $title, string $msg, string $backUrl = 
         . 'h1{font-size:22px;margin:0 0 .6rem;letter-spacing:-.02em}'
         . 'p{color:#686868;font-size:15px;line-height:1.6;margin:0 0 1.4rem}'
         . 'a.b{display:inline-block;background:#C8102E;color:#fff;font-weight:700;font-size:14.5px;padding:.7rem 1.4rem;border-radius:10px;text-decoration:none}</style>'
-        . '</head><body><div class="e"><a class="m" href="index.php"><span class="mk">R</span><span class="w">' . e(PLATFORM_NAME) . '</span></a>'
+        . '</head><body><div class="e"><a class="m" href="index.php"><span class="mk">A</span><span class="w">' . e(PLATFORM_NAME) . '</span></a>'
         . '<h1>' . e($title) . '</h1><p>' . e($msg) . '</p>'
         . '<a class="b" href="' . e($backUrl) . '">' . e($backLabel) . '</a></div></body></html>';
     exit;
