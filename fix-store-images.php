@@ -1,37 +1,44 @@
 <?php
-// Update demo stores with menu images (preserves customizations) - run once, DELETE after
-$slugs = ['tandoor-nights' => 'desi-bbq', 'brew-and-bean' => 'cafe', 'maison-olive' => 'fine-dining', 'smash-bros' => 'pizza-fastfood'];
+// Copy menu images from templates to stores. DELETE AFTER RUN.
+require __DIR__ . '/config.php';
 
-echo "<pre>";
-foreach ($slugs as $slug => $tpl) {
-    $storeFile = __DIR__ . "/stores/$slug/content.json";
-    $tplFile = __DIR__ . "/templates/$tpl/content.json";
-    if (!file_exists($storeFile) || !file_exists($tplFile)) {
-        echo "⏭️ $slug: skip\n"; continue;
-    }
-    $store = json_decode(file_get_contents($storeFile), true);
-    $tplData = json_decode(file_get_contents($tplFile), true);
+$map = [
+    'tandoor-nights' => 'desi-bbq',
+    'brew-and-bean'  => 'cafe',
+    'maison-olive'   => 'fine-dining',
+    'smash-bros'     => 'pizza-fastfood',
+];
 
-    // Build image map from template
-    $imgMap = [];
+foreach ($map as $store => $tpl) {
+    echo "=== $store (from $tpl) ===\n";
+    
+    // Load template images by item name
+    $tplData = json_decode(file_get_contents(__DIR__ . "/templates/$tpl/content.json"), true);
+    $tplImages = [];
     foreach ($tplData['menu']['categories'] ?? [] as $cat) {
         foreach ($cat['items'] ?? [] as $item) {
-            if (!empty($item['image'])) $imgMap[$item['name']] = $item['image'];
+            if (!empty($item['image'])) {
+                $tplImages[$item['name']] = $item['image'];
+            }
         }
     }
-
-    // Apply to store (only where missing)
+    
+    // Load store content
+    $storeFile = __DIR__ . "/stores/$store/content.json";
+    $storeData = json_decode(file_get_contents($storeFile), true);
+    
     $fixed = 0;
-    foreach ($store['menu']['categories'] ?? [] as &$cat) {
+    foreach ($storeData['menu']['categories'] ?? [] as &$cat) {
         foreach ($cat['items'] ?? [] as &$item) {
-            if (empty($item['image']) && isset($imgMap[$item['name']])) {
-                $item['image'] = $imgMap[$item['name']];
+            if (empty($item['image']) && isset($tplImages[$item['name']])) {
+                $item['image'] = $tplImages[$item['name']];
                 $fixed++;
             }
         }
     }
-    file_put_contents($storeFile, json_encode($store, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-    echo "✅ $slug: $fixed images added\n";
+    
+    file_put_contents($storeFile, json_encode($storeData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+    echo "  Fixed $fixed items\n";
 }
-echo "DONE! Delete this file.</pre>";
+echo "DONE.\n";
 @unlink(__FILE__);
