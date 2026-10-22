@@ -899,5 +899,14 @@ document.addEventListener("change",a20Track,true);
   });
 })();
 </script>
+<script>
+fetch("../content.json").then(function(r){return r.json()}).then(function(j){
+  var sn = (j.site && j.site.name) || j.name || '';
+  if(sn){
+    document.querySelectorAll('#loginBox h2').forEach(function(el){el.textContent = sn + ' — Admin'});
+    document.title = 'Admin — ' + sn;
+  }
+}).catch(function(){});
+</script>
 </body>
 </html>
