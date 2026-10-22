@@ -53,10 +53,8 @@ foreach ($demos as $d) {
         generateStoreFiles($store);
         echo "✅ {$d['name']} created: /{$d['slug']}/\n";
     } catch (Throwable $ex) {
-        echo "❌ {$d['name']} failed: " . $e($ex->getMessage()) . "\n";
+        echo "❌ {$d['name']} failed: " . htmlspecialchars($ex->getMessage(), ENT_QUOTES, 'UTF-8') . "\n";
     }
 }
 
 echo "\n✅ DONE! Delete this file now.\n</pre>";
-
-function e($s) { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
