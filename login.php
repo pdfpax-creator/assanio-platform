@@ -60,7 +60,8 @@ page_head('Log in');
         <input class="rp-input" id="lPass" type="password" name="password" required autocomplete="current-password" placeholder="Your password">
         <div style="margin-top:1.1rem"><button class="rp-btn rp-btn-red rp-btn-block" type="submit">Log in →</button></div>
       </form>
-      <p class="rp-hint" style="margin-top:1rem;text-align:center">New here? <a href="register.php" style="font-weight:700">Create an account</a></p>
+      <p class="rp-hint" style="margin-top:.5rem;text-align:center"><a href="forgot-password.php">Forgot your password?</a></p>
+      <p class="rp-hint" style="margin-top:.5rem;text-align:center">New here? <a href="register.php" style="font-weight:700">Create an account</a></p>
     </div>
     <?php rp_auth_mini_foot(); ?>
   </div>
