@@ -286,42 +286,48 @@
             "img": "images/seekh-kabab.jpg",
             "name": "Chicken Tikka",
             "price": "Rs 380",
-            "tag": "Bestseller"
+            "tag": "Bestseller",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Hand-rolled minced beef skewers with green chilies and fresh coriander, smoked over embers.",
             "img": "images/seekh-kabab.jpg",
             "name": "Seekh Kabab Beef",
             "price": "Rs 450",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Creamy, melt-in-mouth chicken cubes marinated in yogurt, cream and mild spices.",
             "img": "images/seekh-kabab.jpg",
             "name": "Malai Boti",
             "price": "Rs 520",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Tender chicken strips in a smoky behari masala, charred to perfection on the grill.",
             "img": "images/seekh-kabab.jpg",
             "name": "Chicken Behari Boti",
             "price": "Rs 480",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Premium minced mutton skewers with roasted spices — the dera classic, extra juicy.",
             "img": "images/seekh-kabab.jpg",
             "name": "Mutton Seekh Kabab",
             "price": "Rs 620",
-            "tag": "Chef’s Pick"
+            "tag": "Chef’s Pick",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Smoky grilled wings tossed in our signature spicy masala glaze.",
             "img": "",
             "name": "Tandoori Wings (6 pc)",
             "price": "Rs 420",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           }
         ],
         "name": "BBQ & Tikka"
@@ -336,35 +342,40 @@
             "img": "images/chicken-karahi.jpg",
             "name": "Chicken Karahi (Half)",
             "price": "Rs 950",
-            "tag": ""
+            "tag": "",
+            "image": "images/chicken-karahi.jpg"
           },
           {
             "desc": "Full wok of our signature chicken karahi — perfect for 3–4 people.",
             "img": "images/chicken-karahi.jpg",
             "name": "Chicken Karahi (Full)",
             "price": "Rs 1,800",
-            "tag": "Bestseller"
+            "tag": "Bestseller",
+            "image": "images/chicken-karahi.jpg"
           },
           {
             "desc": "Tender mutton slow-cooked in the wok with black pepper and fresh coriander.",
             "img": "images/chicken-karahi.jpg",
             "name": "Mutton Karahi (Half)",
             "price": "Rs 1,650",
-            "tag": ""
+            "tag": "",
+            "image": "images/chicken-karahi.jpg"
           },
           {
             "desc": "Full wok of mutton karahi for the whole family — rich, peppery and aromatic.",
             "img": "",
             "name": "Mutton Karahi (Full)",
             "price": "Rs 2,900",
-            "tag": ""
+            "tag": "",
+            "image": "images/chicken-karahi.jpg"
           },
           {
             "desc": "Creamy white karahi with yogurt, green chilies and a buttery finish.",
             "img": "",
             "name": "Chicken White Karahi (Half)",
             "price": "Rs 1,050",
-            "tag": ""
+            "tag": "",
+            "image": "images/chicken-karahi.jpg"
           }
         ],
         "name": "Karahi"
@@ -379,35 +390,40 @@
             "img": "images/chicken-karahi.jpg",
             "name": "Chicken Makhni Handi",
             "price": "Rs 1,100",
-            "tag": "Favorite"
+            "tag": "Favorite",
+            "image": "images/chicken-karahi.jpg"
           },
           {
             "desc": "Rich, creamy butter chicken — mild, comforting and deeply satisfying.",
             "img": "",
             "name": "Butter Chicken",
             "price": "Rs 1,150",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "White gravy of cashew and cream with tender chicken and green chili heat.",
             "img": "",
             "name": "Chicken White Handi",
             "price": "Rs 1,050",
-            "tag": ""
+            "tag": "",
+            "image": "images/chicken-karahi.jpg"
           },
           {
             "desc": "Black lentils simmered overnight with butter and cream — pure comfort.",
             "img": "",
             "name": "Daal Makhni",
             "price": "Rs 550",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Fresh spinach and soft paneer in a homestyle desi-ghee tadka.",
             "img": "",
             "name": "Palak Paneer",
             "price": "Rs 650",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           }
         ],
         "name": "Handi"
@@ -422,35 +438,40 @@
             "img": "",
             "name": "Chicken Biryani",
             "price": "Rs 320",
-            "tag": "Bestseller"
+            "tag": "Bestseller",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Hearty beef biryani with bold masala and a squeeze of lemon.",
             "img": "",
             "name": "Beef Biryani",
             "price": "Rs 380",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Yakhni-style chicken pulao — subtle, aromatic and deeply savoury.",
             "img": "",
             "name": "Chicken Pulao",
             "price": "Rs 350",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Family-size biryani tray with extra masala, raita and salad — feeds 4–5.",
             "img": "",
             "name": "Sindhi Biryani Family Pack",
             "price": "Rs 1,200",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Simple steamed basmati tossed with roasted cumin — the perfect karahi partner.",
             "img": "",
             "name": "Zeera Rice",
             "price": "Rs 280",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           }
         ],
         "name": "Rice & Biryani"
@@ -465,42 +486,48 @@
             "img": "images/naan-tandoor.jpg",
             "name": "Roghni Naan",
             "price": "Rs 60",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Naan brushed with roasted garlic butter — made for karahi.",
             "img": "images/naan-tandoor.jpg",
             "name": "Garlic Naan",
             "price": "Rs 80",
-            "tag": "Favorite"
+            "tag": "Favorite",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Whole-wheat tandoori roti, blistered and smoky straight from the clay oven.",
             "img": "",
             "name": "Tandoori Roti",
             "price": "Rs 30",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Naan stuffed with molten cheese — a crowd-pleaser for kids and adults.",
             "img": "",
             "name": "Cheese Naan",
             "price": "Rs 150",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Cooling yogurt with mint and roasted cumin — the BBQ essential.",
             "img": "",
             "name": "Mint Raita",
             "price": "Rs 120",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Crisp onions, tomatoes, cucumber and lemon with a chaat-masala sprinkle.",
             "img": "",
             "name": "Green Salad",
             "price": "Rs 150",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           }
         ],
         "name": "Breads & Sides"
@@ -515,42 +542,48 @@
             "img": "",
             "name": "Fresh Lime Soda",
             "price": "Rs 180",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Thick, creamy Punjabi lassi — choose sweet or salted, topped with malai.",
             "img": "",
             "name": "Desi Lassi",
             "price": "Rs 200",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Dense, slow-frozen traditional kulfi with crushed pistachios.",
             "img": "",
             "name": "Kulfi",
             "price": "Rs 150",
-            "tag": "Bestseller"
+            "tag": "Bestseller",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Royal rice pudding with cardamom, saffron and silver leaf.",
             "img": "",
             "name": "Shahi Kheer",
             "price": "Rs 180",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "Chilled 345ml can — Coca-Cola, Sprite, or Fanta.",
             "img": "",
             "name": "Regular Soft Drink",
             "price": "Rs 120",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           },
           {
             "desc": "500ml purified cold mineral water.",
             "img": "",
             "name": "Mineral Water",
             "price": "Rs 100",
-            "tag": ""
+            "tag": "",
+            "image": "images/naan-tandoor.jpg"
           }
         ],
         "name": "Drinks & Desserts"

@@ -285,28 +285,32 @@
             "img": "images/hero-dish.jpg",
             "name": "Smoked Hummus",
             "price": "Rs 1,200",
-            "tag": "Chef's Pick"
+            "tag": "Chef's Pick",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Velvet saffron broth, cream swirl, toasted almonds.",
             "img": "",
             "name": "Saffron Soup",
             "price": "Rs 950",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Seared halloumi, honey-chili glaze, micro herbs.",
             "img": "",
             "name": "Crispy Halloumi",
             "price": "Rs 1,350",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Creamy burrata, charred figs, balsamic pearls, rocket.",
             "img": "",
             "name": "Burrata & Charred Fig",
             "price": "Rs 1,650",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           }
         ],
         "name": "Starters"
@@ -321,28 +325,32 @@
             "img": "images/hero-dish.jpg",
             "name": "Tandoori Lamb Chops",
             "price": "Rs 2,800",
-            "tag": "Signature"
+            "tag": "Signature",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Saffron-marinated chicken tikka, mint emulsion.",
             "img": "",
             "name": "Saffron Chicken Tikka",
             "price": "Rs 1,450",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Tandoor-fired sea bass, turmeric beurre blanc, charred lemon.",
             "img": "",
             "name": "Tandoori Sea Bass",
             "price": "Rs 2,400",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Creamy malai boti skewers, smoked onion jam.",
             "img": "",
             "name": "Malai Boti Skewers",
             "price": "Rs 1,650",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           }
         ],
         "name": "From the Tandoor"
@@ -357,28 +365,32 @@
             "img": "images/hero-dish.jpg",
             "name": "Chapli Royale",
             "price": "Rs 1,850",
-            "tag": "Signature"
+            "tag": "Signature",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Twelve-hour braised lamb shank, smoked aubergine, jus.",
             "img": "",
             "name": "Slow-Braised Lamb Shank",
             "price": "Rs 2,950",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Free-range chicken karahi, tomato confit, ginger pearls.",
             "img": "",
             "name": "Saffron Chicken Karahi",
             "price": "Rs 1,950",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Wild mushroom risotto, truffle oil, aged parmesan.",
             "img": "",
             "name": "Wild Mushroom Risotto",
             "price": "Rs 1,750",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           }
         ],
         "name": "Main Courses"
@@ -393,21 +405,24 @@
             "img": "",
             "name": "Saffron Biryani",
             "price": "Rs 1,450",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Slow-cooked khichdi, truffle oil, crispy shallots.",
             "img": "",
             "name": "Truffle Khichdi",
             "price": "Rs 1,250",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Chef's signature pulao, dried fruits, brown butter.",
             "img": "",
             "name": "NOORÉ Special Pulao",
             "price": "Rs 1,650",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           }
         ],
         "name": "Rice & Biryani"
@@ -422,21 +437,24 @@
             "img": "images/dessert.jpg",
             "name": "Gold-Leaf Kulfi",
             "price": "Rs 850",
-            "tag": "Signature"
+            "tag": "Signature",
+            "image": "images/dessert.jpg"
           },
           {
             "desc": "Silky saffron panna cotta, rose syrup, almond tuile.",
             "img": "",
             "name": "Saffron Panna Cotta",
             "price": "Rs 950",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Crisp chocolate samosa, cardamom cream, gold cocoa.",
             "img": "",
             "name": "Chocolate Samosa",
             "price": "Rs 750",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           }
         ],
         "name": "Desserts"
@@ -451,28 +469,32 @@
             "img": "",
             "name": "Kehwa",
             "price": "Rs 450",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Fresh mint, lime, sparkling water, crushed ice.",
             "img": "",
             "name": "Mint Cooler",
             "price": "Rs 550",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "House lemonade brightened with saffron and rose.",
             "img": "",
             "name": "Saffron Lemonade",
             "price": "Rs 650",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           },
           {
             "desc": "Slow-brewed chai over ice, cinnamon smoke.",
             "img": "",
             "name": "NOORÉ Iced Chai",
             "price": "Rs 600",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-dish.jpg"
           }
         ],
         "name": "Beverages & Infusions"

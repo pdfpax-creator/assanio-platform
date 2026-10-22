@@ -278,56 +278,64 @@
             "img": "images/latte-art.jpg",
             "name": "Spanish Latte",
             "price": "Rs 550",
-            "tag": "Bestseller"
+            "tag": "Bestseller",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Classic Italian balance — rich espresso, steamed milk and a cloud of foam, dusted with cocoa.",
             "img": "images/latte-art.jpg",
             "name": "Cappuccino",
             "price": "Rs 450",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Single-origin Ethiopian beans brewed slow through a V60 at exactly 92°C. Floral, bright, clean.",
             "img": "images/pour-over.jpg",
             "name": "Pour Over",
             "price": "Rs 650",
-            "tag": ""
+            "tag": "",
+            "image": "images/pour-over.jpg"
           },
           {
             "desc": "Steeped 18 hours for a smooth, chocolatey concentrate. Served over ice, black or with milk.",
             "img": "images/pour-over.jpg",
             "name": "Cold Brew",
             "price": "Rs 600",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Double ristretto with silky microfoam. Small, strong and honest.",
             "img": "images/latte-art.jpg",
             "name": "Flat White",
             "price": "Rs 520",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Our house espresso folded into Belgian cocoa, topped with a whisper of cream.",
             "img": "images/latte-art.jpg",
             "name": "Belgian Mocha",
             "price": "Rs 580",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "A proper double shot — syrupy, intense, the base of everything we pour.",
             "img": "images/latte-art.jpg",
             "name": "Espresso",
             "price": "Rs 350",
-            "tag": ""
+            "tag": "",
+            "image": "images/pour-over.jpg"
           },
           {
             "desc": "Vanilla bean gelato drowned in a fresh double espresso. Simple and perfect.",
             "img": "images/cheesecake.jpg",
             "name": "Affogato",
             "price": "Rs 650",
-            "tag": "Favorite"
+            "tag": "Favorite",
+            "image": "images/latte-art.jpg"
           }
         ],
         "name": "Specialty Coffee"
@@ -342,42 +350,48 @@
             "img": "images/latte-art.jpg",
             "name": "Kashmiri Chai",
             "price": "Rs 400",
-            "tag": "Signature"
+            "tag": "Signature",
+            "image": "images/pour-over.jpg"
           },
           {
             "desc": "Ceremonial-grade matcha whisked to order, poured over cold milk and ice.",
             "img": "images/latte-art.jpg",
             "name": "Iced Matcha",
             "price": "Rs 700",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Slow-simmered with cardamom, ginger and whole spices. Tastes like home.",
             "img": "images/latte-art.jpg",
             "name": "Masala Chai",
             "price": "Rs 350",
-            "tag": ""
+            "tag": "",
+            "image": "images/pour-over.jpg"
           },
           {
             "desc": "Double espresso shaken with cold milk over ice. Clean, cold, strong.",
             "img": "images/latte-art.jpg",
             "name": "Iced Latte",
             "price": "Rs 550",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Fresh mint, lemon and a hint of honey over crushed ice. The afternoon reset.",
             "img": "images/latte-art.jpg",
             "name": "Mint Lemonade",
             "price": "Rs 400",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Belgian hot chocolate, thick and dark, with a torched marshmallow on top.",
             "img": "images/latte-art.jpg",
             "name": "Hot Chocolate",
             "price": "Rs 500",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           }
         ],
         "name": "Tea & Cold Drinks"
@@ -392,42 +406,48 @@
             "img": "images/croissant.jpg",
             "name": "Butter Croissant",
             "price": "Rs 350",
-            "tag": "Bestseller"
+            "tag": "Bestseller",
+            "image": "images/croissant.jpg"
           },
           {
             "desc": "Smashed avocado, poached egg, chili flakes and sourdough toasted in olive oil.",
             "img": "images/croissant.jpg",
             "name": "Avocado Toast",
             "price": "Rs 850",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Flaky paratha wrapped around spiced chicken, mint chutney and pickled onions.",
             "img": "images/croissant.jpg",
             "name": "Chicken Paratha Roll",
             "price": "Rs 400",
-            "tag": ""
+            "tag": "",
+            "image": "images/croissant.jpg"
           },
           {
             "desc": "Three-egg omelette with cheddar and herbs, served with toasted sourdough.",
             "img": "images/croissant.jpg",
             "name": "Cheese Omelette",
             "price": "Rs 450",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "House granola, Greek yogurt, honey and seasonal fruit. Light and lovely.",
             "img": "images/cheesecake.jpg",
             "name": "Granola Bowl",
             "price": "Rs 650",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Grilled chicken, pesto and mozzarella pressed in ciabatta until golden.",
             "img": "images/croissant.jpg",
             "name": "Chicken Panini",
             "price": "Rs 700",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           }
         ],
         "name": "Breakfast & Light Bites"
@@ -442,35 +462,40 @@
             "img": "images/cheesecake.jpg",
             "name": "Lotus Cheesecake Slice",
             "price": "Rs 650",
-            "tag": "Favorite"
+            "tag": "Favorite",
+            "image": "images/cheesecake.jpg"
           },
           {
             "desc": "Dense, dark and unapologetic. Served slightly warm with a dusting of cocoa.",
             "img": "images/cheesecake.jpg",
             "name": "Chocolate Fudge Cake",
             "price": "Rs 550",
-            "tag": ""
+            "tag": "",
+            "image": "images/cheesecake.jpg"
           },
           {
             "desc": "Milk-soaked sponge, light as a cloud, topped with cinnamon cream.",
             "img": "images/cheesecake.jpg",
             "name": "Tres Leches",
             "price": "Rs 600",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Toasted walnut banana bread, served warm with salted butter.",
             "img": "images/cheesecake.jpg",
             "name": "Banana Bread",
             "price": "Rs 400",
-            "tag": ""
+            "tag": "",
+            "image": "images/latte-art.jpg"
           },
           {
             "desc": "Delicate saffron-infused milk cake — our nod to classic Pakistani mithaas.",
             "img": "images/cheesecake.jpg",
             "name": "Saffron Milk Cake",
             "price": "Rs 600",
-            "tag": ""
+            "tag": "",
+            "image": "images/cheesecake.jpg"
           }
         ],
         "name": "Cakes & Desserts"

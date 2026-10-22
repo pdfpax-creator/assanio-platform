@@ -257,35 +257,40 @@
             "img": "images/hero-pizza.jpg",
             "name": "Chicken Tikka Pizza",
             "price": "Rs 1,499",
-            "tag": "Bestseller"
+            "tag": "Bestseller",
+            "image": "images/hero-pizza.jpg"
           },
           {
             "desc": "Grilled fajita chicken, crisp bell capsicum, black olives, sweetcorn and aromatic herbs.",
             "img": "images/hero-pizza.jpg",
             "name": "Fajita Supreme Pizza",
             "price": "Rs 1,599",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           },
           {
             "desc": "Creamy malai boti chicken, melted mozzarella, roasted garlic drizzle and mild green chilies.",
             "img": "images/hero-pizza.jpg",
             "name": "Malai Boti Pizza",
             "price": "Rs 1,699",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           },
           {
             "desc": "Double beef pepperoni slices, slow-simmered marinara, Italian herbs and rich mozzarella.",
             "img": "images/hero-pizza.jpg",
             "name": "Pepperoni Pizza",
             "price": "Rs 1,799",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           },
           {
             "desc": "Rich slow-simmered tomato sauce, fragrant fresh basil leaves and premium double mozzarella.",
             "img": "images/hero-pizza.jpg",
             "name": "Margherita Pizza",
             "price": "Rs 1,099",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           }
         ],
         "name": "Pizzas"
@@ -300,21 +305,24 @@
             "img": "images/burger.jpg",
             "name": "Zinger Burger",
             "price": "Rs 599",
-            "tag": "Favorite"
+            "tag": "Favorite",
+            "image": "images/burger.jpg"
           },
           {
             "desc": "Double smashed beef patties, melted sharp cheddar, caramelized brown onions and signature house relish.",
             "img": "images/burger.jpg",
             "name": "Beef Smash Burger",
             "price": "Rs 899",
-            "tag": ""
+            "tag": "",
+            "image": "images/burger.jpg"
           },
           {
             "desc": "Grilled shredded chicken, creamy garlic mayo, crisp garden lettuce wrapped tightly in a soft tortilla.",
             "img": "images/burger.jpg",
             "name": "Chicken Cheese Wrap",
             "price": "Rs 499",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           }
         ],
         "name": "Burgers & Wraps"
@@ -329,21 +337,24 @@
             "img": "images/fries.jpg",
             "name": "Loaded Fries",
             "price": "Rs 499",
-            "tag": ""
+            "tag": "",
+            "image": "images/fries.jpg"
           },
           {
             "desc": "Warm toasted baguette slices loaded with herb-infused garlic butter and golden melted cheese.",
             "img": "images/fries.jpg",
             "name": "Garlic Bread",
             "price": "Rs 349",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           },
           {
             "desc": "Crispy chicken wings tossed generously in smokey spicy peri-peri glaze.",
             "img": "images/fries.jpg",
             "name": "Chicken Wings, 6 Pieces",
             "price": "Rs 699",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           }
         ],
         "name": "Sides"
@@ -358,21 +369,24 @@
             "img": "",
             "name": "Regular Soft Drink",
             "price": "Rs 120",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           },
           {
             "desc": "Family sharing chilled bottle for squad celebrations.",
             "img": "",
             "name": "1.5L Soft Drink",
             "price": "Rs 250",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           },
           {
             "desc": "500ml purified cold mineral water.",
             "img": "",
             "name": "Mineral Water",
             "price": "Rs 100",
-            "tag": ""
+            "tag": "",
+            "image": "images/hero-pizza.jpg"
           }
         ],
         "name": "Drinks"
