@@ -13,10 +13,10 @@ $stores = $pdo->query("SELECT s.name, s.slug, s.template, s.city, s.whatsapp,
 
 // Template info: display name + image
 $tplInfo = [
-    'pizza-fastfood' => ['name' => 'Pizza & Fast Food', 'img' => 'assets/landing/t1-pizza.jpg', 'emoji' => '🍕'],
-    'desi-bbq'       => ['name' => 'Desi & BBQ',          'img' => 'assets/landing/t2-dera.jpg',  'emoji' => '🍖'],
-    'cafe'           => ['name' => 'Cafe',                'img' => 'assets/landing/t3-cafe.jpg',   'emoji' => '☕'],
-    'fine-dining'    => ['name' => 'Fine Dining',         'img' => 'assets/landing/t4-noore.jpg',  'emoji' => '🍽️'],
+    'pizza-fastfood' => ['name' => 'Pizza & Fast Food', 'img' => 'templates/pizza-fastfood/images/hero-pizza.jpg', 'emoji' => '🍕'],
+    'desi-bbq'       => ['name' => 'Desi & BBQ',          'img' => 'templates/desi-bbq/images/bbq-platter.jpg',  'emoji' => '🍖'],
+    'cafe'           => ['name' => 'Cafe',                'img' => 'templates/cafe/images/latte-art.jpg',   'emoji' => '☕'],
+    'fine-dining'    => ['name' => 'Fine Dining',         'img' => 'templates/fine-dining/images/hero-dish.jpg',  'emoji' => '🍽️'],
 ];
 
 page_head('Discover Restaurants — Assanio');
