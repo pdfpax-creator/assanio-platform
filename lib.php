@@ -657,6 +657,10 @@ function generateStoreFiles(array $store): string
     if (!isset($cj['site']) || !is_array($cj['site'])) $cj['site'] = [];
     $phone = normalize_phone((string)($store['whatsapp'] ?? ''));
     $cj['site']['name'] = $store['name'];
+    // Clear template-default header logo text so it falls back to the store name
+    if (isset($cj['header']['logoText'])) {
+        unset($cj['header']['logoText']);
+    }
     if ($phone['digits'] !== '') {
         $cj['site']['whatsappDigits'] = $phone['digits'];
         $cj['site']['phoneDigits'] = $phone['digits'];

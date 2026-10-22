@@ -641,13 +641,13 @@ var toastT=null;
 function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove("show")},1800)}
 function addToCart(id,name,priceStr){
   var price=parsePrice(priceStr),it=null,i;
-  for(i=0;i<cart.length;i++)if(cart[i].id===id)it=cart[i];
+  id=String(id);for(i=0;i<cart.length;i++)if(String(cart[i].id)===id)it=cart[i];
   if(it)it.qty=Math.min(99,it.qty+1);
   else cart.push({id:id,name:name,price:price,qty:1});
   saveCart();renderCart();toast(ctxt("toastAdded","Added to cart"));openDrawer();
 }
-function changeQty(id,d){for(var i=0;i<cart.length;i++)if(cart[i].id===id){cart[i].qty+=d;if(cart[i].qty<1)cart.splice(i,1);break}saveCart();renderCart()}
-function removeItem(id){cart=cart.filter(function(i){return i.id!==id});saveCart();renderCart()}
+function changeQty(id,d){id=String(id);for(var i=0;i<cart.length;i++)if(String(cart[i].id)===id){cart[i].qty+=d;if(cart[i].qty<1)cart.splice(i,1);break}saveCart();renderCart()}
+function removeItem(id){id=String(id);cart=cart.filter(function(i){return String(i.id)!==id});saveCart();renderCart()}
 function renderCart(){
   var n=cartCount(),badge=$("cartCount");
   badge.textContent=n;badge.style.display=n?"flex":"none";
