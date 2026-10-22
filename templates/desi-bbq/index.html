@@ -75,7 +75,7 @@ nav.desk a:hover{color:#1e1b16}
 /* ---------- trust row ---------- */
 .trust{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .trust-in{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;padding:1rem;max-width:1200px;margin:0 auto;text-align:center}
-.trust-item .material-symbols-outlined{color:var(--orange);font-size:24px}
+.trust-item .material-symbols-outlined,.trust-item .trust-svg{display:inline-flex;color:var(--orange);font-size:24px}
 .trust-item b{display:block;font-size:12px;margin-top:.3rem;font-family:var(--font-d);letter-spacing:.04em}
 .trust-item span{font-size:11px;color:var(--muted)}
 /* ---------- deal of the day ---------- */
@@ -389,7 +389,9 @@ html.no-anim *,html.no-anim *::before,html.no-anim *::after{animation:none!impor
 @media(prefers-reduced-motion:reduce){.os-dot.on{animation:none}}
 </style>
 <style>
-.ch-loader{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;transition:opacity .3s}
+.ch-loader{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;transition:opacity .4s}
+body{opacity:0;transition:opacity .4s ease-in}
+body.ch-ready{opacity:1}
 .ch-loader.hide{opacity:0;pointer-events:none}
 .ch-loader .spin{width:40px;height:40px;border:3px solid #eee;border-top-color:#c0392b;border-radius:50%;animation:chspin 0.8s linear infinite}
 @keyframes chspin{to{transform:rotate(360deg)}}
@@ -1059,7 +1061,11 @@ Promise.all([
   fetch("content.json").then(function(r){if(!r.ok)throw new Error("content.json missing");return r.json()}),
   fetch("palettes.json").then(function(r){return r.ok?r.json():{}}).catch(function(){return {}})
 ]).then(function(res){
-  var _l=document.getElementById("chLoader");if(_l)_l.classList.add("hide");
+  var _t=Date.now();
+  setTimeout(function(){
+    var _l=document.getElementById("chLoader");if(_l)_l.classList.add("hide");
+    document.body.classList.add("ch-ready");
+  }, Math.max(0, 400-(Date.now()-_t)));
   var c=res[0],palettes=res[1]||{};
   var S=c.site, W=c.whatsapp;
   window.__CH_SITE__=S;
@@ -1102,7 +1108,7 @@ Promise.all([
 
   /* trust */
   $("trustRow").innerHTML=c.trustRow.map(function(t){
-    return '<div class="trust-item"><span class="material-symbols-outlined">'+esc(t.icon)+'</span><b>'+esc(t.title)+'</b><span>'+esc(t.text)+'</span></div>'}).join("");
+    return '<div class="trust-item"><span class="trust-svg">'+svgIcon(t.icon,28)+'</span><b>'+esc(t.title)+'</b><span>'+esc(t.text)+'</span></div>'}).join("");
 
   /* deal of day */
   var D=c.dealOfDay;
@@ -1321,6 +1327,74 @@ Promise.all([
   if(document.readyState==="complete")hashGo();
   else window.addEventListener("load",hashGo);
 })();
+</script>
+<script>
+// SVG icon set — replaces Material Symbols (font fails on some mobile browsers)
+// Usage: icon('call') returns SVG string. Add class via wrapper.
+var SVG_ICONS = {
+'arrow_forward': '<path d="M5 12h14M12 5l7 7-7 7"/>',
+'call': '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>',
+'chat': '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+'delivery_dining': '<circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M9 17.5h6M5.5 14l4-7h6l3 7M12 7V4h3"/>',
+'directions': '<polygon points="3 11 22 2 13 21 11 13 3 11"/>',
+'location_on': '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+'payments': '<rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>',
+'print': '<polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>',
+'schedule': '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+'timer': '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/>',
+'outdoor_grill': '<path d="M4 11h16M6 11V7a6 6 0 0 1 12 0v4M12 11v3M8 21l2-4M16 21l-2-4M10 17h4"/>',
+'soup_kitchen': '<path d="M4 11h16v2a8 8 0 0 1-16 0v-2z"/><path d="M8 11V7M12 11V5M16 11V7M2 21h20"/>',
+'verified': '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
+'bakery_dining': '<path d="M4 15a4 4 0 0 1 4-4h8a4 4 0 0 1 1.5 7.7A3.5 3.5 0 0 1 14 21H9a3.5 3.5 0 0 1-3.5-2.3A4 4 0 0 1 4 15z"/><path d="M9 11V8M12 11V7M15 11V8"/>',
+'cooking': '<path d="M4 13h16v-2a8 8 0 0 0-16 0v2z"/><path d="M2 13h20M12 5V3M8 21l1.5-6M16 21l-1.5-6"/>',
+'icecream': '<path d="M12 22V12M12 12L7 3h10l-5 9z"/><path d="M7 3a5 5 0 0 0 10 0"/>',
+'kebab_dining': '<path d="M12 2v20M8 6l4-2 4 2M7 10l5-2.5L17 10M8 14l4-2 4 2M7 18l5-2.5 5 2.5"/>',
+'rice_bowl': '<path d="M4 12h16a8 8 0 0 1-16 0z"/><path d="M9 12V8M12 12V6M15 12V8M2 20h20"/>',
+'star': '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+'check': '<polyline points="20 6 9 17 4 12"/>',
+'clock': '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+'phone': '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>',
+'mail': '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+'map_pin': '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+'coffee': '<path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>',
+'pizza': '<path d="M12 2 2 19h20L12 2z"/><path d="M12 2v2M9 13h.01M14 15h.01M10 17h.01"/>',
+'flame': '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>',
+'leaf': '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>',
+'wifi': '<path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>',
+'users': '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+'gift': '<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>',
+'truck': '<rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>'
+};
+function svgIcon(name, size){
+  size = size || 24;
+  var p = SVG_ICONS[name] || SVG_ICONS['star'];
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="'+size+'" height="'+size+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex:0 0 auto">'+p+'</svg>';
+}
+
+
+// Auto-replace Material Symbols with SVGs (font fails on some mobile browsers)
+(function(){
+  function replaceAll(){
+    document.querySelectorAll('.material-symbols-outlined').forEach(function(el){
+      var name = el.textContent.trim();
+      if(name && !el.dataset.svgDone){
+        el.dataset.svgDone = '1';
+        // Get size from computed font-size
+        var fs = parseInt(window.getComputedStyle(el).fontSize) || 24;
+        el.innerHTML = svgIcon(name, fs);
+        el.style.display = 'inline-flex';
+        el.style.alignItems = 'center';
+      }
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', replaceAll);
+  } else { replaceAll(); }
+  // Also run after dynamic content renders
+  setTimeout(replaceAll, 500);
+  setTimeout(replaceAll, 2000);
+})();
+
 </script>
 </body>
 </html>
