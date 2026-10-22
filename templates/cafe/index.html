@@ -262,7 +262,8 @@ body.cart-open{overflow:hidden}
 /* ---------- premium animations: transform/opacity only (GPU) ---------- */
 @keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
 .hero-bg img{animation:kb 18s ease-in-out infinite alternate;will-change:transform}
-.rv{opacity:0;transition:opacity .7s ease-out,transform .7s ease-out;will-change:opacity,transform}
+.rv{transition:opacity .7s ease-out,transform .7s ease-out;will-change:opacity,transform}
+.rv-hide{opacity:0}
 .rv-up{transform:translateY(32px)}
 .rv-left{transform:translateX(-40px)}
 .rv-right{transform:translateX(40px)}
@@ -393,7 +394,7 @@ html.no-anim *,html.no-anim *::before,html.no-anim *::after{animation:none!impor
 
 </style>
 </head>
-<body class="no-js">
+<body>
 
 <div class="annbar" id="annBar" hidden><span id="annText"></span><button class="ann-x" id="annX" aria-label="Dismiss announcement">&times;</button></div>
 
@@ -911,7 +912,9 @@ x:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.3
 
 /* ---------- premium animations: scroll reveal, stat count-up, header shadow ---------- */
 function initAnims(c){
-  document.body.classList.remove('no-js');
+  document.querySelectorAll('.rv').forEach(function(el){
+    el.classList.add('rv-hide');
+  });
   if(c.theme&&c.theme.animations===false)return;
   if(!("IntersectionObserver" in window))return;
   var animMap=[
