@@ -1,1 +1,66 @@
-{"gold":{"name":"Gold","primary":"#ecc246","accent":"#c9a227","onPrimary":"#111111","onAccent":"#141414","accentText":"#c9a227"},"platinum":{"name":"Platinum","primary":"#d9d9de","accent":"#a7a7b3","onPrimary":"#111111","onAccent":"#141414","accentText":"#a7a7b3"},"rosewood":{"name":"Rosewood","primary":"#e0a899","accent":"#b76e79","onPrimary":"#111111","onAccent":"#141414","accentText":"#b76e79"},"emeraldgold":{"name":"Emerald & Gold","primary":"#065f46","accent":"#d4af37","onPrimary":"#ffffff","onAccent":"#141414","accentText":"#d4af37"}}
+{
+  "gold": {
+    "name": "Gold",
+    "primary": "#ecc246",
+    "accent": "#c9a227",
+    "onPrimary": "#111111",
+    "onAccent": "#141414",
+    "accentText": "#c9a227"
+  },
+  "platinum": {
+    "name": "Platinum",
+    "primary": "#d9d9de",
+    "accent": "#a7a7b3",
+    "onPrimary": "#111111",
+    "onAccent": "#141414",
+    "accentText": "#a7a7b3"
+  },
+  "rosewood": {
+    "name": "Rosewood",
+    "primary": "#e0a899",
+    "accent": "#b76e79",
+    "onPrimary": "#111111",
+    "onAccent": "#141414",
+    "accentText": "#b76e79"
+  },
+  "emeraldgold": {
+    "name": "Emerald & Gold",
+    "primary": "#065f46",
+    "accent": "#d4af37",
+    "onPrimary": "#ffffff",
+    "onAccent": "#141414",
+    "accentText": "#d4af37"
+  },
+  "onyx": {
+    "name": "Onyx Black",
+    "primary": "#0d0d0d",
+    "onPrimary": "#ffffff",
+    "accent": "#c9a961",
+    "accentText": "#c9a961",
+    "onAccent": "#0d0d0d"
+  },
+  "champagne": {
+    "name": "Champagne",
+    "primary": "#f7e7ce",
+    "onPrimary": "#1a1a1a",
+    "accent": "#b76e79",
+    "accentText": "#8a4a5a",
+    "onAccent": "#ffffff"
+  },
+  "burgundy": {
+    "name": "Burgundy",
+    "primary": "#4a0e18",
+    "onPrimary": "#ffffff",
+    "accent": "#d4a574",
+    "accentText": "#d4a574",
+    "onAccent": "#1a1a1a"
+  },
+  "sapphire": {
+    "name": "Sapphire Blue",
+    "primary": "#1b2a4a",
+    "onPrimary": "#ffffff",
+    "accent": "#7fb3d5",
+    "accentText": "#7fb3d5",
+    "onAccent": "#1a1a1a"
+  }
+}

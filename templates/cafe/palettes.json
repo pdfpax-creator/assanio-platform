@@ -1,1 +1,66 @@
-{"ink":{"name":"Ink Black","primary":"#181612","accent":"#8d4d35","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#8d4d35"},"terracotta":{"name":"Terracotta","primary":"#7c3f27","accent":"#9c4a1f","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#9c4a1f"},"sage":{"name":"Deep Sage","primary":"#3f4f3a","accent":"#5f7161","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#5f7161"},"navy":{"name":"Navy","primary":"#1e3a5f","accent":"#96690f","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#96690f"}}
+{
+  "ink": {
+    "name": "Ink Black",
+    "primary": "#181612",
+    "accent": "#8d4d35",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#8d4d35"
+  },
+  "terracotta": {
+    "name": "Terracotta",
+    "primary": "#7c3f27",
+    "accent": "#9c4a1f",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#9c4a1f"
+  },
+  "sage": {
+    "name": "Deep Sage",
+    "primary": "#3f4f3a",
+    "accent": "#5f7161",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#5f7161"
+  },
+  "navy": {
+    "name": "Navy",
+    "primary": "#1e3a5f",
+    "accent": "#96690f",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#96690f"
+  },
+  "mocha": {
+    "name": "Mocha Brown",
+    "primary": "#6f4e37",
+    "onPrimary": "#ffffff",
+    "accent": "#c8a882",
+    "accentText": "#6f4e37",
+    "onAccent": "#1a1a1a"
+  },
+  "blush": {
+    "name": "Blush Pink",
+    "primary": "#f8edeb",
+    "onPrimary": "#1a1a1a",
+    "accent": "#e8a598",
+    "accentText": "#b76e61",
+    "onAccent": "#1a1a1a"
+  },
+  "mint": {
+    "name": "Mint Fresh",
+    "primary": "#d8f3dc",
+    "onPrimary": "#1a1a1a",
+    "accent": "#2d6a4f",
+    "accentText": "#2d6a4f",
+    "onAccent": "#ffffff"
+  },
+  "espresso": {
+    "name": "Espresso Dark",
+    "primary": "#3c2f2f",
+    "onPrimary": "#ffffff",
+    "accent": "#d4a574",
+    "accentText": "#d4a574",
+    "onAccent": "#1a1a1a"
+  }
+}

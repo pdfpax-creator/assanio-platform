@@ -1,1 +1,66 @@
-{"classic":{"name":"Burnt Orange","primary":"#9b4003","accent":"#bb581e","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#b6561d"},"maroon":{"name":"Deep Maroon","primary":"#7f1d2e","accent":"#a16207","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#a16207"},"forest":{"name":"Forest Green","primary":"#166534","accent":"#0f766e","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#0f766e"},"indigo":{"name":"Indigo","primary":"#3730a3","accent":"#be185d","onPrimary":"#ffffff","onAccent":"#ffffff","accentText":"#be185d"}}
+{
+  "classic": {
+    "name": "Burnt Orange",
+    "primary": "#9b4003",
+    "accent": "#bb581e",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#b6561d"
+  },
+  "maroon": {
+    "name": "Deep Maroon",
+    "primary": "#7f1d2e",
+    "accent": "#a16207",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#a16207"
+  },
+  "forest": {
+    "name": "Forest Green",
+    "primary": "#166534",
+    "accent": "#0f766e",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#0f766e"
+  },
+  "indigo": {
+    "name": "Indigo",
+    "primary": "#3730a3",
+    "accent": "#be185d",
+    "onPrimary": "#ffffff",
+    "onAccent": "#ffffff",
+    "accentText": "#be185d"
+  },
+  "saffron": {
+    "name": "Saffron Gold",
+    "primary": "#e09f3e",
+    "onPrimary": "#1a1a1a",
+    "accent": "#9e2a2b",
+    "accentText": "#9e2a2b",
+    "onAccent": "#ffffff"
+  },
+  "coal": {
+    "name": "Coal Black",
+    "primary": "#1a1a1a",
+    "onPrimary": "#ffffff",
+    "accent": "#e09f3e",
+    "accentText": "#e09f3e",
+    "onAccent": "#1a1a1a"
+  },
+  "ivory": {
+    "name": "Ivory Light",
+    "primary": "#fffcf2",
+    "onPrimary": "#1a1a1a",
+    "accent": "#9e2a2b",
+    "accentText": "#9e2a2b",
+    "onAccent": "#ffffff"
+  },
+  "crimson": {
+    "name": "Crimson Spice",
+    "primary": "#a4133c",
+    "onPrimary": "#ffffff",
+    "accent": "#ff4d6d",
+    "accentText": "#ff4d6d",
+    "onAccent": "#1a1a1a"
+  }
+}

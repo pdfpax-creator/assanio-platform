@@ -1,1 +1,66 @@
-{"classic":{"accent":"#f4a261","accentText":"#f4a261","name":"Classic Red","onAccent":"#141414","onPrimary":"#ffffff","primary":"#d62839"},"emerald":{"accent":"#fbbf24","accentText":"#fbbf24","name":"Emerald","onAccent":"#141414","onPrimary":"#ffffff","primary":"#047857"},"midnight":{"accent":"#38bdf8","accentText":"#38bdf8","name":"Midnight Blue","onAccent":"#141414","onPrimary":"#ffffff","primary":"#2563eb"},"royal":{"accent":"#e879f9","accentText":"#e879f9","name":"Royal Purple","onAccent":"#141414","onPrimary":"#ffffff","primary":"#7c3aed"}}
+{
+  "classic": {
+    "accent": "#f4a261",
+    "accentText": "#f4a261",
+    "name": "Classic Red",
+    "onAccent": "#141414",
+    "onPrimary": "#ffffff",
+    "primary": "#d62839"
+  },
+  "emerald": {
+    "accent": "#fbbf24",
+    "accentText": "#fbbf24",
+    "name": "Emerald",
+    "onAccent": "#141414",
+    "onPrimary": "#ffffff",
+    "primary": "#047857"
+  },
+  "midnight": {
+    "accent": "#38bdf8",
+    "accentText": "#38bdf8",
+    "name": "Midnight Blue",
+    "onAccent": "#141414",
+    "onPrimary": "#ffffff",
+    "primary": "#2563eb"
+  },
+  "royal": {
+    "accent": "#e879f9",
+    "accentText": "#e879f9",
+    "name": "Royal Purple",
+    "onAccent": "#141414",
+    "onPrimary": "#ffffff",
+    "primary": "#7c3aed"
+  },
+  "sunset": {
+    "name": "Sunset Orange",
+    "primary": "#e76f51",
+    "onPrimary": "#ffffff",
+    "accent": "#f4a261",
+    "accentText": "#e76f51",
+    "onAccent": "#1a1a1a"
+  },
+  "charcoal": {
+    "name": "Charcoal Dark",
+    "primary": "#2b2d42",
+    "onPrimary": "#ffffff",
+    "accent": "#ef233c",
+    "accentText": "#ef233c",
+    "onAccent": "#ffffff"
+  },
+  "cream": {
+    "name": "Cream Light",
+    "primary": "#fefae0",
+    "onPrimary": "#1a1a1a",
+    "accent": "#d62839",
+    "accentText": "#d62839",
+    "onAccent": "#ffffff"
+  },
+  "chili": {
+    "name": "Chili Pepper",
+    "primary": "#9d0208",
+    "onPrimary": "#ffffff",
+    "accent": "#ffba08",
+    "accentText": "#ffba08",
+    "onAccent": "#1a1a1a"
+  }
+}
