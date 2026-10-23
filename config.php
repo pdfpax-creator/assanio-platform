@@ -20,6 +20,7 @@ define('RP_TEMPLATES', [
     'desi-bbq'       => ['name' => 'Dera BBQ House',  'label' => 'Dera BBQ House — Desi BBQ',       'blurb' => 'Warm and hearty. BBQ, karahi and family platters.',             'img' => 'assets/landing/t2-dera.jpg'],
     'cafe'           => ['name' => 'The Quiet Cup',   'label' => 'The Quiet Cup — Cafe & Bakery',   'blurb' => 'Calm and minimal. Coffee, bakes and slow mornings.',            'img' => 'assets/landing/t3-cafe.jpg'],
     'fine-dining'    => ['name' => 'NOORÉ',           'label' => 'NOORÉ — Fine Dining',             'blurb' => 'Dark, gold, premium. Fine dining and tasting menus.',          'img' => 'assets/landing/t4-noore.jpg'],
+    'real-estate'    => ['name' => 'Emerald Estates', 'label' => 'Emerald Estates — Real Estate',   'blurb' => 'Professional property portal. Listings, agents, site-visit booking.', 'img' => 'assets/landing/t5-realestate.jpg'],
 ]);
 
 define('RP_ORDER_STATUSES', ['new', 'accepted', 'preparing', 'delivered', 'cancelled']);

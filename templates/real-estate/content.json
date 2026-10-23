@@ -1,0 +1,601 @@
+{
+  "about": {
+    "heading": "Twelve Years of Trusted Dealing",
+    "image": "https://picsum.photos/seed/emerald-office/800/600",
+    "imageAlt": "Emerald Estates office team",
+    "kicker": "Our Story",
+    "para1": "Emerald Estates started in 2014 with a single desk in DHA Phase 5 and one rule: never sell a property we wouldn't buy ourselves. That rule built our name — today, most of our business comes from repeat clients and their referrals.",
+    "para2": "From first homes to commercial plazas, our team handles buying, selling and renting across Lahore's premium housing societies — with in-house legal support so your transfer is smooth and safe.",
+    "stats": [
+      {
+        "label": "Properties Sold",
+        "suffix": "+",
+        "value": "850"
+      },
+      {
+        "label": "Happy Families",
+        "suffix": "+",
+        "value": "1200"
+      },
+      {
+        "label": "Years of Trust",
+        "suffix": "",
+        "value": "12"
+      },
+      {
+        "label": "Google Rating",
+        "suffix": "",
+        "value": "4.9"
+      }
+    ]
+  },
+  "agents": {
+    "heading": "Your Property Advisors",
+    "items": [
+      {
+        "experience": "12 yrs",
+        "id": "agent1",
+        "image": "https://picsum.photos/seed/emerald-agent1/400/400",
+        "name": "Ahmed Raza",
+        "phone": "0300 1112233",
+        "phoneDigits": "923001112233",
+        "role": "Founder · DHA Specialist",
+        "whatsappDigits": "923001112233"
+      },
+      {
+        "experience": "8 yrs",
+        "id": "agent2",
+        "image": "https://picsum.photos/seed/emerald-agent2/400/400",
+        "name": "Fatima Khan",
+        "phone": "0300 4445566",
+        "phoneDigits": "923004445566",
+        "role": "Commercial Head",
+        "whatsappDigits": "923004445566"
+      },
+      {
+        "experience": "6 yrs",
+        "id": "agent3",
+        "image": "https://picsum.photos/seed/emerald-agent3/400/400",
+        "name": "Bilal Sheikh",
+        "phone": "0300 7778899",
+        "phoneDigits": "923007778899",
+        "role": "Bahria Town Expert",
+        "whatsappDigits": "923007778899"
+      }
+    ],
+    "kicker": "Meet the Team",
+    "subtitle": "Talk directly to the person handling your deal — no middlemen."
+  },
+  "announcement": {
+    "enabled": true,
+    "link": "#properties",
+    "linkText": "View listings",
+    "text": "New: 1 Kanal farmhouses available in DHA Phase 9 — call for details"
+  },
+  "contact": {
+    "address": "Office 12, Plaza 44, Main Boulevard, DHA Phase 5, Lahore",
+    "email": "info@emeraldestates.pk",
+    "heading": "Visit Our Office",
+    "hours": "Mon–Sat · 10:00 AM – 8:00 PM",
+    "kicker": "Get In Touch",
+    "mapNote": "Find us on the map",
+    "phone": "0300 1234567",
+    "whatsappText": "Chat on WhatsApp"
+  },
+  "footer": {
+    "about": "Emerald Estates is a Lahore-based real estate agency specialising in verified residential and commercial property across DHA, Bahria Town and Gulberg.",
+    "copyright": "© 2026 Emerald Estates. All rights reserved.",
+    "quickLinks": [
+      {
+        "href": "#properties",
+        "label": "Properties"
+      },
+      {
+        "href": "#whyus",
+        "label": "Why Us"
+      },
+      {
+        "href": "#agents",
+        "label": "Agents"
+      },
+      {
+        "href": "#visit",
+        "label": "Schedule a Visit"
+      },
+      {
+        "href": "#contact",
+        "label": "Contact"
+      }
+    ]
+  },
+  "header": {
+    "ctaText": "WhatsApp Us",
+    "nav": [
+      {
+        "href": "#properties",
+        "label": "Properties"
+      },
+      {
+        "href": "#whyus",
+        "label": "Why Us"
+      },
+      {
+        "href": "#about",
+        "label": "About"
+      },
+      {
+        "href": "#agents",
+        "label": "Agents"
+      },
+      {
+        "href": "#contact",
+        "label": "Contact"
+      }
+    ]
+  },
+  "hero": {
+    "heading": "Find a Home You'll Love to Live In",
+    "image": "https://picsum.photos/seed/emerald-hero/1600/900",
+    "imageAlt": "Modern villa exterior at dusk",
+    "kicker": "DHA · Bahria Town · Model Town",
+    "resetButton": "Reset",
+    "searchButton": "Search",
+    "searchTitle": "Search Properties",
+    "subtext": "Verified houses, flats, plots and commercial properties across Lahore — with honest pricing and complete legal support."
+  },
+  "properties": {
+    "detailsButton": "View Details",
+    "heading": "Properties for Sale & Rent",
+    "inquireButton": "WhatsApp",
+    "kicker": "Featured Listings",
+    "noResults": "No properties match your search. Try widening your filters or WhatsApp us — we may have off-market options.",
+    "properties": [
+      {
+        "agentId": "agent1",
+        "area": "DHA Phase 5",
+        "areaSize": "10 Marla",
+        "areaSqft": "2,722 sq.ft",
+        "baths": 6,
+        "beds": 5,
+        "description": "A stunning 10 marla designer house in the heart of DHA Phase 5. Double-height lobby, designer ceilings, and a lush green lawn. All documents clear — ready for immediate transfer.",
+        "featured": true,
+        "features": [
+          "Solid ash-wood flooring",
+          "Imported kitchen fittings",
+          "Powder room + store",
+          "Servant quarter",
+          "CCTV + video door phone",
+          "Near park & mosque"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p1a/800/600",
+          "https://picsum.photos/seed/emerald-p1b/800/600",
+          "https://picsum.photos/seed/emerald-p1c/800/600"
+        ],
+        "id": "prop1",
+        "image": "https://picsum.photos/seed/emerald-p1/800/600",
+        "location": "DHA Phase 5, Lahore",
+        "price": 28500000,
+        "priceLabel": "Rs 2.85 Crore",
+        "purpose": "sale",
+        "title": "10 Marla Designer House",
+        "type": "House"
+      },
+      {
+        "agentId": "agent2",
+        "area": "Gulberg",
+        "areaSize": "1,450 sq.ft",
+        "areaSqft": "1,450 sq.ft",
+        "baths": 3,
+        "beds": 2,
+        "description": "Bright, fully ventilated 2-bedroom apartment on a high floor with panoramic city views. Ideal for a small family or working couple. Available from next month.",
+        "featured": true,
+        "features": [
+          "High-floor with city view",
+          "2 covered car parks",
+          "Gym + swimming pool access",
+          "24/7 security & backup power",
+          "Near metro station"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p2a/800/600",
+          "https://picsum.photos/seed/emerald-p2b/800/600"
+        ],
+        "id": "prop2",
+        "image": "https://picsum.photos/seed/emerald-p2/800/600",
+        "location": "Gulberg Greens, Islamabad",
+        "price": 95000,
+        "priceLabel": "Rs 95,000/mo",
+        "purpose": "rent",
+        "title": "2 Bed Luxury Apartment",
+        "type": "Flat"
+      },
+      {
+        "agentId": "agent1",
+        "area": "DHA Phase 5",
+        "areaSize": "1 Kanal",
+        "areaSqft": "4,500 sq.ft",
+        "baths": 0,
+        "beds": 0,
+        "description": "Premium 1 kanal corner plot facing a lush green park in DHA Phase 9. Level land, all development charges paid, possession available immediately on full payment.",
+        "featured": true,
+        "features": [
+          "Corner + facing park",
+          "Level, ready-to-construct",
+          "All dues clear",
+          "Possession on payment",
+          "Ideal for investment"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p3a/800/600"
+        ],
+        "id": "prop3",
+        "image": "https://picsum.photos/seed/emerald-p3/800/600",
+        "location": "DHA Phase 9, Lahore",
+        "price": 42000000,
+        "priceLabel": "Rs 4.20 Crore",
+        "purpose": "sale",
+        "title": "1 Kanal Corner Plot",
+        "type": "Plot"
+      },
+      {
+        "agentId": "agent3",
+        "area": "Bahria Town",
+        "areaSize": "5 Marla",
+        "areaSqft": "1,900 sq.ft",
+        "baths": 4,
+        "beds": 4,
+        "description": "Beautifully built 5 marla house with Spanish elevation in Bahria Town Sector C. Walking distance to the Grand Mosque and family parks. Ideal for first-time buyers.",
+        "featured": true,
+        "features": [
+          "Spanish elevation",
+          "Marble + wooden flooring",
+          "Mumty + roof terrace",
+          "Near Grand Mosque",
+          "Bahria maintained streets"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p4a/800/600",
+          "https://picsum.photos/seed/emerald-p4b/800/600"
+        ],
+        "id": "prop4",
+        "image": "https://picsum.photos/seed/emerald-p4/800/600",
+        "location": "Bahria Town Sector C, Lahore",
+        "price": 16500000,
+        "priceLabel": "Rs 1.65 Crore",
+        "purpose": "sale",
+        "title": "5 Marla Modern House",
+        "type": "House"
+      },
+      {
+        "agentId": "agent2",
+        "area": "Gulberg",
+        "areaSize": "4,000 sq.ft",
+        "areaSqft": "4,000 sq.ft",
+        "baths": 4,
+        "beds": 0,
+        "description": "Prestigious 4,000 sq.ft office floor on Main Boulevard Gulberg. Glass facade with excellent brand visibility. Ready for immediate corporate occupancy.",
+        "featured": false,
+        "features": [
+          "Glass facade, main road facing",
+          "Dedicated parking (10 cars)",
+          "Central HVAC",
+          "2 conference rooms",
+          "Ideal for banks / MNCs"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p5a/800/600",
+          "https://picsum.photos/seed/emerald-p5b/800/600"
+        ],
+        "id": "prop5",
+        "image": "https://picsum.photos/seed/emerald-p5/800/600",
+        "location": "Main Boulevard, Gulberg, Lahore",
+        "price": 350000,
+        "priceLabel": "Rs 3.5 Lac/mo",
+        "purpose": "rent",
+        "title": "Corporate Office Floor",
+        "type": "Commercial"
+      },
+      {
+        "agentId": "agent3",
+        "area": "Model Town",
+        "areaSize": "8 Marla",
+        "areaSqft": "2,180 sq.ft",
+        "baths": 3,
+        "beds": 4,
+        "description": "Distress-sale 8 marla house on Model Town Link Road — priced below market for quick sale. Currently rented at Rs 70,000/month. Excellent rental yield for investors.",
+        "featured": false,
+        "features": [
+          "Below market price",
+          "Solid 15-year-old structure",
+          "Rental income Rs 70k/mo",
+          "Near schools & hospitals"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p6a/800/600"
+        ],
+        "id": "prop6",
+        "image": "https://picsum.photos/seed/emerald-p6/800/600",
+        "location": "Model Town Link Road, Lahore",
+        "price": 19800000,
+        "priceLabel": "Rs 1.98 Crore",
+        "purpose": "sale",
+        "title": "8 Marla House — Investor Deal",
+        "type": "House"
+      },
+      {
+        "agentId": "agent1",
+        "area": "Johar Town",
+        "areaSize": "1,850 sq.ft",
+        "areaSqft": "1,850 sq.ft",
+        "baths": 3,
+        "beds": 3,
+        "description": "Spacious 3-bedroom west-open apartment in Johar Town Block H. Minutes from Emporium Mall and top schools. Bank financing available for eligible buyers.",
+        "featured": false,
+        "features": [
+          "West-open, airy",
+          "3rd floor with lift",
+          "Near Emporium Mall",
+          "Family-oriented block",
+          "Clear title, bank loan eligible"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p7a/800/600",
+          "https://picsum.photos/seed/emerald-p7b/800/600"
+        ],
+        "id": "prop7",
+        "image": "https://picsum.photos/seed/emerald-p7/800/600",
+        "location": "Johar Town Block H, Lahore",
+        "price": 13500000,
+        "priceLabel": "Rs 1.35 Crore",
+        "purpose": "sale",
+        "title": "3 Bed Family Apartment",
+        "type": "Flat"
+      },
+      {
+        "agentId": "agent2",
+        "area": "DHA Phase 5",
+        "areaSize": "10 Marla",
+        "areaSqft": "12,000 sq.ft",
+        "baths": 6,
+        "beds": 0,
+        "description": "High-yield 10 marla commercial plaza on DHA Phase 6 main commercial road. Fully rented to national brands with 7.2% annual yield. A trophy asset for serious investors.",
+        "featured": false,
+        "features": [
+          "4-storey + basement",
+          "Main commercial road",
+          "Rented to national brands",
+          "Annual yield 7.2%",
+          "Separate meters & lifts"
+        ],
+        "gallery": [
+          "https://picsum.photos/seed/emerald-p8a/800/600",
+          "https://picsum.photos/seed/emerald-p8b/800/600"
+        ],
+        "id": "prop8",
+        "image": "https://picsum.photos/seed/emerald-p8/800/600",
+        "location": "DHA Phase 6 Commercial, Lahore",
+        "price": 85000000,
+        "priceLabel": "Rs 8.50 Crore",
+        "purpose": "sale",
+        "title": "10 Marla Commercial Plaza",
+        "type": "Commercial"
+      }
+    ],
+    "resultsLabel": "properties found",
+    "subtitle": "Hand-picked, physically verified listings. Prices are final — no hidden charges."
+  },
+  "search": {
+    "bedOptions": [
+      {
+        "label": "Any",
+        "min": 0
+      },
+      {
+        "label": "3+",
+        "min": 3
+      },
+      {
+        "label": "4+",
+        "min": 4
+      },
+      {
+        "label": "5+",
+        "min": 5
+      }
+    ],
+    "locations": [
+      "DHA Phase 5",
+      "DHA Phase 6",
+      "Bahria Town",
+      "Model Town",
+      "Johar Town",
+      "Gulberg"
+    ],
+    "priceRanges": [
+      {
+        "label": "Any price",
+        "max": 0
+      },
+      {
+        "label": "Up to Rs 1 Crore",
+        "max": 10000000
+      },
+      {
+        "label": "Up to Rs 2.5 Crore",
+        "max": 25000000
+      },
+      {
+        "label": "Up to Rs 5 Crore",
+        "max": 50000000
+      },
+      {
+        "label": "Rs 5 Crore+",
+        "max": -1
+      }
+    ],
+    "purposes": [
+      {
+        "label": "For Sale",
+        "value": "sale"
+      },
+      {
+        "label": "For Rent",
+        "value": "rent"
+      }
+    ],
+    "types": [
+      "House",
+      "Flat",
+      "Plot",
+      "Commercial"
+    ]
+  },
+  "site": {
+    "address": "Office 12, Plaza 44, Main Boulevard, DHA Phase 5, Lahore",
+    "email": "info@emeraldestates.pk",
+    "name": "Emerald Estates",
+    "phone": "0300 1234567",
+    "phoneDigits": "923001234567",
+    "tagline": "Lahore's Trusted Property Advisors",
+    "whatsapp": "0300 1234567",
+    "whatsappDigits": "923001234567"
+  },
+  "socials": [
+    {
+      "platform": "facebook",
+      "url": ""
+    },
+    {
+      "platform": "instagram",
+      "url": ""
+    },
+    {
+      "platform": "tiktok",
+      "url": ""
+    }
+  ],
+  "testimonials": {
+    "heading": "What Our Clients Say",
+    "items": [
+      {
+        "meta": "Bought a house · DHA Phase 5",
+        "name": "Usman Tariq",
+        "text": "Ahmed found us a 10 marla house in DHA within our budget in just two weeks. He personally verified all documents and the transfer took three days. Highly professional."
+      },
+      {
+        "meta": "Overseas buyer · UK",
+        "name": "Sana Malik",
+        "text": "As an overseas Pakistani, I was nervous about buying remotely. Fatima sent video tours, handled the legal work, and I never had to fly in. Complete peace of mind."
+      },
+      {
+        "meta": "Sold commercial · Gulberg",
+        "name": "Chaudhry Aslam",
+        "text": "Sold my commercial plaza through Emerald Estates at 8% above my asking price. Their investor network is real — three serious buyers in the first week."
+      }
+    ],
+    "kicker": "Client Stories"
+  },
+  "theme": {
+    "animations": true,
+    "bodyFont": "Inter",
+    "headingFont": "Fraunces",
+    "palette": "navy"
+  },
+  "visibility": {
+    "about": true,
+    "agents": true,
+    "announcement": true,
+    "contact": true,
+    "footer": true,
+    "hero": true,
+    "properties": true,
+    "testimonials": true,
+    "visit": true,
+    "whyus": true
+  },
+  "visit": {
+    "dateLabel": "Preferred date",
+    "heading": "Schedule a Site Visit",
+    "kicker": "See It Yourself",
+    "namePh": "Your full name",
+    "note": "No spam, no pressure. One confirmation message, that's it.",
+    "phonePh": "03xx xxxxxxx",
+    "propertyAny": "Just browsing — show me options",
+    "propertyLabel": "I'm interested in",
+    "submitText": "Request Visit on WhatsApp",
+    "subtitle": "Pick a property and a time — we'll confirm on WhatsApp within an hour.",
+    "successText": "Opening WhatsApp with your visit request...",
+    "timeLabel": "Preferred time",
+    "nameLabel": "Full Name",
+    "phoneLabel": "Phone",
+    "anyProperty": "Just browsing — show me options",
+    "timeOptions": [
+      "Morning (10am – 1pm)",
+      "Afternoon (1pm – 5pm)",
+      "Evening (5pm – 8pm)"
+    ],
+    "phoneError": "Please enter a valid phone number (e.g. 0300 1234567).",
+    "nameError": "Please enter your name."
+  },
+  "whatsapp": {
+    "generalMessage": "Hello {agency}! I have a question about your property listings.",
+    "inquiryMessage": "Hello {agency}! I'm interested in this property:\n\n{title}\n{price} · {location}\n\nPlease share more details.",
+    "visitMessage": "Hello {agency}! I'd like to schedule a site visit.\n\nName: {name}\nPhone: {phone}\nProperty: {property}\nPreferred: {date} at {time}\n\nPlease confirm."
+  },
+  "whyUs": {
+    "heading": "Property Dealing, Done Right",
+    "items": [
+      {
+        "icon": "verified",
+        "text": "We visit every property ourselves before listing. No fake photos, no surprises.",
+        "title": "Physically Verified"
+      },
+      {
+        "icon": "check",
+        "text": "Title, registry and tax records checked in advance. Transfer handled end-to-end.",
+        "title": "Clear Documentation"
+      },
+      {
+        "icon": "lock",
+        "text": "One transparent commission, agreed in writing before we start. Nothing extra.",
+        "title": "No Hidden Charges"
+      },
+      {
+        "icon": "users",
+        "text": "We stay with you through transfer, possession and even resale years later.",
+        "title": "After-Sale Support"
+      }
+    ],
+    "kicker": "Why Emerald Estates",
+    "subtitle": "We treat your money like our own. Every listing is verified, every price is honest."
+  },
+  "ui": {
+    "forSale": "For Sale",
+    "forRent": "For Rent",
+    "featured": "Featured",
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "detailsButton": "Details",
+    "inquireButton": "WhatsApp Inquiry",
+    "scheduleVisit": "Schedule Visit",
+    "modalDescription": "Description",
+    "modalFeatures": "Features & Amenities",
+    "modalAgent": "Your Agent",
+    "callAgent": "Call",
+    "loading": "Loading...",
+    "resultsFound": "properties found",
+    "showing": "Showing",
+    "of": "of",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "close": "Close",
+    "prevReview": "Previous review",
+    "nextReview": "Next review",
+    "officeAddress": "Office Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "officeHours": "Office Hours",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact"
+  }
+}

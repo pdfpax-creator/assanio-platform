@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Admin — Emerald Estates</title>
+<style>
+:root{--rp-red:#C8102E;--rp-red-dark:#A90D26;--rp-ink:#141414;--rp-mut:#686868;--rp-bg:#F7F7F5;--rp-card:#ffffff;--rp-line:#E7E5E1;--rp-line2:#D9D6D1;--rp-track:#ECEAE7}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--rp-bg);color:var(--rp-ink);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font-family:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1rem}
+.topbar{position:sticky;top:0;z-index:50;background:#141414;color:#fff;padding:0 1rem;height:60px;display:flex;align-items:center;justify-content:space-between;gap:.7rem;box-shadow:0 1px 8px rgba(0,0,0,.18)}
+.tb-brand{display:flex;align-items:center;gap:.6rem;min-width:0}
+.rp-logo{width:32px;height:32px;border-radius:9px;background:var(--rp-red);color:#fff;font-weight:800;font-size:18px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 32px}
+.rp-logo.lg{width:44px;height:44px;border-radius:12px;font-size:24px;margin:0 auto .7rem}
+.tb-right{display:flex;align-items:center;gap:.8rem}
+.tb-view{color:#fff;opacity:.75;font-size:13px;font-weight:600;text-decoration:none}
+.tb-store{color:#c9c9c9;font-size:13px;font-weight:500;margin-left:.4rem;padding-left:.8rem;border-left:1px solid #3d3d3d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card{background:var(--rp-card);border:1px solid var(--rp-line);border-radius:16px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 1px 2px rgba(20,20,20,.05),0 10px 30px rgba(20,20,20,.05)}
+.card>h2{font-size:16px;font-weight:700;margin-bottom:.3rem}
+.card>.csub{font-size:13px;color:var(--rp-mut);margin-bottom:.6rem}
+.grp{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--rp-mut);margin:1.1rem 0 .4rem;padding-top:.9rem;border-top:1px solid var(--rp-line)}
+label.fl{display:block;font-size:13px;font-weight:600;margin:.7rem 0 .25rem;color:#3f3f3f}
+input[type=text],input[type=password],input[type=number],textarea,select{width:100%;padding:.65rem .8rem;border:1px solid var(--rp-line2);border-radius:10px;font-size:15px;font-family:inherit;min-height:44px;background:#fff;color:var(--rp-ink)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--rp-ink);box-shadow:0 0 0 3px rgba(20,20,20,.14)}
+textarea{min-height:76px;resize:vertical}
+.hint{font-size:12px;color:var(--rp-mut);margin-top:.2rem;line-height:1.45}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:44px;padding:.65rem 1.2rem;border-radius:10px;border:none;font-weight:700;font-size:14px;cursor:pointer}
+.btn-red{background:var(--rp-red);color:#fff}
+.btn-red:hover{background:var(--rp-red-dark)}
+.btn-dark{background:var(--rp-ink);color:#fff}
+.btn-line{background:#fff;border:1px solid var(--rp-line2);color:var(--rp-ink)}
+.btn-line:hover{border-color:var(--rp-ink)}
+.btn-sm{min-height:38px;padding:.4rem .8rem;font-size:13px}
+.btn-block{width:100%;font-size:16px}
+.item{border:1px solid var(--rp-line);border-radius:12px;padding:.9rem;margin-bottom:.7rem;background:#FBFAF9}
+.item .grow{flex:1;min-width:0}
+.thumb{width:72px;height:72px;object-fit:cover;border-radius:10px;background:var(--rp-track);flex:0 0 72px;border:1px solid var(--rp-line)}
+.frow{display:flex;gap:.7rem;align-items:center}
+.danger{color:var(--rp-red)}
+#loginBox{max-width:400px;margin:10vh auto;padding:0 1rem}
+#loginBox .card{text-align:center;padding:2rem 1.75rem}
+.msg{padding:.7rem .9rem;border-radius:10px;margin:.7rem 0;font-size:14px;display:none;font-weight:500}
+.msg.ok{display:block;background:#E9F7EE;color:#157347;border:1px solid #BDE5C8}
+.msg.err{display:block;background:#FDECEC;color:#A90D26;border:1px solid #F5C2C7}
+.hidden{display:none!important}
+.sec-nav{position:sticky;top:60px;z-index:9;background:var(--rp-bg);padding:.6rem 0;overflow-x:auto;white-space:nowrap;border-bottom:1px solid var(--rp-line)}
+.sec-nav a{display:inline-block;padding:.45rem .9rem;margin-right:.4rem;background:#fff;border:1px solid var(--rp-line);border-radius:999px;font-size:13px;font-weight:600;color:var(--rp-ink);text-decoration:none}
+.size-tag{display:inline-block;background:#F5F3F0;color:var(--rp-mut);font-size:11px;font-weight:700;padding:.15rem .5rem;border-radius:6px;margin-left:.4rem;border:1px solid var(--rp-line)}
+.switch{position:relative;display:inline-block;width:44px;height:24px;flex:0 0 44px}
+.switch input{opacity:0;width:0;height:0}
+.switch .sl{position:absolute;inset:0;background:#D9D6D1;border-radius:999px;transition:.2s;cursor:pointer}
+.switch .sl:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.switch input:checked + .sl{background:var(--rp-red)}
+.switch input:checked + .sl:before{transform:translateX(20px)}
+.secrow{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.55rem 0;border-bottom:1px solid #F1EFEC}
+.secrow:last-child{border-bottom:none}
+.secrow b{font-size:14px;display:block}
+.savebar{position:sticky;bottom:0;z-index:5;background:#fff;border:1px solid var(--rp-line);border-radius:16px;padding:1rem;box-shadow:0 -6px 20px rgba(20,20,20,.08);margin-bottom:1rem}
+.pal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
+@media(max-width:560px){.pal-grid{grid-template-columns:repeat(2,1fr)}}
+.pal-card{border:2px solid var(--rp-line);border-radius:12px;overflow:hidden;cursor:pointer;background:#fff}
+.pal-card.on{border-color:var(--rp-red);box-shadow:0 0 0 1px var(--rp-red)}
+.pal-sw{height:44px}
+.pal-nm{font-size:12px;font-weight:700;padding:.4rem .5rem;text-align:center}
+.checkrow{display:flex;align-items:center;gap:.6rem;padding:.5rem 0}
+.checkrow input{width:20px;height:20px;accent-color:var(--rp-red)}
+#app{display:flex;flex-direction:column;height:100vh;overflow:hidden}
+#app.hidden{display:none!important}
+.admin-split{flex:1;min-height:0;display:flex;gap:1rem;padding:.75rem 1rem 1rem}
+.pv-pane{flex:0 0 55%;display:flex;flex-direction:column;min-width:0;min-height:0}
+.ed-pane{flex:1 1 45%;min-width:0;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 .25rem 1rem}
+.pv-toolbar{display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem}
+.pv-toolbar .pv-label{font-size:12px;color:var(--rp-mut);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.pv-toolbar .seg{display:inline-flex;background:var(--rp-track);border-radius:12px;padding:4px}
+.pv-toolbar .seg button{border:0;background:transparent;padding:.45rem 1rem;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;color:var(--rp-mut);min-height:38px}
+.pv-toolbar .seg button.on{background:#fff;color:var(--rp-ink);box-shadow:0 1px 3px rgba(0,0,0,.14);font-weight:700}
+.pv-frame-wrap{flex:1;min-height:0;overflow:auto;background:var(--rp-track);border-radius:16px;padding:14px;display:flex;justify-content:center;align-items:flex-start;border:1px solid var(--rp-line)}
+#pvFrame{border:0;border-radius:8px;background:#fff;width:100%;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.pv-frame-wrap.mobile #pvFrame{width:390px;max-width:100%;border:10px solid #141414;border-radius:22px}
+.pv-toast{position:fixed;right:1rem;bottom:1rem;z-index:9999;background:#141414;color:#fff;font-size:13px;font-weight:600;padding:.6rem 1rem;border-radius:999px;opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;pointer-events:none}
+.pv-toast.show{opacity:1;transform:none}
+@keyframes cardFlash{0%,100%{outline:3px solid transparent;outline-offset:3px}30%{outline:3px solid var(--rp-red);outline-offset:3px}}
+.card.flash{animation:cardFlash 1.1s ease-in-out 2}
+@media (max-width:900px){#app{height:auto;overflow:visible}.admin-split{flex-direction:column}.pv-pane{flex:0 0 auto;height:60vh}.ed-pane{overflow:visible}}
+</style>
+</head>
+<body>
+<div id="loginBox">
+  <div class="card">
+    <div class="rp-logo lg">A</div>
+    <h2>Real Estate — Admin</h2>
+    <p class="hint">Authorized access only. Contact your administrator if you need help logging in.</p>
+    <div class="msg" id="loginMsg"></div>
+    <label class="fl" style="text-align:left">Password</label>
+    <input type="password" id="pw" autocomplete="current-password">
+    <br><br>
+    <button class="btn btn-red" id="loginBtn" style="width:100%">Log In</button>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <div class="topbar"><span class="tb-brand"><span class="rp-logo">A</span><span class="tb-store" id="tbStore">Emerald Estates</span></span><span class="tb-right"><a href="../" target="_blank" class="tb-view">View site &#8599;</a><button class="btn btn-sm btn-line" id="logoutBtn" style="color:#fff;border-color:#4d4d4d;background:transparent">Log out</button></span></div>
+  <div class="sec-nav wrap" id="secNav"></div>
+  <div class="admin-split">
+    <div class="pv-pane">
+      <div class="pv-toolbar">
+        <span class="pv-label">Live preview</span>
+        <div class="seg" id="devBar"><button type="button" data-dev="desktop" class="on">Desktop</button><button type="button" data-dev="mobile">Mobile</button></div>
+      </div>
+      <div class="pv-frame-wrap" id="pvWrap"><iframe id="pvFrame" title="Live site preview" src="../index.html?editmode=1"></iframe></div>
+    </div>
+    <div class="ed-pane" id="edPane">
+      <div class="msg" id="msg"></div>
+      <div id="sections"></div>
+      <div class="savebar">
+        <button class="btn btn-red btn-block" id="saveBtn">Save All Changes</button>
+        <p class="hint" style="text-align:center">Saves everything to the live website immediately.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var data=null,palettes={};
+/* ---------- field builders (every field gets a hint) ---------- */
+function hint(t){return t?'<div class="hint">'+esc(t)+'</div>':''}
+function field(label,path,val,h,t){
+  return '<label class="fl">'+esc(label)+'</label>'+
+    '<input type="text" data-p="'+esc(path)+'" value="'+esc(val==null?"":val)+'">'+hint(h);
+}
+function ta(label,path,val,h,rows){
+  return '<label class="fl">'+esc(label)+'</label>'+
+    '<textarea data-p="'+esc(path)+'"'+(rows?' rows="'+rows+'"':'')+'>'+esc(val==null?"":val)+'</textarea>'+hint(h);
+}
+function num(label,path,val,h){
+  return '<label class="fl">'+esc(label)+'</label>'+
+    '<input type="number" data-p="'+esc(path)+'" value="'+esc(val==null?"":val)+'">'+hint(h);
+}
+function sel(label,path,val,opts,h){
+  return '<label class="fl">'+esc(label)+'</label><select data-p="'+esc(path)+'">'+
+    opts.map(function(o){var v=o.value!=null?o.value:o;return '<option value="'+esc(v)+'"'+(String(v)===String(val)?" selected":"")+'>'+esc(o.label||o)+'</option>'}).join("")+
+    '</select>'+hint(h);
+}
+function imgField(label,path,val,h){
+  return '<label class="fl">'+esc(label)+'</label><div class="frow">'+
+    (val?'<img class="thumb" src="../'+esc(val)+'">':"")+
+    '<input type="text" data-p="'+esc(path)+'" value="'+esc(val||"")+'" placeholder="images/... or https://..." style="flex:1">'+
+    '<label class="btn btn-sm btn-line" style="white-space:nowrap;cursor:pointer">Upload<input type="file" accept="image/*" data-upload="'+esc(path)+'" style="display:none"></label></div>'+hint(h);
+}
+function check(label,path,val,h){
+  return '<div class="checkrow"><input type="checkbox" data-c="'+esc(path)+'"'+(val?" checked":"")+'><div><b style="font-size:14px">'+esc(label)+'</b>'+(h?'<div class="hint">'+esc(h)+'</div>':"")+'</div></div>';
+}
+function card(id,title,sub,inner){
+  return '<div class="card" id="sec-'+id+'" data-section="'+esc(id)+'"><h2>'+esc(title)+'</h2>'+(sub?'<div class="csub">'+esc(sub)+'</div>':"")+inner+'</div>';
+}
+function msg(t,ok){var m=$("msg");m.textContent=t;m.className="msg "+(ok?"ok":"err");
+  var ep=$("edPane");try{ep.scrollTo({top:0,behavior:"smooth"})}catch(e){ep.scrollTop=0}
+  setTimeout(function(){m.className="msg"},4500)}
+/* ---------- login ---------- */
+$("loginBtn").onclick=function(){
+  var fd=new FormData();fd.append("action","login");fd.append("password",$("pw").value);
+  fetch("save.php",{method:"POST",body:fd}).then(function(r){return r.json()}).then(function(j){
+    if(j.ok){$("loginBox").classList.add("hidden");$("app").classList.remove("hidden");load();}
+    else{var m=$("loginMsg");m.textContent=j.error||"Login failed";m.className="msg err"}
+  });
+};
+$("pw").addEventListener("keydown",function(e){if(e.key==="Enter")$("loginBtn").click()});
+$("logoutBtn").onclick=function(){var fd=new FormData();fd.append("action","logout");fetch("save.php",{method:"POST",body:fd}).then(function(){location.reload()})};
+</script>
+<script>
+"use strict";
+/* ---------- render editors ---------- */
+function getPath(p){return p.split(".").reduce(function(o,k){return o?o[k]:undefined},data)}
+function setPath(p,v){var ks=p.split("."),o=data;for(var i=0;i<ks.length-1;i++){if(o[ks[i]]==null)o[ks[i]]={};o=o[ks[i]]}o[ks[ks.length-1]]=v}
+function lines(v){return Array.isArray(v)?v.join("\n"):(v||"")}
+
+function propRow(i,p){
+  return '<div class="item"><div class="frow">'+
+    (p.image?'<img class="thumb" src="'+esc(p.image)+'">':"")+
+    '<div class="grow"><b>'+esc(p.title||"(no title)")+'</b><div class="hint">'+esc(p.priceLabel||"")+' · '+esc(p.location||"")+'</div></div>'+
+    '<button class="btn btn-sm btn-line" data-pedit="'+i+'">Edit</button>'+
+    '<button class="btn btn-sm btn-line danger" data-pdel="'+i+'">Delete</button></div>'+
+    '<div class="pform hidden" id="pform-'+i+'"></div></div>';
+}
+function propForm(i){
+  var p=data.properties.properties[i];
+  var agents=(data.agents.items||[]).map(function(a){return{value:a.id,label:a.name}});
+  agents.unshift({value:"",label:"— No agent —"});
+  return '<div style="border-top:1px solid var(--rp-line);margin-top:.7rem;padding-top:.7rem">'+
+  field("Property title","",p.title,"The main heading on the property card. Example: 10 Marla Designer House")+
+  '<div class="row"><div>'+sel("Property type","",p.type,["House","Flat","Plot","Commercial"],"What kind of property is this? Used by the search filter.")+'</div>'+
+  '<div>'+sel("For Sale or For Rent","",p.purpose,[{value:"sale",label:"For Sale"},{value:"rent",label:"For Rent"}],"Shows the correct badge and price style on the card.")+'</div></div>'+
+  '<div class="row"><div>'+num("Price (numbers only)","",p.price,"Just digits, no commas or Rs. Example: 28500000. Used for price-range search.")+'</div>'+
+  '<div>'+field("Price label","",p.priceLabel,"How the price appears on the site. Example: Rs 2.85 Crore or Rs 95,000/mo")+'</div></div>'+
+  field("Location (full)","",p.location,"Shown under the title. Example: DHA Phase 5, Lahore")+
+  field("Area (for search filter)","",p.area,"Must match one of the Locations in Hero & Search, e.g. DHA Phase 5")+
+  '<div class="row"><div>'+num("Bedrooms","",p.beds,"Number of bedrooms. Put 0 for plots and commercial.")+'</div>'+
+  '<div>'+num("Bathrooms","",p.baths,"Number of bathrooms. Put 0 for plots.")+'</div></div>'+
+  '<div class="row"><div>'+field("Plot size","",p.areaSize,"Example: 10 Marla, 1 Kanal, 5 Marla")+'</div>'+
+  '<div>'+field("Covered area","",p.areaSqft,"Example: 2,722 sq.ft. Leave empty if not known.")+'</div></div>'+
+  imgField("Main photo","",p.image,"The big photo on the property card. Landscape photos look best (800×600).")+
+  ta("More photos (gallery)","",lines(p.gallery),"One photo link per line. Shown as thumbnails in the property popup.")+
+  ta("Features list","",lines(p.features),"One feature per line. Example: Imported kitchen fittings")+
+  ta("Description","",(p.description||""),"2–4 sentences describing the property. Shown in the popup.")+
+  sel("Assigned agent","",p.agentId||"",agents,"Whose name, photo and phone show in the property popup.")+
+  '<div class="checkrow"><input type="checkbox" data-pfeat="'+i+'"'+(p.featured?" checked":"")+ '><div><b style="font-size:14px">Featured property</b><div class="hint">Featured properties show first and get a gold badge.</div></div></div>'+
+  '<button class="btn btn-sm btn-dark" data-psave="'+i+'">Done Editing</button></div>';
+}
+function agentRow(i,a){
+  return '<div class="item"><div class="frow">'+
+    (a.image?'<img class="thumb" src="'+esc(a.image)+'">':"")+
+    '<div class="grow"><b>'+esc(a.name||"(no name)")+'</b><div class="hint">'+esc(a.role||"")+'</div></div>'+
+    '<button class="btn btn-sm btn-line" data-aedit="'+i+'">Edit</button>'+
+    '<button class="btn btn-sm btn-line danger" data-adel="'+i+'">Delete</button></div>'+
+    '<div class="aform hidden" id="aform-'+i+'"></div></div>';
+}
+function testiRow(i,t){
+  return '<div class="item"><div class="frow"><div class="grow"><b>'+esc(t.name||"(no name)")+'</b><div class="hint">'+esc((t.text||"").slice(0,80))+'…</div></div>'+
+    '<button class="btn btn-sm btn-line" data-tedit="'+i+'">Edit</button>'+
+    '<button class="btn btn-sm btn-line danger" data-tdel="'+i+'">Delete</button></div>'+
+    '<div class="tform hidden" id="tform-'+i+'"></div></div>';
+}
+
+function render(){
+  try{syncOpenPropForms();syncOpenAgentForms();syncOpenTestiForms()}catch(e){}
+  try{collect()}catch(e){}
+  ["site","hero","search","properties","whyUs","about","agents","testimonials","visit","contact","footer","whatsapp","ui","announcement","theme","visibility","header"].forEach(function(k){if(data[k]==null)data[k]={}});
+  if(!Array.isArray(data.properties.properties))data.properties.properties=[];
+  if(!Array.isArray(data.agents.items))data.agents.items=[];
+  if(!Array.isArray((data.testimonials||{}).items))data.testimonials.items=[];
+  if(!Array.isArray(data.socials))data.socials=[];
+  var S=data.site,H=data.hero,SC=data.search,P=data.properties,Y=data.whyUs,A=data.about,AG=data.agents,T=data.testimonials,V=data.visit,C=data.contact,F=data.footer,W=data.whatsapp,UI=data.ui,AN=data.announcement,TH=data.theme;
+  var nav=[["pagesections","Page Sections"],["properties","Properties"],["hero","Hero & Search"],["site","Site Info"],["agents","Agents"],["whyus","Why Choose Us"],["about","About"],["testimonials","Testimonials"],["visit","Visit Booking"],["contact","Contact"],["footer","Footer"],["wamsg","WhatsApp Messages"],["uitext","Button Texts"],["socials","Social Links"],["announce","Announcement Bar"],["design","Design & Fonts"]];
+  $("secNav").innerHTML=nav.map(function(n){return '<a href="#sec-'+n[0]+'">'+n[1]+'</a>'}).join("");
+  var h="";
+
+  /* page sections */
+  var SECTIONS=[["announcement","Announcement Bar","Top notification strip"],["hero","Hero + Search","Headline and property search"],["properties","Properties","Property listings grid"],["whyus","Why Choose Us","Trust badges"],["about","About","Story and statistics"],["agents","Agents","Team cards"],["testimonials","Testimonials","Client reviews"],["visit","Site Visit","Booking form"],["contact","Contact","Office info"],["footer","Footer","Bottom bar"]];
+  var VS=data.visibility||{};
+  h+=card("pagesections","Page Sections","Turn any section of the website on or off.",
+    SECTIONS.map(function(s){return '<div class="secrow"><div><b>'+esc(s[1])+'</b><div class="hint">'+esc(s[2])+'</div></div><label class="switch"><input type="checkbox" data-vis="'+esc(s[0])+'"'+(VS[s[0]]!==false?" checked":"")+'><span class="sl"></span></label></div>'}).join(""));
+
+  /* properties */
+  h+=card("properties","Properties <span class='size-tag'>"+P.properties.length+" listed</span>","Add, edit or remove property listings. Changes appear on the website after you press Save.",
+    '<div id="propList">'+P.properties.map(function(p,i){return propRow(i,p)}).join("")+'</div>'+
+    '<button class="btn btn-dark" id="addPropBtn">+ Add New Property</button>');
+
+  /* hero & search */
+  h+=card("hero","Hero & Search","The big banner at the top of the website and the search filters visitors use.",
+    field("Top line (kicker)","hero.kicker",H.kicker,"Small text above the headline. Example: DHA · Bahria Town · Model Town")+
+    field("Main headline","hero.heading",H.heading,"The biggest text on the page. Keep it short and emotional.")+
+    ta("Subtext","hero.subtext",H.subtext,"One or two sentences under the headline.")+
+    imgField("Background photo","hero.image",H.image,"Wide photo behind the headline (1600×900 works best).")+
+    field("Search box title","hero.searchTitle",H.searchTitle,"Heading above the search filters.")+
+    field("Search button text","hero.searchButton",H.searchButton,"")+
+    field("Reset button text","hero.resetButton",H.resetButton,"")+
+    '<div class="grp">Search filter options</div>'+
+    ta("Locations","",lines(SC.locations),"One area per line. These appear in the Location dropdown AND must match the Area field on each property.")+
+    ta("Property types","",lines(SC.types),"One per line. Example: House, Flat, Plot, Commercial")+
+    ta("Price ranges","",lines((SC.priceRanges||[]).filter(function(r){return r.max!==0}).map(function(r){return r.label+"|"+r.max})),"One per line as Label|MaxPrice. MaxPrice is digits only; use -1 for the top open-ended range. Example: Up to Rs 2.5 Crore|25000000")+
+    '<div class="hint">Bedroom options are fixed: Any, 3+, 4+, 5+.</div>');
+
+  /* site info */
+  h+=card("site","Site Info","Your agency's name and contact details — shown in the header, footer and WhatsApp messages.",
+    field("Agency name","site.name",S.name,"Example: Emerald Estates")+
+    field("Tagline","site.tagline",S.tagline,"Short line under the name in the browser tab.")+
+    '<div class="row"><div>'+field("Phone (display)","site.phone",S.phone,"How the number looks. Example: 0300 1234567")+'</div>'+
+    '<div>'+field("Phone (digits)","site.phoneDigits",S.phoneDigits,"Digits only with country code, no +. Example: 923001234567. Used for the Call button.")+'</div></div>'+
+    '<div class="row"><div>'+field("WhatsApp (display)","site.whatsapp",S.whatsapp,"Example: 0300 1234567")+'</div>'+
+    '<div>'+field("WhatsApp (digits)","site.whatsappDigits",S.whatsappDigits,"Digits only with country code. Example: 923001234567. All WhatsApp buttons use this.")+'</div></div>'+
+    field("Email","site.email",S.email,"Shown in the Contact section.")+
+    field("Office address","site.address",S.address,"Full address shown in Contact and footer."));
+
+  /* agents */
+  h+=card("agents","Agents","The people visitors can call. Each agent gets a card with photo, phone and WhatsApp button.",
+    field("Section top line","agents.kicker",AG.kicker,"")+
+    field("Section heading","agents.heading",AG.heading,"")+
+    field("Section subtitle","agents.subtitle",AG.subtitle,"")+
+    '<div id="agentList">'+AG.items.map(function(a,i){return agentRow(i,a)}).join("")+'</div>'+
+    '<button class="btn btn-dark" id="addAgentBtn">+ Add Agent</button>');
+
+  /* why us */
+  h+=card("whyus","Why Choose Us","Four trust badges that explain why visitors should choose this agency.",
+    field("Top line","whyUs.kicker",Y.kicker,"")+field("Heading","whyUs.heading",Y.heading,"")+field("Subtitle","whyUs.subtitle",Y.subtitle,"")+
+    [0,1,2,3].map(function(i){var it=(Y.items||[])[i]||{};
+      return '<div class="grp">Badge '+(i+1)+'</div>'+
+      '<label class="fl">Icon picture</label><input type="text" data-whyicon="'+i+'" value="'+esc(it.icon||"verified")+'"><div class="hint">Try: verified, check, lock, users, shield, key, home</div>'+
+      '<label class="fl">Title</label><input type="text" data-whyti="'+i+'" value="'+esc(it.title||"")+'"><div class="hint">Short bold line. Example: Physically Verified</div>'+
+      '<label class="fl">Text</label><textarea data-whytx="'+i+'">'+esc(it.text||"")+'</textarea><div class="hint">One sentence explaining it.</div>'}).join(""));
+
+  /* about */
+  h+=card("about","About","Your agency's story plus the animated number counters.",
+    field("Top line","about.kicker",A.kicker,"")+field("Heading","about.heading",A.heading,"")+
+    ta("Story paragraph 1","about.para1",A.para1,"How the agency started.")+
+    ta("Story paragraph 2","about.para2",A.para2,"What you do today.")+
+    imgField("About photo","about.image",A.image,"Photo of your office or team (800×600).")+
+    '<div class="grp">Statistics (animated counters)</div>'+
+    [0,1,2,3].map(function(i){var st=(A.stats||[])[i]||{};
+      return '<div class="row"><div><label class="fl">Number '+(i+1)+'</label><input type="number" data-statv="'+i+'" value="'+esc(st.value==null?"":st.value)+'"><div class="hint">Digits only. Example: 850</div></div>'+
+      '<div><label class="fl">Label '+(i+1)+'</label><input type="text" data-statl="'+i+'" value="'+esc(st.label||"")+'"><div class="hint">What the number means. Example: Properties Sold</div></div></div>'+
+      '<label class="fl">Suffix '+(i+1)+' (optional)</label><input type="text" data-stats="'+i+'" value="'+esc(st.suffix||"")+'"><div class="hint">Shown after the number. Example: + — or leave empty</div>'}).join(""));
+
+  /* testimonials */
+  h+=card("testimonials","Testimonials","Client reviews shown in the rotating carousel.",
+    field("Top line","testimonials.kicker",T.kicker,"")+field("Heading","testimonials.heading",T.heading,"")+
+    '<div id="testiList">'+T.items.map(function(t,i){return testiRow(i,t)}).join("")+'</div>'+
+    '<button class="btn btn-dark" id="addTestiBtn">+ Add Testimonial</button>');
+
+  /* visit */
+  h+=card("visit","Site Visit Booking","The booking form. Visitors fill it and it opens WhatsApp with everything pre-written.",
+    field("Top line","visit.kicker",V.kicker,"")+field("Heading","visit.heading",V.heading,"")+ta("Subtitle","visit.subtitle",V.subtitle,"")+
+    '<div class="row"><div>'+field("Name field label","visit.nameLabel",V.nameLabel,"")+'</div><div>'+field("Phone field label","visit.phoneLabel",V.phoneLabel,"")+'</div></div>'+
+    '<div class="row"><div>'+field("Name placeholder","visit.namePh",V.namePh,"Grey hint inside the name box.")+'</div><div>'+field("Phone placeholder","visit.phonePh",V.phonePh,"Grey hint inside the phone box.")+'</div></div>'+
+    '<div class="row"><div>'+field("Date label","visit.dateLabel",V.dateLabel,"")+'</div><div>'+field("Time label","visit.timeLabel",V.timeLabel,"")+'</div></div>'+
+    field("Property dropdown label","visit.propertyLabel",V.propertyLabel,"")+
+    field("\"Just browsing\" option","visit.anyProperty",V.anyProperty,"The first option in the property dropdown.")+
+    ta("Time options","",(V.timeOptions||[]).join("\n"),"One time slot per line.")+
+    field("Submit button text","visit.submitText",V.submitText,"")+
+    field("Note under button","visit.note",V.note,"Reassuring line. Example: No spam, no pressure.")+
+    '<div class="grp">Error messages</div>'+
+    field("Name error","visit.nameError",V.nameError,"Shown if the name is left empty.")+
+    field("Phone error","visit.phoneError",V.phoneError,"Shown if the phone number looks wrong."));
+
+  /* contact */
+  h+=card("contact","Contact","Office details shown in the Contact section.",
+    field("Top line","contact.kicker",C.kicker,"")+field("Heading","contact.heading",C.heading,"")+
+    field("Office hours","contact.hours",C.hours,"Example: Mon–Sat · 10:00 AM – 8:00 PM")+
+    field("Map note","contact.mapNote",C.mapNote,"Text on the map placeholder. Replace with a real map embed later if you like."));
+
+  /* footer */
+  h+=card("footer","Footer","The dark bar at the very bottom of the website.",
+    ta("About blurb","footer.about",F.about,"2–3 sentences about the agency.")+
+    ta("Quick links","",(F.quickLinks||[]).map(function(l){return l.label+"|"+l.href}).join("\n"),"One per line as Label|Link. Example: Properties|#properties")+
+    field("Copyright line","footer.copyright",F.copyright,"Example: © 2026 Emerald Estates. All rights reserved."));
+
+  /* whatsapp messages */
+  h+=card("wamsg","WhatsApp Messages","The pre-written messages visitors send you. {agency}, {title}, {price}, {name}, {phone}, {property}, {date}, {time} are filled in automatically — keep them in the text.",
+    ta("General message","whatsapp.generalMessage",W.generalMessage,"Sent from header and floating WhatsApp buttons.")+
+    ta("Property inquiry","whatsapp.inquiryMessage",W.inquiryMessage,"Sent from a property card's WhatsApp button. Keep {title}, {price}, {location}.")+
+    ta("Visit request","whatsapp.visitMessage",W.visitMessage,"Sent from the booking form. Keep {name}, {phone}, {property}, {date}, {time}."));
+
+  /* button texts */
+  h+=card("uitext","Button & Label Texts","Every small label on the website. Change the words without touching code.",
+    '<div class="row"><div>'+field("\"For Sale\" badge","ui.forSale",UI.forSale,"")+'</div><div>'+field("\"For Rent\" badge","ui.forRent",UI.forRent,"")+'</div></div>'+
+    '<div class="row"><div>'+field("\"Featured\" badge","ui.featured",UI.featured,"")+'</div><div>'+field("\"Details\" button","ui.detailsButton",UI.detailsButton,"")+'</div></div>'+
+    '<div class="row"><div>'+field("\"Schedule Visit\" button","ui.scheduleVisit",UI.scheduleVisit,"")+'</div><div>'+field("WhatsApp inquiry button","ui.inquireButton",UI.inquireButton,"")+'</div></div>'+
+    '<div class="row"><div>'+field("\"Call Now\" (mobile bar)","ui.callNow",UI.callNow,"")+'</div><div>'+field("\"WhatsApp\" (mobile bar)","ui.whatsapp",UI.whatsapp,"")+'</div></div>'+
+    '<div class="row"><div>'+field("Popup: Description heading","ui.modalDescription",UI.modalDescription,"")+'</div><div>'+field("Popup: Features heading","ui.modalFeatures",UI.modalFeatures,"")+'</div></div>'+
+    '<div class="row"><div>'+field("Popup: Agent heading","ui.modalAgent",UI.modalAgent,"")+'</div><div>'+field("\"Call\" (agent)","ui.callAgent",UI.callAgent,"")+'</div></div>'+
+    field("\"properties found\" text","ui.resultsFound",UI.resultsFound,"Shown after the count, e.g. 8 properties found."));
+
+  /* socials */
+  h+=card("socials","Social Links","Your Facebook, Instagram etc. Empty link = hidden from the website.",
+    '<div id="socList">'+data.socials.map(function(s,i){
+      return '<div class="frow" style="margin-bottom:.5rem"><select data-socplat style="max-width:140px">'+["facebook","instagram","tiktok","youtube"].map(function(p){return '<option value="'+p+'"'+(s.platform===p?" selected":"")+'>'+p+'</option>'}).join("")+'</select>'+
+      '<input type="text" data-socurl value="'+esc(s.url||"")+'" placeholder="https://..." style="flex:1">'+
+      '<button class="btn btn-sm btn-line danger" data-socdel="'+i+'">Remove</button></div>'}).join("")+'</div>'+
+    '<button class="btn btn-sm btn-dark" id="addSocBtn">+ Add Social Link</button>');
+
+  /* announcement */
+  h+=card("announce","Announcement Bar","The thin strip at the very top of the website.",
+    '<div class="checkrow"><input type="checkbox" data-c="announcement.enabled"'+(AN.enabled?" checked":"")+'><div><b style="font-size:14px">Show announcement bar</b><div class="hint">Turn the top strip on or off.</div></div></div>'+
+    field("Message","announcement.text",AN.text,"Example: New farmhouses available — call for details")+
+    '<div class="row"><div>'+field("Link text (optional)","announcement.linkText",AN.linkText,"Example: View listings")+'</div><div>'+field("Link target (optional)","announcement.link",AN.link,"Example: #properties")+'</div></div>');
+
+  /* header nav */
+  h+=card("header","Header Menu","The links in the top navigation bar.",
+    field("WhatsApp button text","header.ctaText",data.header.ctaText,"The green button in the header.")+
+    '<div id="navList">'+(data.header.nav||[]).map(function(n,i){
+      return '<div class="frow" style="margin-bottom:.5rem"><input type="text" data-navlabel value="'+esc(n.label)+'" placeholder="Label" style="flex:1"><input type="text" data-navhref value="'+esc(n.href)+'" placeholder="#section" style="flex:1"><button class="btn btn-sm btn-line danger" data-navdel="'+i+'">Remove</button></div>'}).join("")+'</div>'+
+    '<button class="btn btn-sm btn-dark" id="addNavBtn">+ Add Menu Link</button>');
+
+  /* design */
+  var palKeys=Object.keys(palettes);
+  h+=card("design","Design & Fonts","Change the website's colours and fonts. Pick a palette — everything updates instantly.",
+    '<label class="fl">Colour palette</label><div class="pal-grid" id="palGrid">'+palKeys.map(function(k){var p=palettes[k];
+      return '<div class="pal-card'+(TH.palette===k?" on":"")+'" data-pal="'+esc(k)+'"><div class="pal-sw" style="background:linear-gradient(135deg,'+esc(p.primary)+' 55%,'+esc(p.accent)+' 55%)"></div><div class="pal-nm">'+esc(p.name)+'</div></div>'}).join("")+'</div>'+
+    '<div class="hint">Click a palette, then press Save All Changes.</div>'+
+    '<div class="row"><div>'+sel("Headings font","theme.headingFont",TH.headingFont||"Fraunces",["Fraunces","Playfair Display","Poppins","Montserrat"],"Big titles across the site.")+'</div>'+
+    '<div>'+sel("Body font","theme.bodyFont",TH.bodyFont||"Inter",["Inter","Roboto","Open Sans"],"Normal text across the site.")+'</div></div>'+
+    '<div class="checkrow"><input type="checkbox" data-c="theme.animations"'+(TH.animations!==false?" checked":"")+'><div><b style="font-size:14px">Animations</b><div class="hint">Gentle fade-in effects when scrolling. Turn off for maximum speed.</div></div></div>');
+
+  $("sections").innerHTML=h;
+  bindUploads();
+  var sn=(data.site&&data.site.name)||"";
+  if(sn)$("tbStore").textContent=sn;
+}
+/* ---------- collect & save ---------- */
+function collect(){
+  if(!data)return;
+  Array.prototype.forEach.call(document.querySelectorAll("#sections [data-p]"),function(el){
+    var p=el.getAttribute("data-p");
+    if(el.type==="file"||!p)return;
+    setPath(p,el.value);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("#sections [data-c]"),function(el){
+    var p=el.getAttribute("data-c");
+    if(!p)return;
+    setPath(p,el.checked);
+  });
+  /* nav links */
+  var navs=[];
+  Array.prototype.forEach.call(document.querySelectorAll("#navList .frow"),function(r){
+    var l=r.querySelector("[data-navlabel]").value.trim(),u=r.querySelector("[data-navhref]").value.trim();
+    if(l)navs.push({label:l,href:u||"#"});
+  });
+  if(!data.header)data.header={};data.header.nav=navs;
+  /* socials */
+  var socs=[];
+  Array.prototype.forEach.call(document.querySelectorAll("#socList .frow"),function(r){
+    var p=r.querySelector("[data-socplat]").value,u=r.querySelector("[data-socurl]").value.trim();
+    if(u)socs.push({platform:p,url:u});
+  });
+  data.socials=socs;
+  /* visibility toggles */
+  if(!data.visibility)data.visibility={};
+  Array.prototype.forEach.call(document.querySelectorAll("[data-vis]"),function(cb){
+    data.visibility[cb.getAttribute("data-vis")]=cb.checked;
+  });
+  collectWhyUs();collectAboutStats();
+}
+function collectWhyUs(){
+  if(!data.whyUs)data.whyUs={};if(!Array.isArray(data.whyUs.items))data.whyUs.items=[];
+  for(var i=0;i<4;i++){
+    var ic=document.querySelector('[data-whyicon="'+i+'"]'),ti=document.querySelector('[data-whyti="'+i+'"]'),tx=document.querySelector('[data-whytx="'+i+'"]');
+    if(ic)data.whyUs.items[i]={icon:ic.value.trim()||"verified",title:ti?ti.value:"",text:tx?tx.value:""};
+  }
+}
+function collectAboutStats(){
+  if(!data.about)data.about={};if(!Array.isArray(data.about.stats))data.about.stats=[];
+  for(var i=0;i<4;i++){
+    var v=document.querySelector('[data-statv="'+i+'"]'),l=document.querySelector('[data-statl="'+i+'"]'),s=document.querySelector('[data-stats="'+i+'"]');
+    if(v)data.about.stats[i]={value:parseFloat(v.value)||0,label:l?l.value:"",suffix:s?s.value:""};
+  }
+}
+$("saveBtn").onclick=function(){
+  collect();
+  /* search option textareas (no data-p — parse manually) */
+  var cards=document.querySelectorAll("#sec-hero textarea");
+  /* locations = first textarea in hero card after subtext; find by order */
+  var heroTas=document.querySelectorAll("#sec-hero textarea");
+  /* order in hero card: subtext, locations, types, price ranges */
+  if(heroTas.length>=4){
+    if(!data.search)data.search={};
+    data.search.locations=heroTas[1].value.split("\n").map(function(s){return s.trim()}).filter(Boolean);
+    data.search.types=heroTas[2].value.split("\n").map(function(s){return s.trim()}).filter(Boolean);
+    data.search.priceRanges=[{label:"Any price",max:0}].concat(heroTas[3].value.split("\n").map(function(s){return s.trim()}).filter(Boolean).map(function(line){
+      var parts=line.split("|");return{label:(parts[0]||"").trim(),max:parseFloat(parts[1])||0};
+    }));
+  }
+  var visitTas=document.querySelectorAll("#sec-visit textarea");
+  if(visitTas.length>=2){if(!data.visit)data.visit={};data.visit.timeOptions=visitTas[1].value.split("\n").map(function(s){return s.trim()}).filter(Boolean)}
+  var footTas=document.querySelectorAll("#sec-footer textarea");
+  if(footTas.length>=2){if(!data.footer)data.footer={};
+    data.footer.quickLinks=footTas[1].value.split("\n").map(function(s){return s.trim()}).filter(Boolean).map(function(line){
+      var p=line.split("|");return{label:(p[0]||"").trim(),href:(p[1]||"#").trim()};
+    });
+  }
+  /* gallery/features/desc/agent/featured from open property forms */
+  syncOpenPropForms();syncOpenAgentForms();syncOpenTestiForms();
+  fetch("save.php?action=save",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
+  .then(function(r){return r.json()}).then(function(j){
+    msg(j.ok?"All changes saved. The live site is updated.":(j.error||"Save failed"),!!j.ok);
+    if(j.ok)a20RefreshPreview();
+  });
+};
+/* sync any open inline edit forms back into data */
+function syncOpenPropForms(){
+  (data.properties.properties||[]).forEach(function(p,i){
+    var f=$("pform-"+i);if(!f||f.classList.contains("hidden"))return;
+    var inp=f.querySelectorAll("input[type=text],input[type=number],textarea,select");
+    /* order matches propForm(): title, type, purpose, price, priceLabel, location, area, beds, baths, areaSize, areaSqft, image, gallery, features, desc, agent */
+    p.title=inp[0].value;p.type=inp[1].value;p.purpose=inp[2].value;
+    p.price=parseFloat(inp[3].value)||0;p.priceLabel=inp[4].value;p.location=inp[5].value;p.area=inp[6].value;
+    p.beds=parseInt(inp[7].value,10)||0;p.baths=parseInt(inp[8].value,10)||0;
+    p.areaSize=inp[9].value;p.areaSqft=inp[10].value;p.image=inp[11].value;
+    p.gallery=inp[12].value.split("\n").map(function(s){return s.trim()}).filter(Boolean);
+    p.features=inp[13].value.split("\n").map(function(s){return s.trim()}).filter(Boolean);
+    p.description=inp[14].value;p.agentId=inp[15].value;
+    var fc=f.querySelector('[data-pfeat]');p.featured=fc?fc.checked:false;
+  });
+}
+function syncOpenAgentForms(){
+  (data.agents.items||[]).forEach(function(a,i){
+    var f=$("aform-"+i);if(!f||f.classList.contains("hidden"))return;
+    var inp=f.querySelectorAll("input[type=text],textarea");
+    a.name=inp[0].value;a.role=inp[1].value;a.experience=inp[2].value;
+    a.phone=inp[3].value;a.phoneDigits=inp[4].value;a.whatsappDigits=inp[5].value;a.image=inp[6].value;
+  });
+}
+function syncOpenTestiForms(){
+  (data.testimonials.items||[]).forEach(function(t,i){
+    var f=$("tform-"+i);if(!f||f.classList.contains("hidden"))return;
+    var inp=f.querySelectorAll("textarea,input[type=text]");
+    t.text=inp[0].value;t.name=inp[1].value;t.meta=inp[2].value;
+  });
+}
+/* ---------- delegated buttons ---------- */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("button");if(!t)return;
+  var g=function(a){return t.getAttribute(a)};
+  if(g("data-pedit")){var pi=+g("data-pedit"),box=$("pform-"+pi);
+    if(box.classList.contains("hidden")){syncOpenPropForms();box.innerHTML=propForm(pi);bindUploads()}
+    box.classList.toggle("hidden");
+  }
+  else if(g("data-psave")){var psi=+g("data-psave");syncOpenPropForms();render();msg("Property updated — press Save All Changes to publish.",true)}
+  else if(g("data-pdel")){var pdi=+g("data-pdel");if(confirm("Delete this property?")){data.properties.properties.splice(pdi,1);render();msg("Property deleted — press Save All Changes to publish.",true)}}
+  else if(t.id==="addPropBtn"){data.properties.properties.push({id:"prop"+Date.now(),title:"New Property",type:"House",purpose:"sale",price:0,priceLabel:"Rs 0",location:"",area:(data.search.locations||[])[0]||"",beds:0,baths:0,areaSize:"",areaSqft:"",image:"",gallery:[],features:[],description:"",agentId:"",featured:false});render();msg("Property added — fill its details, then Save.",true)}
+  else if(g("data-aedit")){var ai=+g("data-aedit"),ab=$("aform-"+ai);
+    if(ab.classList.contains("hidden")){syncOpenAgentForms();ab.innerHTML=agentForm(ai);bindUploads()}
+    ab.classList.toggle("hidden");
+  }
+  else if(g("data-asave")){syncOpenAgentForms();render();msg("Agent updated — press Save All Changes to publish.",true)}
+  else if(g("data-adel")){var adi=+g("data-adel");if(confirm("Delete this agent?")){data.agents.items.splice(adi,1);render();msg("Agent deleted — press Save All Changes to publish.",true)}}
+  else if(t.id==="addAgentBtn"){data.agents.items.push({id:"agent"+Date.now(),name:"New Agent",role:"",experience:"",phone:"",phoneDigits:"",whatsappDigits:"",image:""});render()}
+  else if(g("data-tedit")){var ti=+g("data-tedit"),tb=$("tform-"+ti);
+    if(tb.classList.contains("hidden")){syncOpenTestiForms();tb.innerHTML=testiForm(ti)}
+    tb.classList.toggle("hidden");
+  }
+  else if(g("data-tsave")){syncOpenTestiForms();render();msg("Testimonial updated — press Save All Changes to publish.",true)}
+  else if(g("data-tdel")){var tdi=+g("data-tdel");if(confirm("Delete this testimonial?")){data.testimonials.items.splice(tdi,1);render();msg("Testimonial deleted — press Save All Changes to publish.",true)}}
+  else if(t.id==="addTestiBtn"){data.testimonials.items.push({text:"",name:"",meta:""});render()}
+  else if(g("data-socdel")){if(confirm("Remove this social link?")){data.socials.splice(+g("data-socdel"),1);render()}}
+  else if(t.id==="addSocBtn"){data.socials.push({platform:"facebook",url:""});render()}
+  else if(g("data-navdel")){if(confirm("Remove this menu link?")){data.header.nav.splice(+g("data-navdel"),1);render()}}
+  else if(t.id==="addNavBtn"){if(!data.header.nav)data.header.nav=[];data.header.nav.push({label:"",href:"#"});render()}
+  else if(t.id==="addPalBtn"){}
+  var pal=t.getAttribute("data-pal");
+  if(pal){if(!data.theme)data.theme={};data.theme.palette=pal;
+    document.querySelectorAll(".pal-card").forEach(function(c){c.classList.toggle("on",c.getAttribute("data-pal")===pal)});
+    msg("Palette selected — press Save All Changes to apply.",true)}
+});
+function agentForm(i){
+  var a=data.agents.items[i];
+  return '<div style="border-top:1px solid var(--rp-line);margin-top:.7rem;padding-top:.7rem">'+
+  field("Full name","",a.name,"Example: Ahmed Raza")+
+  field("Role / title","",a.role,"Example: Founder · DHA Specialist")+
+  field("Experience","",a.experience,"Example: 12 yrs — shown under the role")+
+  '<div class="row"><div>'+field("Phone (display)","",a.phone,"Example: 0300 1112233")+'</div><div>'+field("Phone digits","",a.phoneDigits,"Digits with country code: 923001112233")+'</div></div>'+
+  field("WhatsApp digits","",a.whatsappDigits,"Usually the same as phone digits.")+
+  imgField("Photo","",a.image,"Square photo works best (400×400).")+
+  '<button class="btn btn-sm btn-dark" data-asave="'+i+'">Done Editing</button></div>';
+}
+function testiForm(i){
+  var t=data.testimonials.items[i];
+  return '<div style="border-top:1px solid var(--rp-line);margin-top:.7rem;padding-top:.7rem">'+
+  ta("Review text","",t.text,"The client's own words.")+
+  '<div class="row"><div>'+field("Client name","",t.name,"Example: Usman Tariq")+'</div><div>'+field("Detail line","",t.meta,"Example: Bought a house · DHA Phase 5")+'</div></div>'+
+  '<button class="btn btn-sm btn-dark" data-tsave="'+i+'">Done Editing</button></div>';
+}
+/* ---------- uploads ---------- */
+function bindUploads(){
+  Array.prototype.forEach.call(document.querySelectorAll("[data-upload]"),function(inp){
+    if(inp.dataset.bound)return;inp.dataset.bound="1";
+    inp.addEventListener("change",function(){
+      if(!inp.files.length)return;
+      var fd=new FormData();fd.append("action","upload");fd.append("file",inp.files[0]);
+      msg("Uploading image...",true);
+      fetch("save.php",{method:"POST",body:fd}).then(function(r){return r.json()}).then(function(j){
+        if(j.ok){
+          var txt=inp.closest(".frow").querySelector('input[type=text]');
+          if(txt){txt.value=j.file;txt.dispatchEvent(new Event("change",{bubbles:true}))}
+          msg("Image uploaded: "+j.file,true);
+        }else msg(j.error||"Upload failed",false);
+      }).catch(function(){msg("Upload failed",false)});
+    });
+  });
+}
+/* ---------- preview bridge ---------- */
+var a20LastSection=null;
+function a20Toast(t){var el=$("pvToast");if(!el){el=document.createElement("div");el.id="pvToast";el.className="pv-toast";document.body.appendChild(el)}el.textContent=t;el.classList.add("show");clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove("show")},2600)}
+function a20RefreshPreview(){var fr=$("pvFrame");if(!fr||!fr.contentWindow)return;var done=false;
+  var onLoad=function(){if(done)return;done=true;try{fr.removeEventListener("load",onLoad)}catch(e){}a20Toast("Preview updated ✓")};
+  fr.addEventListener("load",onLoad);setTimeout(onLoad,15000);
+  try{fr.contentWindow.location.reload()}catch(e){fr.src="../index.html?editmode=1"}}
+$("devBar").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+  document.querySelectorAll("#devBar button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");
+  $("pvWrap").classList.toggle("mobile",b.getAttribute("data-dev")==="mobile")});
+/* ---------- load ---------- */
+function load(){
+  fetch("../content.json").then(function(r){return r.json()}).then(function(j){
+    data=j;
+    fetch("../palettes.json").then(function(r){return r.ok?r.json():{}}).catch(function(){return{}}).then(function(p){
+      palettes=p;
+      var sn=(j.site&&j.site.name)||"";
+      if(sn){$("tbStore").textContent=sn;document.title="Admin — "+sn}
+      render();
+    });
+  }).catch(function(){msg("Could not load content.json",false)});
+}
+</script>
+</body>
+</html>
