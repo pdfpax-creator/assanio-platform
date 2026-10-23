@@ -1,7 +1,7 @@
 {
   "about": {
     "heading": "Twelve Years of Trusted Dealing",
-    "image": "https://picsum.photos/seed/emerald-office/800/600",
+    "image": "images/hero-villa.jpg",
     "imageAlt": "Emerald Estates office team",
     "kicker": "Our Story",
     "para1": "Emerald Estates started in 2014 with a single desk in DHA Phase 5 and one rule: never sell a property we wouldn't buy ourselves. That rule built our name — today, most of our business comes from repeat clients and their referrals.",
@@ -35,7 +35,7 @@
       {
         "experience": "12 yrs",
         "id": "agent1",
-        "image": "https://picsum.photos/seed/emerald-agent1/400/400",
+        "image": "images/agent-1.jpg",
         "name": "Ahmed Raza",
         "phone": "0300 1112233",
         "phoneDigits": "923001112233",
@@ -45,7 +45,7 @@
       {
         "experience": "8 yrs",
         "id": "agent2",
-        "image": "https://picsum.photos/seed/emerald-agent2/400/400",
+        "image": "images/agent-2.jpg",
         "name": "Fatima Khan",
         "phone": "0300 4445566",
         "phoneDigits": "923004445566",
@@ -55,7 +55,7 @@
       {
         "experience": "6 yrs",
         "id": "agent3",
-        "image": "https://picsum.photos/seed/emerald-agent3/400/400",
+        "image": "images/agent-3.jpg",
         "name": "Bilal Sheikh",
         "phone": "0300 7778899",
         "phoneDigits": "923007778899",
@@ -135,8 +135,8 @@
   },
   "hero": {
     "heading": "Find a Home You'll Love to Live In",
-    "image": "https://picsum.photos/seed/emerald-hero/1600/900",
-    "imageAlt": "Modern villa exterior at dusk",
+    "image": "images/hero-villa.jpg",
+    "imageAlt": "Modern luxury villa exterior at dusk",
     "kicker": "DHA · Bahria Town · Model Town",
     "resetButton": "Reset",
     "searchButton": "Search",
@@ -173,7 +173,7 @@
           "https://picsum.photos/seed/emerald-p1c/800/600"
         ],
         "id": "prop1",
-        "image": "https://picsum.photos/seed/emerald-p1/800/600",
+        "image": "images/prop-1.jpg",
         "location": "DHA Phase 5, Lahore",
         "price": 28500000,
         "priceLabel": "Rs 2.85 Crore",
@@ -202,7 +202,7 @@
           "https://picsum.photos/seed/emerald-p2b/800/600"
         ],
         "id": "prop2",
-        "image": "https://picsum.photos/seed/emerald-p2/800/600",
+        "image": "images/prop-2.jpg",
         "location": "Gulberg Greens, Islamabad",
         "price": 95000,
         "priceLabel": "Rs 95,000/mo",
@@ -230,7 +230,7 @@
           "https://picsum.photos/seed/emerald-p3a/800/600"
         ],
         "id": "prop3",
-        "image": "https://picsum.photos/seed/emerald-p3/800/600",
+        "image": "images/prop-3.jpg",
         "location": "DHA Phase 9, Lahore",
         "price": 42000000,
         "priceLabel": "Rs 4.20 Crore",
@@ -259,7 +259,7 @@
           "https://picsum.photos/seed/emerald-p4b/800/600"
         ],
         "id": "prop4",
-        "image": "https://picsum.photos/seed/emerald-p4/800/600",
+        "image": "images/prop-4.jpg",
         "location": "Bahria Town Sector C, Lahore",
         "price": 16500000,
         "priceLabel": "Rs 1.65 Crore",
@@ -288,7 +288,7 @@
           "https://picsum.photos/seed/emerald-p5b/800/600"
         ],
         "id": "prop5",
-        "image": "https://picsum.photos/seed/emerald-p5/800/600",
+        "image": "images/prop-5.jpg",
         "location": "Main Boulevard, Gulberg, Lahore",
         "price": 350000,
         "priceLabel": "Rs 3.5 Lac/mo",
@@ -315,7 +315,7 @@
           "https://picsum.photos/seed/emerald-p6a/800/600"
         ],
         "id": "prop6",
-        "image": "https://picsum.photos/seed/emerald-p6/800/600",
+        "image": "images/prop-6.jpg",
         "location": "Model Town Link Road, Lahore",
         "price": 19800000,
         "priceLabel": "Rs 1.98 Crore",
@@ -344,7 +344,7 @@
           "https://picsum.photos/seed/emerald-p7b/800/600"
         ],
         "id": "prop7",
-        "image": "https://picsum.photos/seed/emerald-p7/800/600",
+        "image": "images/prop-7.jpg",
         "location": "Johar Town Block H, Lahore",
         "price": 13500000,
         "priceLabel": "Rs 1.35 Crore",
@@ -373,7 +373,7 @@
           "https://picsum.photos/seed/emerald-p8b/800/600"
         ],
         "id": "prop8",
-        "image": "https://picsum.photos/seed/emerald-p8/800/600",
+        "image": "images/prop-8.jpg",
         "location": "DHA Phase 6 Commercial, Lahore",
         "price": 85000000,
         "priceLabel": "Rs 8.50 Crore",
