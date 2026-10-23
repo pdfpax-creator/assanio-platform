@@ -76,17 +76,8 @@ foreach ($stores as $s) {
     $st = $pdo->prepare("INSERT INTO stores (owner_id, name, slug, template, whatsapp, city, api_key) VALUES (1,?,?,?,?,?,?)");
     $st->execute([$s['name'], $s['slug'], $s['template'], $s['whatsapp'], $s['city'], $apiKey]);
     
-    // Admin password
-    $adminDir = "$storeDir/admin";
-    if (file_exists("$adminDir/config.php")) {
-        $cfg = file_get_contents("$adminDir/config.php");
-        $hash = password_hash('test123', PASSWORD_BCRYPT);
-        $cfg = preg_replace("/'password_hash'\s*=>\s*'[^']*'/", "'password_hash' => '$hash'", $cfg);
-        if (strpos($cfg, 'password_hash') === false) {
-            $cfg = str_replace('<?php', "<?php\n// Admin password: test123", $cfg);
-        }
-        file_put_contents("$adminDir/config.php", $cfg);
-    }
+    // Admin uses template default password (test123 for testing)
+    // Skip custom password to avoid bcrypt issues
     
     echo $s['slug'] . ": CREATED ✅\n";
     echo "  URL: https://app.pdfpax.com/" . $s['slug'] . "/\n";
