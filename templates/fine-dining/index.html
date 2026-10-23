@@ -1045,6 +1045,11 @@ Promise.all([
 fetch("content.json").then(function(r){if(!r.ok)throw new Error("content.json missing");return r.json()}),
 fetch("palettes.json").then(function(r){return r.ok?r.json():{}}).then(function(j){return (j&&typeof j==="object")?j:{}}).catch(function(){return {}})
 ]).then(function(rs){
+  var _t=Date.now();
+  setTimeout(function(){
+    var _l=document.getElementById("chLoader");if(_l)_l.classList.add("hide");
+    document.body.classList.add("ch-ready");
+  }, Math.max(0, 400-(Date.now()-_t)));
   var c=rs[0],__CH_PALS__=rs[1];
   var S=c.site, W=c.whatsapp;
   window.__CH_SITE__=S;
