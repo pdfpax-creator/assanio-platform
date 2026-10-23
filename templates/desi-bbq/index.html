@@ -1251,6 +1251,8 @@ Promise.all([
   initCart(c);
 }).catch(function(e){
   document.body.insertAdjacentHTML("afterbegin",'<p style="padding:1rem;color:#f4a261">Content failed to load. Please check content.json.</p>');
+  var l=document.getElementById("chLoader");if(l)l.classList.add("hide");
+  document.body.classList.add("ch-ready");
 });
 })();
 </script>
@@ -1370,7 +1372,7 @@ var SVG_ICONS = {
 'users': '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
 'gift': '<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>',
 'truck': '<rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>'
-};
+  qr_code_2:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v3h-3v-3zm-3 3h3v3h-3v-3zm3 3h3v3h-3v-3zm-3-6h3v3h-3v-3zm6 6h3v3h-3v-3z"/></svg>',};
 function svgIcon(name, size){
   size = size || 24;
   var p = SVG_ICONS[name] || SVG_ICONS['star'];
