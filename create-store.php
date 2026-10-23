@@ -14,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $err = 'Please enter your restaurant name.';
     } elseif (!isset(RP_TEMPLATES[$vals['template']])) {
         $err = 'Please pick a template.';
+    } elseif (!in_array($vals['template'], ['desi-bbq', 'pizza-fastfood'])) {
+        $err = 'This template is coming soon. Please choose Tandoor Nights or Smash Bros.';
     } elseif (!preg_match('/^92?3\d{9}$/', normalize_phone($vals['whatsapp'])['digits'] ?? '')) {
         $err = 'Please enter a valid WhatsApp mobile number (e.g. 03xx xxxxxxx).';
     } else {
@@ -69,15 +71,39 @@ $tplClass = ['pizza-fastfood' => 'tpl-pizza', 'desi-bbq' => 'tpl-desi', 'cafe' =
       </div>
       <label class="rp-label">Choose a template</label>
       <div class="tpl-grid">
-        <?php foreach (RP_TEMPLATES as $key => $t): ?>
-          <label class="tpl <?= $tplClass[$key] ?? '' ?> <?= $vals['template'] === $key ? 'sel' : '' ?>">
-            <input type="radio" name="template" value="<?= e($key) ?>" <?= $vals['template'] === $key ? 'checked' : '' ?>>
-            <span class="tpl-visual"><img src="<?= e($t['img'] ?? '') ?>" alt="<?= e($t['name']) ?> template preview" loading="lazy"></span>
+        <?php
+        $enabled_templates = ['desi-bbq', 'pizza-fastfood'];
+        foreach (RP_TEMPLATES as $key => $t):
+          $is_enabled = in_array($key, $enabled_templates);
+        ?>
+          <label class="tpl <?= $tplClass[$key] ?? '' ?> <?= $vals['template'] === $key ? 'sel' : '' ?> <?= !$is_enabled ? 'tpl-coming' : '' ?>">
+            <?php if ($is_enabled): ?>
+              <input type="radio" name="template" value="<?= e($key) ?>" <?= $vals['template'] === $key ? 'checked' : '' ?>>
+            <?php else: ?>
+              <input type="radio" name="template" value="<?= e($key) ?>" disabled>
+            <?php endif; ?>
+            <span class="tpl-visual"><img src="<?= e($t['img'] ?? '') ?>" alt="<?= e($t['name']) ?> template preview" loading="lazy">
+              <?php if (!$is_enabled): ?>
+                <span class="coming-badge">Coming Soon</span>
+              <?php endif; ?>
+            </span>
             <b><?= e($t['label']) ?></b>
             <p><?= e($t['blurb']) ?></p>
           </label>
         <?php endforeach; ?>
       </div>
+      <style>
+        .tpl-coming { opacity: 0.6; cursor: not-allowed; }
+        .tpl-coming .tpl-visual { position: relative; }
+        .coming-badge {
+          position: absolute; top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          background: #1b2a4a; color: #fff;
+          padding: 0.4rem 1rem; border-radius: 6px;
+          font-size: 13px; font-weight: 700;
+          white-space: nowrap;
+        }
+      </style>
       <div class="rp-row">
         <div>
           <label class="rp-label" for="fWa">WhatsApp number (orders go here) *</label>
