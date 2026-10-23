@@ -650,5 +650,11 @@
     "dealMessage": "Assalam-o-Alaikum! I would like to reserve the {deal} for {price}",
     "dotdMessage": "Assalam-o-Alaikum! I would like to reserve tonight's Chef's Special ({offer} for {price})",
     "orderMessage": "Assalam-o-Alaikum! I would like to order from {name}"
+  },
+  "imagePrompts": {
+    "images/hero-dish.jpg": "Elegant fine dining plated dish, seared meat with artistic sauce dots, microgreens, on black slate plate, dark moody background, Michelin-star presentation, professional culinary photography, no people, no text. Size: 1200x800 landscape.",
+    "images/dessert.jpg": "Luxurious chocolate dessert with gold leaf, quenelle of ice cream, artistic plating, dark elegant background, fine dining presentation, professional culinary photography, no people, no text. Size: 800x600 landscape.",
+    "images/interior.jpg": "Luxurious fine dining restaurant interior, dim warm lighting, elegant table settings with candles, dark wood and brass accents, empty tables, professional interior photography, no people, no text. Size: 1200x800 landscape.",
+    "images/table.jpg": "Beautifully set fine dining table, crystal glasses, white linen, silver cutlery, soft candle light, dark sophisticated ambiance, professional restaurant photography, no people, no text. Size: 800x600 landscape."
   }
 }

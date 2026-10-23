@@ -545,5 +545,11 @@
     "formError": "Please fill all fields correctly.",
     "phoneError": "Please enter a valid Pakistani mobile number.",
     "message": "*Table Reservation — {site}*\nName: {name}\nPhone: {phone}\nDate: {date}\nTime: {time}\nGuests: {guests}"
+  },
+  "imagePrompts": {
+    "images/hero-pizza.jpg": "Large pepperoni pizza with melted cheese pull, steam rising, on wooden table, vibrant red background, professional fast food photography, appetizing, no people, no text. Size: 1200x800 landscape.",
+    "images/burger.jpg": "Juicy double cheeseburger with crispy fries, sesame bun, melted cheddar, fresh lettuce and tomato, on dark background, professional fast food photography, no people, no text. Size: 800x600 landscape.",
+    "images/fries.jpg": "Golden crispy french fries in a red carton, salt crystals visible, close-up shot, dark background, professional fast food photography, no people, no text. Size: 800x600 landscape.",
+    "images/chef-oven.jpg": "Chef sliding pizza into a wood-fired oven, flames visible, professional kitchen, action shot, warm lighting, restaurant photography, no text. Size: 800x600 landscape."
   }
 }

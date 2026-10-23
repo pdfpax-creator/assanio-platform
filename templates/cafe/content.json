@@ -650,5 +650,11 @@
   "whatsapp": {
     "dotdMessage": "Assalam-o-Alaikum! I want to order the Deal of the Day ({offer} for {price})",
     "orderMessage": "Assalam-o-Alaikum! I want to order from {name}"
+  },
+  "imagePrompts": {
+    "images/latte-art.jpg": "Beautiful latte art heart design in a white ceramic cup, on wooden table with coffee beans scattered, soft natural light, cozy cafe aesthetic, professional coffee photography, no people, no text. Size: 800x600 landscape.",
+    "images/croissant.jpg": "Fresh buttery croissants on a rustic wooden board, flaky layers visible, warm morning light, cozy bakery aesthetic, professional food photography, no people, no text. Size: 800x600 landscape.",
+    "images/cheesecake.jpg": "Slice of creamy New York cheesecake with berry compote, on elegant white plate, soft cafe lighting, professional dessert photography, no people, no text. Size: 800x600 landscape.",
+    "images/pour-over.jpg": "Pour-over coffee brewing, hot water pouring from gooseneck kettle into dripper, steam rising, minimalist cafe setting, professional coffee photography, no people, no text. Size: 800x600 landscape."
   }
 }

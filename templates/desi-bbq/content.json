@@ -739,5 +739,11 @@
     "dealMessage": "Assalam-o-Alaikum! I want to order the {deal} for {price}",
     "dotdMessage": "Assalam-o-Alaikum! I want to order the Deal of the Day ({offer} for {price})",
     "orderMessage": "Assalam-o-Alaikum! I want to order from {name}"
+  },
+  "imagePrompts": {
+    "images/bbq-platter.jpg": "Sizzling BBQ platter with seekh kababs, chicken tikka, malai boti on a metal tray, garnished with onions and mint chutney, dark rustic background, professional food photography, no people, no text. Size: 800x600 landscape.",
+    "images/chicken-karahi.jpg": "Steaming chicken karahi in a traditional iron wok (karahi), rich tomato gravy, garnished with ginger and green chilies, naan bread on side, dark moody background, professional Pakistani food photography, no people, no text. Size: 800x600 landscape.",
+    "images/naan-tandoor.jpg": "Fresh tandoori naan breads stuck on the inner wall of a clay tandoor oven, flames visible below, dramatic lighting, professional food photography, no people, no text. Size: 800x600 landscape.",
+    "images/seekh-kabab.jpg": "Juicy seekh kababs grilling over charcoal embers, smoke rising, close-up shot, charred edges, professional BBQ food photography, dark background, no people, no text. Size: 800x600 landscape."
   }
 }
