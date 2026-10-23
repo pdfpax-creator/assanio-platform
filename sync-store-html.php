@@ -7,6 +7,7 @@ $stores = [
     'smash-bros' => 'pizza-fastfood',
     'downtown-slice' => 'pizza-fastfood',
     'br9-cafe' => 'pizza-fastfood',
+    'emerald-estates-demo' => 'real-estate',
 ];
 foreach ($stores as $slug => $tpl) {
     $src = __DIR__ . "/templates/$tpl/index.html";
