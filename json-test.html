@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><title>JSON Test</title></head><body>
+<h1>Testing content.json fetch</h1>
+<div id="result">Loading...</div>
+<script>
+fetch("stores/emerald-estates-demo/content.json?v=20261023")
+  .then(function(r){
+    document.getElementById("result").innerHTML += "<p>Fetch OK, status: " + r.status + "</p>";
+    return r.text();
+  })
+  .then(function(t){
+    document.getElementById("result").innerHTML += "<p>Text length: " + t.length + "</p>";
+    try {
+      var j = JSON.parse(t);
+      document.getElementById("result").innerHTML += "<p style='color:green'>JSON PARSE OK! Properties: " + j.properties.properties.length + "</p>";
+    } catch(e) {
+      document.getElementById("result").innerHTML += "<p style='color:red'>JSON PARSE FAILED: " + e.message + "</p>";
+      document.getElementById("result").innerHTML += "<pre>" + t.substring(0, 500) + "</pre>";
+    }
+  })
+  .catch(function(e){
+    document.getElementById("result").innerHTML += "<p style='color:red'>FETCH FAILED: " + e.message + "</p>";
+  });
+</script>
+</body></html>
