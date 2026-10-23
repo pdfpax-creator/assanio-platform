@@ -1228,8 +1228,7 @@ Promise.all([
   /* QR — decorative placeholder (replace with real QR service in production) */
   $("qrKicker").textContent=c.qr.kicker; $("qrHeading").textContent=c.qr.heading;
   $("qrText").textContent=c.qr.text; $("qrDlText").textContent=c.qr.downloadText; $("qrNote").textContent=c.qr.note;
-  var qrLink=(c.qr&&c.qr.link)||window.location.href;
-  $("qrBox").innerHTML='<img src="https://api.qrserver.com/v1/create-qr-code/?size=190x190&data='+encodeURIComponent(qrLink)+'" alt="Scan QR Code" style="width:100%;height:auto;display:block;border-radius:4px">';
+  $("qrBox").innerHTML='<div style="width:100%;aspect-ratio:1;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;font-size:12px">QR Code<br>Scan to order</div>';
 
   /* footer */
   $("ftLogo").textContent=S.name.toUpperCase(); $("ftAbout").textContent=c.footer.about;
@@ -1252,8 +1251,6 @@ Promise.all([
   initCart(c);
 }).catch(function(e){
   document.body.insertAdjacentHTML("afterbegin",'<p style="padding:1rem;color:#f4a261">Content failed to load. Please check content.json.</p>');
-  var l=document.getElementById("chLoader");if(l)l.classList.add("hide");
-  document.body.classList.add("ch-ready");
 });
 })();
 </script>
