@@ -157,6 +157,15 @@ function imgField(label,path,val,h){
     '<input type="text" data-p="'+esc(path)+'" value="'+esc(val||"")+'" placeholder="images/... or https://..." style="flex:1">'+
     '<label class="btn btn-sm btn-line" style="white-space:nowrap;cursor:pointer">Upload<input type="file" accept="image/*" data-upload="'+esc(path)+'" style="display:none"></label></div>'+promptHtml+hint(h);
 }
+
+function sectionPrompt(size, prompt){
+  return '<div class="section-prompt" style="background:#fff8e1;border:1px solid #f0d060;border-radius:8px;padding:.8rem 1rem;margin-bottom:1rem;font-size:13px">'
+    + '<div style="font-weight:700;color:#7a5c00;margin-bottom:.4rem">📸 Image Guide <span style="background:#7a5c00;color:#fff;padding:.1rem .5rem;border-radius:4px;font-size:11px;margin-left:.5rem">'+size+'</span>'
+    + ' <button type="button" onclick="copyPrompt(this)" data-prompt="'+prompt.replace(/"/g,'&quot;')+'" style="margin-left:.5rem;background:#1b2a4a;color:#fff;border:none;border-radius:4px;padding:.2rem .6rem;font-size:11px;cursor:pointer">Copy Prompt</button></div>'
+    + '<div style="color:#555;line-height:1.5">'+prompt+'</div>'
+    + '<div style="color:#999;margin-top:.3rem;font-size:11px">Copy this prompt → paste in any AI image generator → upload the result below. Replace [ITEM NAME] with your dish/product name.</div></div>';
+}
+
 function copyPrompt(btn){
   var t = btn.getAttribute('data-prompt');
   navigator.clipboard.writeText(t).then(function(){
@@ -520,7 +529,25 @@ document.addEventListener("click",function(e){
     if(box.classList.contains("hidden")){syncOpenPropForms();box.innerHTML=propForm(pi);bindUploads()}
     box.classList.toggle("hidden");
   }
-  else if(g("data-psave")){var psi=+g("data-psave");syncOpenPropForms();render();msg("Property updated — press Save All Changes to publish.",true)}
+  else if(g("data-psave")){var psi=+g("data-psave");syncOpenPropForms();render();
+var SECTION_PROMPTS = {
+  "sec-hero": ["1600x900", "Modern luxury villa exterior at dusk in Lahore Pakistan, contemporary architecture, warm lights, manicured lawn, professional real estate photography, no people, no text."],
+  "sec-properties": ["800x600", "Professional real estate photography in Pakistan, [PROPERTY TYPE], exterior/interior, daylight, no people, no text."],
+  "sec-agents": ["400x400", "Professional headshot portrait of a Pakistani real estate agent, business attire, office background blurred, friendly, corporate photography, no text."]
+};
+// Inject section image prompts
+(function(){
+  if(typeof SECTION_PROMPTS === 'undefined') return;
+  Object.keys(SECTION_PROMPTS).forEach(function(secId){
+    var sec = document.getElementById(secId);
+    if(sec && !sec.querySelector('.section-prompt')) {
+      var size = SECTION_PROMPTS[secId][0];
+      var prompt = SECTION_PROMPTS[secId][1];
+      sec.insertAdjacentHTML('afterbegin', sectionPrompt(size, prompt));
+    }
+  });
+})();
+msg("Property updated — press Save All Changes to publish.",true)}
   else if(g("data-pdel")){var pdi=+g("data-pdel");if(confirm("Delete this property?")){data.properties.properties.splice(pdi,1);render();msg("Property deleted — press Save All Changes to publish.",true)}}
   else if(t.id==="addPropBtn"){data.properties.properties.push({id:"prop"+Date.now(),title:"New Property",type:"House",purpose:"sale",price:0,priceLabel:"Rs 0",location:"",area:(data.search.locations||[])[0]||"",beds:0,baths:0,areaSize:"",areaSqft:"",image:"",gallery:[],features:[],description:"",agentId:"",featured:false});render();msg("Property added — fill its details, then Save.",true)}
   else if(g("data-aedit")){var ai=+g("data-aedit"),ab=$("aform-"+ai);
