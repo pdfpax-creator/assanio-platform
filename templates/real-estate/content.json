@@ -597,5 +597,19 @@
     "officeHours": "Office Hours",
     "quickLinks": "Quick Links",
     "contactTitle": "Contact"
+  },
+  "imagePrompts": {
+    "images/hero-villa.jpg": "Modern luxury villa exterior at dusk in Lahore Pakistan, contemporary architecture with warm interior lights glowing through large windows, manicured lawn, elegant entrance, professional real estate photography, no people, no text. Size: 1600x900 landscape.",
+    "images/prop-1.jpg": "Beautiful 10 marla modern house exterior in DHA Lahore Pakistan, two-story contemporary home with clean lines, driveway, professional real estate listing photo, daylight, no people, no text. Size: 800x600 landscape.",
+    "images/prop-2.jpg": "Luxury apartment living room interior in Pakistan, modern furniture, large windows with city view, bright daylight, professional real estate photography, no people, no text. Size: 800x600 landscape.",
+    "images/prop-3.jpg": "Aerial drone view of empty residential plot land in Bahria Town Pakistan, marked plot boundaries, developing housing society with roads, daytime, professional real estate photography, no people, no text. Size: 800x600 landscape.",
+    "images/prop-4.jpg": "Modern 5 marla small house exterior in Pakistan, compact two-story home, neat facade, small front yard, daytime, professional real estate listing photo, no people, no text. Size: 800x600 landscape.",
+    "images/prop-5.jpg": "Modern corporate office floor interior in Lahore Pakistan, open workspace with desks, glass partitions, professional lighting, daytime, commercial real estate photography, no people, no text. Size: 800x600 landscape.",
+    "images/prop-6.jpg": "Elegant 8 marla house exterior in DHA Lahore, modern Pakistani residential architecture, double-story, beautiful entrance, evening light, professional real estate photography, no people, no text. Size: 800x600 landscape.",
+    "images/prop-7.jpg": "Spacious 3 bedroom family apartment interior in Pakistan, bright living-dining area, modern Pakistani home decor, natural light from balcony, professional real estate photography, no people, no text. Size: 800x600 landscape.",
+    "images/prop-8.jpg": "Modern commercial plaza building exterior in DHA Lahore Pakistan, multi-story shops and offices, glass facade, daytime, professional real estate photography, no people, no text. Size: 800x600 landscape.",
+    "images/agent-1.jpg": "Professional headshot portrait of a confident Pakistani male real estate agent in his 30s, wearing dark suit, office background blurred, friendly smile, corporate photography, no text. Size: 400x400 square.",
+    "images/agent-2.jpg": "Professional headshot portrait of a Pakistani female real estate agent in her 30s, wearing elegant blazer and hijab, office background blurred, warm smile, corporate photography, no text. Size: 400x400 square.",
+    "images/agent-3.jpg": "Professional headshot portrait of a senior Pakistani male property consultant in his 40s, wearing traditional waistcoat over shirt, office background blurred, trustworthy expression, corporate photography, no text. Size: 400x400 square."
   }
 }
