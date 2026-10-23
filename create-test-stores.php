@@ -71,9 +71,9 @@ foreach ($stores as $s) {
     if (isset($cj['site']['city'])) $cj['site']['city'] = $s['city'];
     file_put_contents("$storeDir/content.json", json_encode($cj, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     
-    // DB entry (user_id 1 = super admin)
+    // DB entry (owner_id 1 = super admin)
     $apiKey = bin2hex(random_bytes(16));
-    $st = $pdo->prepare("INSERT INTO stores (user_id, name, slug, template, whatsapp, city, api_key, created_at) VALUES (1,?,?,?,?,?,?,datetime('now'))");
+    $st = $pdo->prepare("INSERT INTO stores (owner_id, name, slug, template, whatsapp, city, api_key) VALUES (1,?,?,?,?,?,?)");
     $st->execute([$s['name'], $s['slug'], $s['template'], $s['whatsapp'], $s['city'], $apiKey]);
     
     // Admin password
