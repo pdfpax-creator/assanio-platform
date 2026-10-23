@@ -11,7 +11,16 @@ if (($user['role'] ?? '') !== 'super') {
 }
 
 // Get all stores
-$stores = $pdo->query("SELECT id, name, slug, template, whatsapp, city, created_at FROM stores ORDER BY created_at DESC")->fetchAll(PDO::FETCH_ASSOC);
+$stores = $pdo->query("SELECT id, name, slug, template, whatsapp, city, created_at, featured FROM stores ORDER BY created_at DESC")->fetchAll(PDO::FETCH_ASSOC);
+
+// Handle featured toggle
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'toggle-featured') {
+    csrf_check();
+    $sid = (int)($_POST['store_id'] ?? 0);
+    $pdo->prepare("UPDATE stores SET featured = 1 - COALESCE(featured, 0) WHERE id = ?")->execute([$sid]);
+    header('Location: master.php');
+    exit;
+}
 
 // Get stats
 $totalStores = count($stores);
@@ -75,6 +84,7 @@ th { background: #f8f9fa; font-weight: 600; }
     <div class="store-row">
       <div>
         <strong><?= e($s['name']) ?></strong>
+        <?php if (!empty($s['featured'])): ?><span style="background:#c9a227;color:#fff;font-size:0.7rem;padding:0.2rem 0.6rem;border-radius:10px;margin-left:0.5rem;">⭐ FEATURED</span><?php endif; ?>
         <span style="color:#888;font-size:0.85rem;">(<?= e($s['slug']) ?>)</span><br>
         <span style="font-size:0.8rem;color:#666;"><?= e($s['city']) ?> • <?= e($s['template']) ?></span>
       </div>
@@ -82,6 +92,14 @@ th { background: #f8f9fa; font-weight: 600; }
         <a class="btn btn-green" href="/<?= e($s['slug']) ?>/" target="_blank">👁 View</a>
         <a class="btn btn-blue" href="/stores/<?= e($s['slug']) ?>/admin/" target="_blank">⚙️ Admin</a>
         <a class="btn btn-orange" href="store-settings.php?id=<?= $s['id'] ?>">📝 Edit</a>
+        <form method="post" style="display:inline;">
+          <?= csrf_field() ?>
+          <input type="hidden" name="action" value="toggle-featured">
+          <input type="hidden" name="store_id" value="<?= $s['id'] ?>">
+          <button type="submit" class="btn" style="background:<?= !empty($s['featured']) ? '#e63946' : '#c9a227' ?>;color:#fff;border:none;cursor:pointer;">
+            <?= !empty($s['featured']) ? '⭐ Unfeature' : '⭐ Feature' ?>
+          </button>
+        </form>
       </div>
     </div>
     <?php endforeach; ?>

@@ -5,11 +5,15 @@ require_once __DIR__ . '/lib.php';
 $pdo = db();
 
 // Get all active stores with order counts (only those marked visible in Discover)
-$stores = $pdo->query("SELECT s.name, s.slug, s.template, s.city, s.whatsapp,
+$stores = $pdo->query("SELECT s.name, s.slug, s.template, s.city, s.whatsapp, s.featured,
                        (SELECT COUNT(*) FROM orders o WHERE o.store_id = s.id) AS order_count
                        FROM stores s WHERE (s.status = 'active' OR s.status IS NULL)
                        AND (s.show_in_discover = 1 OR s.show_in_discover IS NULL)
-                       ORDER BY order_count DESC, s.created_at DESC")->fetchAll();
+                       ORDER BY s.featured DESC, order_count DESC, s.created_at DESC")->fetchAll();
+
+// Split featured
+$featured = array_filter($stores, fn($s) => !empty($s['featured']));
+$regular = array_filter($stores, fn($s) => empty($s['featured']));
 
 // Template info: display name + image
 $tplInfo = [
@@ -95,10 +99,31 @@ $discSubtitle = setting_get('discover_subtitle', 'Order directly from the restau
       <p>Own a restaurant? <a href="register.php" style="color:#C8102E;font-weight:700">Claim your free setup →</a></p>
     </div>
   <?php else: ?>
+    <?php if ($featured): ?>
+    <div class="disc-section" style="margin-bottom:2.5rem;">
+      <h2>⭐ Featured Restaurants</h2>
+      <div class="disc-grid" id="discFeatured">
+        <?php foreach ($featured as $s):
+          $tpl = $tplInfo[$s['template']] ?? $tplInfo['pizza-fastfood'];
+        ?>
+        <a href="/<?= e($s['slug']) ?>/" class="disc-card" data-tpl="<?= e($s['template']) ?>" style="border:2px solid #c9a227;position:relative;">
+          <div style="position:absolute;top:10px;right:10px;background:#c9a227;color:#fff;font-size:0.75rem;font-weight:700;padding:0.3rem 0.8rem;border-radius:20px;z-index:2;">⭐ FEATURED</div>
+          <div class="disc-card-img"><img src="<?= e($tpl['img']) ?>" alt="<?= e($s['name']) ?>" loading="lazy"></div>
+          <div class="disc-card-body">
+            <h3><?= e($s['name']) ?></h3>
+            <p class="disc-meta"><?= e($tpl['emoji'] . ' ' . $tpl['name']) ?> • <?= e($s['city']) ?></p>
+            <?php if ($s['order_count'] > 0): ?><p class="disc-orders"><?= (int)$s['order_count'] ?> orders</p><?php endif; ?>
+            <span class="disc-order-btn">Order Direct →</span>
+          </div>
+        </a>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <?php endif; ?>
     <div class="disc-section">
-      <h2>All Restaurants <span style="color:#999;font-weight:400;font-size:1rem">(<?= count($stores) ?>)</span></h2>
+      <h2>All Restaurants <span style="color:#999;font-weight:400;font-size:1rem">(<?= count($regular) ?>)</span></h2>
       <div class="disc-grid" id="discGrid">
-        <?php foreach ($stores as $s):
+        <?php foreach ($regular as $s):
           $tpl = $tplInfo[$s['template']] ?? ['name' => $s['template'], 'img' => 'assets/landing/t1-pizza.jpg', 'emoji' => '🍴'];
           $waNum = preg_replace('/\D/', '', $s['whatsapp'] ?? '');
           if ($waNum && $waNum[0] === '0') $waNum = '92' . substr($waNum, 1);
