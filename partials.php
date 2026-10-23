@@ -101,7 +101,7 @@ function rp_sidebar(array $user, string $active): string
         return '<a href="' . $href . '" class="' . ($active === $key ? 'on' : '') . '">'
             . '<span class="ic">' . $icon . '</span>' . e($label) . $extra . '</a>';
     };
-    $h = '<aside class="rp-side"><div class="rp-side-top">' . rp_logo() . '</div><nav class="rp-nav">';
+    $h = '<aside class="rp-side"><div class="rp-side-top">' . rp_logo() . '<button class="rp-side-close" onclick="document.body.classList.remove(\'nav-open\')" aria-label="Close menu" style="margin-left:auto;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#666;display:none;">✕</button></div><nav class="rp-nav">';
     if ($isCaller) {
         $h .= $item('crm', 'caller-crm.php', rp_icon('phone', 18), 'My Leads');
     } else {

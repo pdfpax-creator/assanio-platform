@@ -419,6 +419,8 @@ table.rp-table{width:100%;border-collapse:collapse;font-size:14px}
 @media(max-width:900px){
   .rp-side{position:fixed;z-index:50;transform:translateX(-102%);transition:transform .25s}
   body.nav-open .rp-side{transform:translateX(0)}
+  body.nav-open .rp-side-close{display:block !important}
+  .rp-side-top{display:flex;align-items:center}
   .rp-burger{display:inline-flex !important}
   .rp-content{padding:1rem 1rem 2rem}
   .rp-top{padding:1rem 1rem .2rem}
