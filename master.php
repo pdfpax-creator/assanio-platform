@@ -56,6 +56,7 @@ th { background: #f8f9fa; font-weight: 600; }
   <button class="tab" onclick="showTab('leads')">📞 Leads</button>
   <button class="tab" onclick="showTab('callers')">👥 Callers</button>
   <button class="tab" onclick="showTab('links')">🔗 Quick Links</button>
+  <button class="tab" onclick="showTab('landing')">🎨 Landing Page</button>
 </div>
 
 <!-- STATS -->
@@ -155,5 +156,51 @@ function showTab(name) {
   document.getElementById('tab-' + name).classList.add('active');
 }
 </script>
+
+<?php
+// Landing page editor handler
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'save-landing') {
+    csrf_check();
+    $lc = include __DIR__ . '/landing-content.php';
+    foreach ($lc as $k => $v) {
+        if (isset($_POST['lc'][$k])) $lc[$k] = trim($_POST['lc'][$k]);
+    }
+    $out = "<?php\n// Landing page content - editable from Master Admin\nreturn [\n";
+    foreach ($lc as $k => $v) {
+        $out .= "  '" . $k . "' => '" . str_replace("'", "\\'", $v) . "',\n";
+    }
+    $out .= "];\n";
+    file_put_contents(__DIR__ . '/landing-content.php', $out);
+    echo '<div style="background:#d4edda;color:#155724;padding:1rem;border-radius:8px;margin-bottom:1rem;">✅ Landing page updated!</div>';
+}
+$lc = include __DIR__ . '/landing-content.php';
+?>
+
+<div id="tab-landing" class="tab-content">
+  <div class="section">
+    <h3>🎨 Landing Page Editor</h3>
+    <p style="color:#666;margin-bottom:1rem;">Yahan se apni main website (app.pdfpax.com) ka text change karo. Save karte hi live ho jayega!</p>
+    <form method="post">
+      <?= csrf_field() ?>
+      <input type="hidden" name="action" value="save-landing">
+      <table>
+        <tr><th style="width:200px;">Field</th><th>Value</th></tr>
+        <tr><td>Hero Heading</td><td><input type="text" name="lc[hero_heading]" value="<?= e($lc['hero_heading']) ?>" style="width:100%;padding:0.5rem;"></td></tr>
+        <tr><td>Hero Subtext</td><td><textarea name="lc[hero_subtext]" style="width:100%;padding:0.5rem;" rows="3"><?= e($lc['hero_subtext']) ?></textarea></td></tr>
+        <tr><td>WhatsApp Number</td><td><input type="text" name="lc[whatsapp]" value="<?= e($lc['whatsapp']) ?>" style="width:100%;padding:0.5rem;"></td></tr>
+        <tr><td>WhatsApp Display</td><td><input type="text" name="lc[whatsapp_display]" value="<?= e($lc['whatsapp_display']) ?>" style="width:100%;padding:0.5rem;"></td></tr>
+        <tr><td>Starter Price</td><td><input type="text" name="lc[price_starter]" value="<?= e($lc['price_starter']) ?>" style="width:100%;padding:0.5rem;"></td></tr>
+        <tr><td>Business Price</td><td><input type="text" name="lc[price_business]" value="<?= e($lc['price_business']) ?>" style="width:100%;padding:0.5rem;"></td></tr>
+        <tr><td>Pro Price</td><td><input type="text" name="lc[price_pro]" value="<?= e($lc['price_pro']) ?>" style="width:100%;padding:0.5rem;"></td></tr>
+        <tr><td>Footer Email</td><td><input type="text" name="lc[footer_email]" value="<?= e($lc['footer_email']) ?>" style="width:100%;padding:0.5rem;"></td></tr>
+      </table>
+      <button type="submit" class="btn btn-blue" style="margin-top:1rem;padding:0.8rem 2rem;font-size:1rem;">💾 Save Changes</button>
+    </form>
+    <p style="margin-top:1rem;font-size:0.85rem;color:#888;">
+      💡 Abhi hero + prices editable hain. Baad mein aur sections add kar dunga!
+      <br><a href="/" target="_blank">👁 View Landing Page →</a>
+    </p>
+  </div>
+</div>
 
 <?php rp_app_close(); ?>

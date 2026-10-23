@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/lib.php';
+$lc = file_exists(__DIR__ . '/landing-content.php') ? include __DIR__ . '/landing-content.php' : [];
 if (file_exists(__DIR__ . '/custom-domain.php')) {
     require_once __DIR__ . '/custom-domain.php';
     /* ---- Custom domain: serve restaurant website directly ---- */
@@ -52,8 +53,8 @@ page_head('Home', 'Assanio builds your restaurant a professional website with on
   <div class="al-wrap">
     <div class="al-rev al-hero-center">
       <p class="al-kicker">🚀 Pakistan's restaurant growth platform</p>
-      <h1>Your restaurant.<br>Your website.<br><em>Zero commission.</em></h1>
-      <p class="al-lede">Stop losing 25% of every order to marketplaces. Get your own professional website with WhatsApp ordering, customer database, and marketing tools — for one flat monthly fee.</p>
+      <h1><?= $lc['hero_heading'] ?? 'Your restaurant.<br>Your website.<br><em>Zero commission.</em>' ?></h1>
+      <p class="al-lede"><?= e($lc['hero_subtext'] ?? 'Stop losing 25% of every order to marketplaces. Get your own professional website with WhatsApp ordering, customer database, and marketing tools — for one flat monthly fee.') ?></p>
       <div class="al-cta-row al-cta-center">
         <a class="al-btn" href="register.php">Claim Free Setup →</a>
         <a class="al-btn al-btn-ghost" href="#math">See how much you save</a>
