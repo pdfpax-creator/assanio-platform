@@ -916,7 +916,7 @@ function renderAll(c){
 }
 /* ================= init ================= */
 Promise.all([
-  fetch("content.json").then(function(r){if(!r.ok)throw new Error("content.json missing");return r.json()}),
+  fetch("content.json?v=20261023").then(function(r){if(!r.ok)throw new Error("content.json missing");return r.json()}),
   fetch("palettes.json").then(function(r){return r.ok?r.json():{}}).catch(function(){return{}})
 ]).then(function(res){
   var t0=Date.now();
