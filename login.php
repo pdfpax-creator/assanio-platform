@@ -24,16 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $err = 'Your account is pending approval. Please complete payment and send screenshot on WhatsApp. We will activate your account shortly.';
         } else {
             login_user((int)$u['id']);
-            // Role-based redirect: caller -> My Leads, super -> admin, owner -> dashboard
-            if (empty($_POST['next'] ?? '') && empty($_GET['next'] ?? '')) {
-                $role = $u['role'] ?? 'owner';
-                if ($role === 'caller') {
-                    $next = 'caller-crm.php';
-                } elseif ($role === 'super') {
-                    $next = 'admin.php';
-                } else {
-                    $next = 'dashboard.php';
-                }
+            // Role-based redirect: caller ALWAYS -> My Leads (never dashboard)
+            $role = $u['role'] ?? 'owner';
+            if ($role === 'caller') {
+                $next = 'caller-crm.php';
+            } elseif ($role === 'super' && empty($_POST['next'] ?? '') && empty($_GET['next'] ?? '')) {
+                $next = 'admin.php';
+            } elseif (empty($_POST['next'] ?? '') && empty($_GET['next'] ?? '')) {
+                $next = 'dashboard.php';
             }
             header('Location: ' . $next);
             exit;

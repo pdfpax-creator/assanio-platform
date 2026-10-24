@@ -1,6 +1,11 @@
 <?php
 require_once __DIR__ . '/lib.php';
 $user = require_login();
+// Callers should never see the merchant dashboard — send them to CRM
+if (($user['role'] ?? '') === 'caller') {
+    header('Location: caller-crm.php');
+    exit;
+}
 $pdo = db();
 $st = $pdo->prepare('SELECT s.*, (SELECT COUNT(*) FROM orders o WHERE o.store_id = s.id) AS order_count,
                      (SELECT COUNT(*) FROM orders o WHERE o.store_id = s.id AND o.status = \'new\') AS new_count
