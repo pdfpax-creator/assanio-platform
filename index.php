@@ -120,6 +120,88 @@ page_head('Home', 'Assanio builds your restaurant a professional website with on
   </div>
 </section>
 
+<!-- INTERACTIVE SAVINGS CALCULATOR -->
+<section class="al-sec" id="calculator">
+  <div class="al-wrap">
+    <p class="al-secnum al-rev">Try it yourself</p>
+    <h2 class="al-rev">Kitna bachao ge? Khud calculate karo!</h2>
+    <p class="al-sub al-rev">Apni monthly online sales likho — dekho kitna commission bachay ga.</p>
+    <div style="max-width:600px;margin:2rem auto;background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.08);">
+      <label style="font-weight:600;display:block;margin-bottom:0.5rem;">Monthly online sales (Rs):</label>
+      <input type="range" id="salesRange" min="50000" max="2000000" step="50000" value="500000" oninput="calcSavings()" style="width:100%;accent-color:#C8102E;">
+      <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:#888;margin-top:0.3rem;"><span>Rs 50K</span><span>Rs 20L</span></div>
+      <div style="text-align:center;margin:1.5rem 0;">
+        <div style="font-size:1rem;color:#666;">Your monthly sales:</div>
+        <div id="salesDisplay" style="font-size:2rem;font-weight:800;color:#1b2a4a;">Rs 500,000</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;text-align:center;">
+        <div style="background:#fee;padding:1rem;border-radius:12px;">
+          <div style="font-size:0.85rem;color:#888;">Marketplace commission (25%)</div>
+          <div id="commDisplay" style="font-size:1.3rem;font-weight:700;color:#e63946;">Rs 125,000</div>
+        </div>
+        <div style="background:#efe;padding:1rem;border-radius:12px;">
+          <div style="font-size:0.85rem;color:#888;">Assanio fee (Business)</div>
+          <div style="font-size:1.3rem;font-weight:700;color:#2a9d8f;">Rs 3,499</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;background:linear-gradient(135deg,#1b2a4a,#2d4a7a);color:#fff;padding:1.5rem;border-radius:12px;">
+        <div style="font-size:0.9rem;opacity:0.8;">You save every month:</div>
+        <div id="saveDisplay" style="font-size:2.2rem;font-weight:800;color:#c9a227;">Rs 121,501</div>
+        <div style="font-size:0.9rem;opacity:0.8;">That's <span id="saveYear">Rs 1,458,012</span> per year!</div>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;">
+        <a href="register.php" style="background:#C8102E;color:#fff;padding:0.8rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;">Start Saving Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function calcSavings() {
+  const sales = parseInt(document.getElementById('salesRange').value);
+  const comm = Math.round(sales * 0.25);
+  const save = comm - 3499;
+  document.getElementById('salesDisplay').textContent = 'Rs ' + sales.toLocaleString('en-PK');
+  document.getElementById('commDisplay').textContent = 'Rs ' + comm.toLocaleString('en-PK');
+  document.getElementById('saveDisplay').textContent = 'Rs ' + save.toLocaleString('en-PK');
+  document.getElementById('saveYear').textContent = 'Rs ' + (save * 12).toLocaleString('en-PK');
+}
+calcSavings();
+</script>
+
+<!-- LIVE ORDER NOTIFICATIONS (social proof) -->
+<div id="orderNotif" style="position:fixed;bottom:20px;left:20px;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.2);padding:1rem 1.2rem;display:none;z-index:9999;max-width:320px;border-left:4px solid #2a9d8f;">
+  <div style="display:flex;gap:0.8rem;align-items:center;">
+    <div style="font-size:1.8rem;">🎉</div>
+    <div>
+      <div id="notifText" style="font-size:0.9rem;font-weight:600;"></div>
+      <div style="font-size:0.75rem;color:#888;">Just now • via Assanio</div>
+    </div>
+    <button onclick="document.getElementById('orderNotif').style.display='none'" style="background:none;border:none;font-size:1.2rem;cursor:pointer;color:#999;margin-left:auto;">×</button>
+  </div>
+</div>
+
+<script>
+const notifs = [
+  "Ahmed from Bahria Town ordered Rs 1,850",
+  "Fatima from Islamabad ordered Rs 2,400",
+  "Ali from Rawalpindi ordered Rs 950",
+  "Sana from Civic Centre ordered Rs 3,200",
+  "Bilal from Phase 4 ordered Rs 1,450",
+  "Ayesha from F-11 ordered Rs 2,100",
+];
+let notifIdx = 0;
+function showNotif() {
+  const el = document.getElementById('orderNotif');
+  document.getElementById('notifText').textContent = notifs[notifIdx % notifs.length];
+  notifIdx++;
+  el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 5000);
+}
+setTimeout(showNotif, 8000);
+setInterval(showNotif, 25000);
+</script>
+
 <section class="al-sec" id="templates">
   <div class="al-wrap">
     <p class="al-secnum al-rev">03 &mdash; Templates</p>
