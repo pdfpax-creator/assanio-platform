@@ -5,10 +5,12 @@ require_once __DIR__ . '/lib.php';
 $pdo = db();
 
 // Get all active stores with order counts (only those marked visible in Discover)
+// Exclude non-restaurant templates (e.g. real-estate demo) from restaurant directory
 $stores = $pdo->query("SELECT s.name, s.slug, s.template, s.city, s.whatsapp, s.featured,
                        (SELECT COUNT(*) FROM orders o WHERE o.store_id = s.id) AS order_count
                        FROM stores s WHERE (s.status = 'active' OR s.status IS NULL)
                        AND (s.show_in_discover = 1 OR s.show_in_discover IS NULL)
+                       AND s.template != 'real-estate'
                        ORDER BY s.featured DESC, order_count DESC, s.created_at DESC")->fetchAll();
 
 // Split featured
