@@ -106,22 +106,30 @@ $discSubtitle = setting_get('discover_subtitle', 'Order directly from the restau
         <?php foreach ($featured as $s):
           $tpl = $tplInfo[$s['template']] ?? $tplInfo['pizza-fastfood'];
         ?>
-        <a href="/<?= e($s['slug']) ?>/" class="disc-card" data-tpl="<?= e($s['template']) ?>" style="border:2px solid #c9a227;position:relative;">
-          <div style="position:absolute;top:10px;right:10px;background:#c9a227;color:#fff;font-size:0.75rem;font-weight:700;padding:0.3rem 0.8rem;border-radius:20px;z-index:2;">⭐ FEATURED</div>
-          <div class="disc-card-img"><img src="<?= e($tpl['img']) ?>" alt="<?= e($s['name']) ?>" loading="lazy"></div>
-          <div class="disc-card-body">
+        <a class="dcard" href="/<?= e($s['slug']) ?>/" data-tpl="<?= e($s['template']) ?>" data-name="<?= e(strtolower($s['name'] . ' ' . $tpl['name'] . ' ' . ($s['city'] ?? ''))) ?>" style="border:2px solid #c9a227;">
+          <span class="dcard-img" style="background-image:url('<?= e($tpl['img']) ?>')">
+            <span class="dcard-badge" style="background:#c9a227;">⭐ FEATURED</span>
+          </span>
+          <span class="dcard-body">
             <h3><?= e($s['name']) ?></h3>
-            <p class="disc-meta"><?= e($tpl['emoji'] . ' ' . $tpl['name']) ?> • <?= e($s['city']) ?></p>
-            <?php if ($s['order_count'] > 0): ?><p class="disc-orders"><?= (int)$s['order_count'] ?> orders</p><?php endif; ?>
-            <span class="disc-order-btn">Order Direct →</span>
-          </div>
+            <div class="dcard-meta"><?= e($tpl['emoji'] . ' ' . $tpl['name']) ?> · <?= e($s['city']) ?></div>
+            <div class="dcard-tags">
+              <?php if ((int)$s['order_count'] > 0): ?>
+                <span>📦 <?= (int)$s['order_count'] ?> orders</span>
+              <?php else: ?>
+                <span style="color:#1a9e4b;font-weight:600">✨ New on Assanio</span>
+              <?php endif; ?>
+              <span style="margin-left:auto;color:#999">No commission</span>
+            </div>
+            <span class="dcard-btn">Order Direct →</span>
+          </span>
         </a>
         <?php endforeach; ?>
       </div>
     </div>
     <?php endif; ?>
     <div class="disc-section">
-      <h2>All Restaurants <span style="color:#999;font-weight:400;font-size:1rem">(<?= count($regular) ?>)</span></h2>
+      <h2>All Restaurants <span id="allCount" style="color:#999;font-weight:400;font-size:1rem">(<?= count($regular) ?>)</span></h2>
       <div class="disc-grid" id="discGrid">
         <?php foreach ($regular as $s):
           $tpl = $tplInfo[$s['template']] ?? ['name' => $s['template'], 'img' => 'assets/landing/t1-pizza.jpg', 'emoji' => '🍴'];
@@ -169,9 +177,22 @@ function filterBy(tpl, btn) {
   document.querySelectorAll('.disc-filter').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('discSearch').value = '';
-  document.querySelectorAll('.dcard').forEach(c => {
+  let visible = 0;
+  document.querySelectorAll('#discGrid .dcard').forEach(c => {
+    const show = (tpl === 'all' || c.dataset.tpl === tpl);
+    c.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.querySelectorAll('#discFeatured .dcard').forEach(c => {
     c.style.display = (tpl === 'all' || c.dataset.tpl === tpl) ? '' : 'none';
   });
+  const featSec = document.querySelector('#discFeatured');
+  if (featSec) {
+    const anyFeatVisible = [...document.querySelectorAll('#discFeatured .dcard')].some(c => c.style.display !== 'none');
+    featSec.closest('.disc-section').style.display = anyFeatVisible ? '' : 'none';
+  }
+  const countEl = document.getElementById('allCount');
+  if (countEl) countEl.textContent = '(' + visible + ')';
 }
 </script>
 
