@@ -293,6 +293,83 @@ page_head('Home', 'Assanio builds your restaurant a professional website with on
   </div>
 </section>
 
+<!-- SHOWCASE CAROUSEL (inspired by Tossdown hero) -->
+<section class="al-sec" id="showcase">
+  <div class="al-wrap">
+    <p class="al-secnum al-rev">Showcase</p>
+    <h2 class="al-rev">Real websites. Real restaurants.</h2>
+    <p class="al-sub al-rev">Swipe through live designs — your restaurant could look like this tomorrow.</p>
+    <div class="al-carousel" id="showCarousel" style="position:relative;overflow:hidden;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.12);">
+      <div class="al-car-track" style="display:flex;transition:transform .5s ease;">
+        <a href="/tandoor-nights/" target="_blank" style="min-width:100%;display:block;"><img src="assets/landing/t2-dera.jpg" alt="Tandoor Nights demo" style="width:100%;height:420px;object-fit:cover;display:block;"></a>
+        <a href="/smash-bros/" target="_blank" style="min-width:100%;display:block;"><img src="assets/landing/t1-pizza.jpg" alt="Smash Bros demo" style="width:100%;height:420px;object-fit:cover;display:block;"></a>
+        <a href="/brew-and-bean/" target="_blank" style="min-width:100%;display:block;"><img src="assets/landing/t3-cafe.jpg" alt="Brew and Bean demo" style="width:100%;height:420px;object-fit:cover;display:block;"></a>
+        <a href="/maison-olive/" target="_blank" style="min-width:100%;display:block;"><img src="assets/landing/t4-noore.jpg" alt="Maison Olive demo" style="width:100%;height:420px;object-fit:cover;display:block;"></a>
+      </div>
+      <button onclick="carMove(-1)" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer;">‹</button>
+      <button onclick="carMove(1)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer;">›</button>
+      <div id="carDots" style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS CAROUSEL -->
+<section class="al-sec" id="testimonials" style="background:var(--al-paper2)">
+  <div class="al-wrap">
+    <p class="al-secnum al-rev">Loved by owners</p>
+    <h2 class="al-rev">Restaurant owners save thousands every month.</h2>
+    <div id="testiBox" style="max-width:700px;margin:2rem auto;text-align:center;background:#fff;padding:2.5rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.08);">
+      <div style="font-size:2rem;color:#c9a227;">★★★★★</div>
+      <p id="testiText" style="font-size:1.2rem;line-height:1.7;margin:1rem 0;color:#333;"></p>
+      <p id="testiName" style="font-weight:700;color:#1b2a4a;"></p>
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:1.5rem;">
+        <button onclick="testiMove(-1)" style="background:#1b2a4a;color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;">‹</button>
+        <button onclick="testiMove(1)" style="background:#1b2a4a;color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+let carIdx = 0;
+const carTrack = document.querySelector('#showCarousel .al-car-track');
+const carTotal = 4;
+function carMove(d) {
+  carIdx = (carIdx + d + carTotal) % carTotal;
+  carTrack.style.transform = 'translateX(-' + (carIdx * 100) + '%)';
+  updateDots();
+}
+function updateDots() {
+  const dots = document.getElementById('carDots');
+  dots.innerHTML = '';
+  for (let i = 0; i < carTotal; i++) {
+    const d = document.createElement('span');
+    d.style.cssText = 'width:10px;height:10px;border-radius:50%;cursor:pointer;background:' + (i === carIdx ? '#fff' : 'rgba(255,255,255,.5)');
+    d.onclick = () => { carIdx = i; carTrack.style.transform = 'translateX(-' + (carIdx * 100) + '%)'; updateDots(); };
+    dots.appendChild(d);
+  }
+}
+updateDots();
+setInterval(() => carMove(1), 5000);
+
+const testis = [
+  { t: "Pehle har order pe 25% commission ja raha tha. Ab apni website se 100% apna hai. Mahine ke Rs 40,000+ bach rahe hain!", n: "— Restaurant Owner, Bahria Town" },
+  { t: "Website 24 ghante mein live ho gayi. Customers WhatsApp pe order karte hain, koi app download nahi karna parta.", n: "— Cafe Owner, Islamabad" },
+  { t: "Menu change karna 2 minute ka kaam hai. Deal lagani ho to khud laga lo. Kisi developer ki zaroorat nahi.", n: "— BBQ Restaurant Owner, Rawalpindi" },
+];
+let testiIdx = 0;
+function testiShow() {
+  document.getElementById('testiText').textContent = '"' + testis[testiIdx].t + '"';
+  document.getElementById('testiName').textContent = testis[testiIdx].n;
+}
+function testiMove(d) {
+  testiIdx = (testiIdx + d + testis.length) % testis.length;
+  testiShow();
+}
+testiShow();
+setInterval(() => testiMove(1), 6000);
+</script>
+
 <section class="al-sec" id="faq" style="background:var(--al-paper2)">
   <div class="al-wrap">
     <p class="al-secnum al-rev">08 &mdash; FAQ</p>
